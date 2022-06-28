@@ -1,0 +1,6 @@
+@media print {
+  div.header, div.footer, div#kt_header, div#loan_status, div#customer_edit, div.card-header  {
+    display: none!important;
+  }
+
+}

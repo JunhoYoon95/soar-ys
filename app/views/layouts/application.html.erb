@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%=@app_title%></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta property="og:locale" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:image" content="">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+ 
+	  	
+	  		
+	<% if content_for?(:head) %>
+	  <%= yield(:head) %>
+	<% end %>  	
+	<link rel="canonical" href="" />
+	<link rel="shortcut icon" href="/images/ysmeta/favicon_logfin.png" />
+	<!--begin::Fonts-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+	<!--script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=1z5nkv1dgw"></script-->
+	<!--end::Fonts-->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-217278797-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-217278797-1');
+	</script>	
+  </head>
+
+  <%= yield %>
+
+</html>
+
+
+
+

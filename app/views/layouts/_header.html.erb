@@ -1,0 +1,99 @@
+					<div id="kt_header" class="header align-items-stretch">
+						
+						<!--begin::Container -->
+						<div class="container-fluid d-flex align-items-stretch justify-content-between">
+							
+
+
+							<!--begin::Mobile logo-->
+							<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+								<a href="/" class="d-lg-none">
+									<%=@app_title%>
+								</a>
+							</div>
+							<!--end::Mobile logo-->
+
+							<!--begin::Wrapper 헤더메뉴-->
+							<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
+								
+								<!--begin::Page title-->
+								<div class="d-flex align-items-stretch" id="kt_header_nav">
+									
+									<!--begin::Title-->
+									
+									<h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1"><%=@page_title%></h1>
+									<!--end::Title-->
+
+									<!--begin::Separator-->
+									<span class="h-20px border-gray-200 border-start mx-4 mt-7"><%=@page_subtitle%></span>
+									<!--end::Separator-->
+
+									<!--begin::Breadcrumb-->
+									<ul class="d-none breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+										<!--begin::Item-->
+										<li class="breadcrumb-item text-muted">
+											<a href="/" class="text-muted text-hover-primary">홈</a>
+										</li>
+										<!--end::Item-->
+										<!--begin::Item-->
+										<li class="breadcrumb-item">
+											<span class="bullet bg-gray-200 w-5px h-2px"></span>
+										</li>
+										<!--end::Item-->
+										<!--begin::Item-->
+										<li class="breadcrumb-item text-muted">부동산 담보대출</li>
+										<!--end::Item-->
+										<!--begin::Item-->
+										<li class="breadcrumb-item">
+											<span class="bullet bg-gray-200 w-5px h-2px"></span>
+										</li>
+										<!--end::Item-->
+										<!--begin::Item-->
+										<li class="breadcrumb-item text-dark">한도조회 계산기</li>
+										<!--end::Item-->
+									</ul>
+									<!--end::Breadcrumb-->
+								</div>
+								<!--end::Page title-->
+
+
+
+									<div class="d-flex align-items-center ms-1 ms-lg-3">
+										<!--begin::Menu wrapper-->
+										<div onclick="show_recent_alarms()" class="btn btn-icon btn-active-light-primary position-relative w-30px h-30px w-md-40px h-md-40px" id="kt_drawer_chat_toggle">
+											<!--begin::Svg Icon | path: icons/duotune/communication/com012.svg-->
+											<span class="svg-icon svg-icon-1">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="black"></path>
+													<rect x="6" y="12" width="7" height="2" rx="1" fill="black"></rect>
+													<rect x="6" y="7" width="12" height="2" rx="1" fill="black"></rect>
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+											<span id="notice_alarm" class="d-none bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"></span>
+										</div>
+										<!--end::Menu wrapper-->
+									</div>
+
+
+
+								<!--begin::Topbar-->
+
+										
+																		
+								
+								
+								<!--end::Topbar-->
+								
+							</div>
+							<!--end::Wrapper 헤더메뉴-->
+						</div>
+						<!--end::Container-->
+					</div>
+
+
+
+		
+		
+		
+					
