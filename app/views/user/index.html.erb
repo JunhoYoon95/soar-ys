@@ -849,28 +849,21 @@
 														<!--begin::Joined-->
 														<!--begin::Action=-->
 														<td class="text-end">
-															<a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-															<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-															<span class="svg-icon svg-icon-5 m-0">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black"></path>
-																</svg>
-															</span>
-															<!--end::Svg Icon--></a>
-															<!--begin::Menu-->
+															<a class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+                                                                <span class="svg-icon svg-icon-5 m-0">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                        <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black"></path>
+                                                                    </svg>
+                                                                </span>
+															</a>
 															<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
-																<!--begin::Menu item-->
 																<div class="menu-item px-3">
 																	<a href="../../demo4/dist/apps/user-management/users/view.html" class="menu-link px-3">Edit</a>
 																</div>
-																<!--end::Menu item-->
-																<!--begin::Menu item-->
 																<div class="menu-item px-3">
 																	<a href="#" class="menu-link px-3" data-kt-users-table-filter="delete_row">Delete</a>
 																</div>
-																<!--end::Menu item-->
 															</div>
-															<!--end::Menu-->
 														</td>
 														<!--end::Action=-->
 													</tr>
@@ -967,6 +960,7 @@
 															<!--end::Avatar-->
 															<!--begin::User details-->
 															<div class="d-flex flex-column">
+                                                            <%# TODO:: user.image, user.name, user.email %>
 																<a href="../../demo4/dist/admin_user_users_student.html" class="text-gray-800 text-hover-primary mb-1">Jr Anthony</a>
 																<span>melody@altbox.com</span>
 															</div>
@@ -975,15 +969,18 @@
 														</td>
 														<!--end::User=-->
 														<!--begin::Role=-->
+                                                        <%# TODO:: user.role %>
 														<td>Student</td>
 														<!--end::Role=-->
 														<!--begin::Last login=-->
 														<td data-order="2022-06-17T17:16:25+09:00">
+                                                        <%# TODO:: 마지막 로그인 시간으로 행위를 트래킹하는 부분 %>
 															<div class="badge badge-light fw-bolder">20 mins ago</div>
 														</td>
 														<!--end::Last login=-->
 												
 														<!--begin::Joined-->
+                                                        <%# TODO:: 가입 날짜 -> created_at %>
 														<td data-order="2021-06-20T22:10:00+09:00">20 Jun 2021, 10:10 pm</td>
 														<!--begin::Joined-->
 														<!--begin::Action=-->
