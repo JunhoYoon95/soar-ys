@@ -9,8 +9,12 @@ class UserController < ApplicationController
     def teacher_detail
         # 선생님 정보를 그대로 가져옵니다
         @id = params[:id]
+        # 기본적인 user 정보를 가져오고, Teacher 에서 uid == @id 인 놈을 또 찾아서 가져와서 둘 다 보여줘야 합니다
+        # @user = ....
+        # @teacher = Teacher.find(params[:id])
     end
     def student_detail
+        #
     end
     def update_user
     end
