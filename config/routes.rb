@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get '/users', to: 'user#index'
 
   get '/users/parent-detail/:id', to: 'user#parent_detail'
+  get '/users/teacher-detail/:id', to: 'user#teacher_detail'
   
 end
