@@ -48132,7 +48132,7 @@ body {
 		box-shadow: none
 	}
 	.aside-enabled.aside-fixed.header-fixed .header {
-		left: 265px;
+		/* left: 265px; */
 		transition: left .3s ease
 	}
 	.aside-enabled.aside-fixed.header-fixed[data-kt-aside-minimize=on] .header {
