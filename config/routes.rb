@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   get '/home', to: 'main#home'
   get '/users', to: 'user#index'
 
-  get '/users/user-detail/:id', to: 'user#user_detail'
+  get '/users/parent-detail/:id', to: 'user#parent_detail'
   
 end
