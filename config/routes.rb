@@ -9,5 +9,6 @@ Rails.application.routes.draw do
 
   get '/users/parent-detail/:id', to: 'user#parent_detail'
   get '/users/teacher-detail/:id', to: 'user#teacher_detail'
+  get '/users/student-detail/:id', to: 'user#student_detail'
   
 end
