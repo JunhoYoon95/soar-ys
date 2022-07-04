@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
   # TODO:: 해당 페이지는 전체 url에 /admin을 붙일 것인가요
-  root to: "main#home"
+  root to: "user#index"
   get '/home', to: 'main#home'
   get '/users', to: 'user#index'
 
