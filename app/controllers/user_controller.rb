@@ -1,5 +1,8 @@
 class UserController < ApplicationController
     def index
+        @users = User.all
+        @admins = User.where(role: 10).all
+        @teachers = User.where(role: 5).all
     end
     def parent_detail
         @id = params[:id]

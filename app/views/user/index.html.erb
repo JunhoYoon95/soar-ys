@@ -393,9 +393,7 @@
 							<div class="tab-content" id="myTabContent">
 
 								<div class="tab-pane show fade active" id="admin_user_1" role="tabpanel">
-									<!--begin::Card user-->
 									<div class="card">
-										<!--begin::Card header-->
 										<div class="card-header border-0 pt-6">
 											<!--begin::Card title-->
 											<div class="card-title">
@@ -808,6 +806,86 @@
 												<!--begin::Table body-->
 												<%# TODO:: 데이터를 연결해서 하나씩 가져오는 부분을 만들어야 합니다 %>
 												<tbody class="text-gray-600 fw-bold">
+															<% @users.each do |user|%>
+																<tr class="odd">
+																	<!--begin::Checkbox-->
+																	<td>
+																		<div class="form-check form-check-sm form-check-custom form-check-solid">
+																			<input class="form-check-input" type="checkbox" value="1">
+																		</div>
+																	</td>
+																	<!--end::Checkbox-->
+																	<!--begin::User=-->
+																	<td class="d-flex align-items-center">
+																		<!--begin:: Avatar -->
+																		<div class="symbol symbol-circle">
+																			<% if (user.name[0..0].ord >= 65) && (user.name[0..0].ord < 70)%>
+																				<div class="symbol-label fs-3 bg-light-danger text-warning"><%=user.name[0..0]%> </div>
+																			<% end %>
+																			<% if (user.name[0..0].ord >= 70) && (user.name[0..0].ord < 75)%>
+																				<div class="symbol-label fs-3 bg-light-success text-success"><%=user.name[0..0]%> </div>
+																			<% end %>
+																			<% if (user.name[0..0].ord >= 75) && (user.name[0..0].ord < 80)%>
+																				<div class="symbol-label fs-3 bg-light-primary text-success"><%=user.name[0..0]%> </div>
+																			<% end %>
+																			<% if (user.name[0..0].ord >= 80) && (user.name[0..0].ord < 85)%>
+																				<div class="symbol-label fs-3 bg-light-info text-info"><%=user.name[0..0]%> </div>
+																			<% end %>
+																			<% if (user.name[0..0].ord >= 85) && (user.name[0..0].ord <= 90)%>
+																				<div class="symbol-label fs-3 bg-light-secondary text-success"><%=user.name[0..0]%> </div>
+																			<% end %>
+																			<% if (user.name[0..0].ord >= 91)%>
+																				<div class="symbol-label fs-3 bg-light-danger text-danger"><%=user.name[0..0]%> </div>
+																			<% end %>
+																			</a>
+																		</div>
+																		<!--end::Avatar-->
+
+																		<!--begin::User details-->
+																		<div class="d-flex flex-column" style="margin-left:20px">
+																		<%# TODO:: USer의 ID 를 받아와 넘기도록 해야 합니다  %>
+																			<% if user.role == 1 %>
+																				<a href="/users/parent-detail/<%=user.id%>" class="text-gray-800 text-hover-primary mb-1"><%=user.name%> </a>
+																			<% end %>
+																			<% if user.role == 5 %>
+																				<a href="/users/teacher-detail/<%=user.id%>" class="text-gray-800 text-hover-primary mb-1"><%=user.name%> </a>
+																			<% end %>
+																			<% if user.role == 10 %>
+																				<a class="text-gray-800 text-hover-primary mb-1"><%=user.name%> (Admin) </a>
+																			<% end %>
+																			<span class="fs-8"><%=user.email%></span>
+																		</div>
+																		<!--begin::User details-->
+																	</td>
+																	<% if user.role == 1 %>
+																		<td>
+																			Parent
+																		</td>
+																	<% end %>
+																	<% if user.role == 5 %>
+																		<td>
+																			Teacher
+																		</td>
+																	<% end %>
+																	<% if user.role == 10 %>
+																		<td>
+																			Admin
+																		</td>
+																	<% end %>
+																	<td data-order="2022-06-16T17:36:25+09:00">
+																		<div class="badge badge-light fw-bolder">Yesterday</div>
+																	</td>
+																	<td data-order="2021-05-05T14:40:00+09:00"> <%=user.created_at.to_formatted_s(:long)%></td>
+
+																	<!--begin::Joined-->
+																	
+																	<!--begin::Action=-->
+																	<td class="text-end">
+																		<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#modal_school_class">Actions
+																	</td>
+																	<!--end::Action=-->
+																</tr>
+															<% end %>	
 													
 													<tr class="odd">
 														<!--begin::Checkbox-->
@@ -1326,68 +1404,67 @@
 														<!--end::Table head-->
 														<!--begin::Table body-->
 														<tbody class="text-gray-600 fw-bold">
-															
-															<tr class="odd">
-																<!--begin::Checkbox-->
-																<td>
-																	<div class="form-check form-check-sm form-check-custom form-check-solid">
-																		<input class="form-check-input" type="checkbox" value="1">
-																	</div>
-																</td>
-																<!--end::Checkbox-->
-																<!--begin::User=-->
-																<td class="d-flex align-items-center">
-																	<!--begin:: Avatar -->
-																	<div class="symbol symbol-circle">
-																	<%# TODO:: USer의 ID 를 받아와 넘기도록 해야 합니다 symbol-50px overflow-hidden me-3"> %>
-																		<a href="/users/parent-detail/1">
-																			<div class="symbol-label fs-3 bg-light-success text-success">ㅈ</div>
-																		</a>
-																	</div>
-																	<!--end::Avatar-->
-
-																	<!--begin::User details-->
-																	<div class="d-flex flex-column">
-																	<%# TODO:: USer의 ID 를 받아와 넘기도록 해야 합니다  %>
-																		<a href="/users/parent-detail/1" class="text-gray-800 text-hover-primary mb-1">조해수 ㅋㅋ</a>
-																		<span class="fs-8">gilvert@gmail.com</span>
-																	</div>
-																	<!--begin::User details-->
-																</td>
-
-																<td>hani, julia</td>
-																<td>82 10 2931 1229</td>
-																<td>KR</td>
-
-															
-																<td>
-																	<div class="symbol-group symbol-hover">
-																		<!--begin::User-->
-																		<div class="symbol symbol-20px symbol-circle" data-bs-toggle="tooltip" title="" data-bs-original-title="Emma Smith">
-																			<img alt="Pic" src="images/avatars/150-1.jpg">
+															<% @users.each do |user|%>
+																<tr class="odd">
+																	<!--begin::Checkbox-->
+																	<td>
+																		<div class="form-check form-check-sm form-check-custom form-check-solid">
+																			<input class="form-check-input" type="checkbox" value="1">
 																		</div>
-																		<!--begin::User-->
-																		<!--begin::User-->
-																		<div class="symbol symbol-20px symbol-circle" data-bs-toggle="tooltip" title="" data-bs-original-title="Rudy Stone">
-																			<img alt="Pic" src="images/avatars/150-2.jpg">
+																	</td>
+																	<!--end::Checkbox-->
+																	<!--begin::User=-->
+																	<td class="d-flex align-items-center">
+																		<!--begin:: Avatar -->
+																		<div class="symbol symbol-circle">
+																		<%# TODO:: USer의 ID 를 받아와 넘기도록 해야 합니다 symbol-50px overflow-hidden me-3"> %>
+																			<a href="/users/parent-detail/1">
+																				<div class="symbol-label fs-3 bg-light-success text-success"><%=user.name[0..0]%> </div>
+																			</a>
 																		</div>
-																		<!--begin::User-->
+																		<!--end::Avatar-->
 
+																		<!--begin::User details-->
+																		<div class="d-flex flex-column" style="margin-left:20px">
+																		<%# TODO:: USer의 ID 를 받아와 넘기도록 해야 합니다  %>
+																			<a href="/users/parent-detail/1" class="text-gray-800 text-hover-primary mb-1"><%=user.name%> </a>
+																			<span class="fs-8"><%=user.email%></span>
+																		</div>
+																		<!--begin::User details-->
+																	</td>
 
-																	</div>
+																	<td>hani, julia</td>
+																	<td>82 10 2931 1229</td>
+																	<td>KR</td>
 
-
-																</td>
-																<!--begin::Joined-->
 																
-																<!--begin::Action=-->
-																<td class="text-end">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#modal_school_class">Actions
-																</td>
-																<!--end::Action=-->
-															</tr>
+																	<td>
+																		<div class="symbol-group symbol-hover">
+																			<!--begin::User-->
+																			<div class="symbol symbol-20px symbol-circle" data-bs-toggle="tooltip" title="" data-bs-original-title="Emma Smith">
+																				<img alt="Pic" src="images/avatars/150-1.jpg">
+																			</div>
+																			<!--begin::User-->
+																			<!--begin::User-->
+																			<div class="symbol symbol-20px symbol-circle" data-bs-toggle="tooltip" title="" data-bs-original-title="Rudy Stone">
+																				<img alt="Pic" src="images/avatars/150-2.jpg">
+																			</div>
+																			<!--begin::User-->
 
-														
+
+																		</div>
+
+
+																	</td>
+																	<!--begin::Joined-->
+																	
+																	<!--begin::Action=-->
+																	<td class="text-end">
+																		<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#modal_school_class">Actions
+																	</td>
+																	<!--end::Action=-->
+																</tr>
+															<% end %>														
 															
 														</tbody>
 														<!--end::Table body-->
