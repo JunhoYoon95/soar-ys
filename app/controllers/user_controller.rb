@@ -16,6 +16,11 @@ class UserController < ApplicationController
         # @user = ....
         # @teacher = Teacher.find(params[:id])
     end
+    def delete_user
+        user = User.find(params[:id])
+        user.update(deleted: true)
+        redirect_back fallback_location: '/index';
+    end
     def student_detail
         #
     end

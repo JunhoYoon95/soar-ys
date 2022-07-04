@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/home', to: 'main#home'
   get '/users', to: 'user#index'
 
+  get '/users/delete-user/:id', to: 'user#delete_user'
   get '/users/parent-detail/:id', to: 'user#parent_detail'
   get '/users/teacher-detail/:id', to: 'user#teacher_detail'
   get '/users/student-detail/:id', to: 'user#student_detail'
