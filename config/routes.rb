@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   # TODO:: 해당 페이지는 전체 url에 /admin을 붙일 것인가요
   root to: "user#index"
   get '/home', to: 'main#home'
-  get '/users', to: 'user#index'
+  get 'admin/users', to: 'user#index'
 
-  get '/users/delete-user/:id', to: 'user#delete_user'
-  get '/users/parent-detail/:id', to: 'user#parent_detail'
-  get '/users/teacher-detail/:id', to: 'user#teacher_detail'
-  get '/users/student-detail/:id', to: 'user#student_detail'
+  get 'admin/users/delete-user/:id', to: 'user#delete_user'
+  get 'admin/users/parent-detail/:id', to: 'user#parent_detail'
+  get 'admin/users/teacher-detail/:id', to: 'user#teacher_detail'
+  get 'admin/users/student-detail/:id', to: 'user#student_detail'
   
 end
