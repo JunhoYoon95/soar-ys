@@ -13,10 +13,10 @@ development:
   <<: *default
   adapter: mysql2
   encoding: utf8mb4
-  database: dev1
-  username: 'ysmeta'
-  password: 'ysmeta-7112'
-  host: ysmeta-dev1.cwpnykdn6kwv.ap-northeast-2.rds.amazonaws.com
+  database: soar
+  username: 'soar'
+  password: 'soar-7112'
+  host: soar.c5gaoz7z04ap.us-west-1.rds.amazonaws.com
   port: 3306
 
 # Warning: The database defined as "test" will be erased and
@@ -30,8 +30,8 @@ production:
   <<: *default
   adapter: mysql2
   encoding: utf8mb4
-  database: dev1
-  username: 'ysmeta'
-  password: 'ysmeta-7112'
-  host: ysmeta-dev1.cwpnykdn6kwv.ap-northeast-2.rds.amazonaws.com
+  database: soar
+  username: 'soar'
+  password: 'soar-7112'
+  host: soar.c5gaoz7z04ap.us-west-1.rds.amazonaws.com
   port: 3306
