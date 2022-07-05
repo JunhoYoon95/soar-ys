@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+	<% if content_for?(:head) %>
+		<%= yield(:head) %>
+   	<% end %>  
     <title><%=@app_title%></title>
     <%= csrf_meta_tags %>
 
@@ -46,17 +49,11 @@
 	<div class="d-flex flex-column flex-root">
 		<div class="page d-flex flex-row flex-column-fluid">
   			
-			<div class="d-flex flex-column flex-row-fluid" id="kt_wrapper">
+			<div class="d-flex flex-column flex-row-fluid" id="kt_wrapper" style=" margin-top : 65px">
 				<%= render "layouts/header"%>
-				<% if notice %>
-					<p class="alert alert-success"><%= notice %></p>
-				<% end %>
-				<% if alert %>
-					<p class="alert alert-danger"><%= alert %></p>
-				<% end %>
 
-				TODO:: 없애도 됩니다
-				<p class="navbar-text float-right" style="margin-left:20px; margin-top : 65px">
+				<%# TODO:: 없애도 됩니다 %>
+				<p class="navbar-text float-right" style="margin-left:20px; margin-top:20px">
 					<% if user_signed_in? %>
 						Logged in as <strong><%= current_user.email %></strong>.
 						<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
@@ -64,6 +61,12 @@
 					<% else %>
 						<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
 						<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+					<% end %>
+					<% if notice %>
+						<p class="alert alert-success" style="margin-left:40px; margin-right:40px"><%= notice %></p>
+					<% end %>
+					<% if alert %>
+						<p class="alert alert-danger" style="margin-left:40px; margin-right:40px"><%= alert %></p>
 					<% end %>
 				</p>
 
