@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'admin/users', to: 'user#index'
 
   # 선생님 관련 페이지
+  get '/teacher', to: 'teacher#home'
   get 'teacher/home', to: 'teacher#home'
   get 'teacher/mypage/:id', to: 'teacher#mypage'
   get 'teacher/new-teacher', to: 'teacher#new_teacher'
