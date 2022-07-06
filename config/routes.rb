@@ -8,6 +8,16 @@ Rails.application.routes.draw do
   get '/home', to: 'main#home'
   get 'admin/users', to: 'user#index'
 
+  # 선생님 관련 페이지
+  get 'teacher/home', to: 'teacher#home'
+  get 'teacher/mypage/:id', to: 'teacher#mypage'
+  get 'teacher/new-teacher', to: 'teacher#new_teacher'
+  post 'teacher/create_teacher', to: 'teacher#create_teacher'
+  
+  
+
+
+  # 관리자 관련 페이지
   get 'admin/users/delete-user/:id', to: 'user#delete_user'
   get 'admin/users/parent-detail/:id', to: 'user#parent_detail'
   get 'admin/users/teacher-detail/:id', to: 'user#teacher_detail'

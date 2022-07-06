@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   
   def init
     @app_company = "회사명"
-    @app_title = "앱타이틀"
+    @app_title = "Soar"
     @app_logo = ""
     @app_description = ""
     @app_url = ""

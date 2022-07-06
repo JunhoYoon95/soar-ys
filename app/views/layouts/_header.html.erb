@@ -1,4 +1,7 @@
 <!--begin::Header-->
+<% if current_user %>
+  <%@user = User.find(current_user.id)%>
+<% end %>
 <div id="kt_header" style="" class="header bg-white align-items-stretch">
 	<!--begin::Container-->
 	<div class="container-fluid d-flex align-items-stretch justify-content-between">
@@ -43,27 +46,28 @@
 				<!--begin::Menu 헤더 메뉴-->
 				<div class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-600 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold fs-6 my-5 my-lg-0 align-items-stretch" id="#kt_header_menu" data-kt-menu="true">
 				
-
-					<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
-						<span class="menu-link py-3 active">
-							<span class="menu-title">User</span>
-							<span class="menu-arrow d-lg-none"></span>
-						</span>
-						<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-							<div class="menu-item">
-								<a class="menu-link py-3" href="../../demo4/dist/admin_user_users.html" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">Users</span>
-								</a>
+					<% if @user && @user.role ==10%>
+						<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+							<span class="menu-link py-3 active">
+								<span class="menu-title">User</span>
+								<span class="menu-arrow d-lg-none"></span>
+							</span>
+							<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+								<div class="menu-item">
+									<a class="menu-link py-3" href="../../demo4/dist/admin_user_users.html" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+										<span class="menu-title">Users</span>
+									</a>
+								</div>
+								<div class="menu-item">
+									<a class="menu-link py-3" href="../../demo4/dist/admin_user_applicant.html" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+										<span class="menu-title">Applicant</span>
+									</a>
+								</div>
+							
+							
 							</div>
-							<div class="menu-item">
-								<a class="menu-link py-3" href="../../demo4/dist/admin_user_applicant.html" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">Applicant</span>
-								</a>
-							</div>
-						
-						
 						</div>
-					</div>
+					<% end %>
 
 					<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
 						<span class="menu-link py-3 ">
@@ -175,20 +179,46 @@
 						</div>
 					</div>
 
-					<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
-						<span class="menu-link py-3 ">
-							<span class="menu-title">Settings</span>
-							<span class="menu-arrow d-lg-none"></span>
-						</span>
-						<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-							<div class="menu-item">
-								<a class="menu-link py-3" href="../../demo4/dist/admin_settings_coupon.html" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">Coupon</span>
-								</a>
+					<% if current_user %>
+					  <% if @user.role == 10 %>
+						<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+							<span class="menu-link py-3 ">
+								<span class="menu-title">Settings</span>
+								<span class="menu-arrow d-lg-none"></span>
+							</span>
+							<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+								<div class="menu-item">
+									<a class="menu-link py-3" href="../../demo4/dist/admin_settings_coupon.html" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+										<span class="menu-title">Coupon</span>
+									</a>
+								</div>
+								
 							</div>
-							
 						</div>
-					</div>
+					  <% end %>
+					  <% if @user.role == 5 || 10%>
+						<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+
+							<span class="menu-link py-3 ">
+								<span class="menu-title">Teacher</span>
+								<span class="menu-arrow d-lg-none"></span>
+							</span>
+							<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+								<div class="menu-item">
+									<a class="menu-link py-3" href="/teacher/home" title="Go to Teacher page" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+										<span class="menu-title">Home</span>
+									</a>
+								</div>
+								<div class="menu-item">
+									<a class="menu-link py-3" href="/teacher/mypage/<%=@user.id%>" title="Move to MyPage" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+										<span class="menu-title">My page</span>
+									</a>
+								</div>
+							
+							</div>
+						</div>
+					  <% end %>
+					<% end %>
 
 					
 				</div>
