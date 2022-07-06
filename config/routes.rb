@@ -16,9 +16,11 @@ Rails.application.routes.draw do
   post 'teacher/create_teacher', to: 'teacher#create_teacher'
   
   
+  # 관지라 School 관련 페이지
+  get 'admin/school/interview-list', to: 'interview#interview_list'
 
 
-  # 관리자 관련 페이지
+  # 관리자 유저 관련 페이지
   get 'admin/users/delete-user/:id', to: 'user#delete_user'
   get 'admin/users/parent-detail/:id', to: 'user#parent_detail'
   get 'admin/users/teacher-detail/:id', to: 'user#teacher_detail'
