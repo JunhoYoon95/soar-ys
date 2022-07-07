@@ -256,16 +256,17 @@
                                     <div class="d-flex overflow-auto h-55px">
                                         <!--begin::Nav links-->
                                         <%# TODO:: Teaching 과 Homework 가 서로 이렇게 어떠한 링크를 가르키는 것이 아닌 서로가 탭으로 구분될 수 있도록 변경을 해야 합니다 %>
-                                        <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bolder flex-nowrap">
+                                        <%# <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bolder flex-nowrap"> %>
+                                        <ul class=" nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-bold mb-8">
                                             <!--begin::Nav item-->
                                             <li class="nav-item">
-                                                <a class="nav-link text-active-primary me-6 active" href="../../demo4/dist/admin_school_book_homework.html">Homework</a>
+                                                <a class="nav-link text-active-primary me-6 active" data-bs-toggle="tab" href="#homework">Homework</a>
                                             </li>
                                             <!--end::Nav item-->
                                             <!--begin::Nav item-->
                                             <li class="nav-item">
 
-                                                <a class="nav-link text-active-primary me-6" href="../../demo4/dist/admin_school_book_question.html">Teaching</a>
+                                                <a class="nav-link text-active-primary me-6" data-bs-toggle="tab" href="#teaching">Teaching</a>
                                             </li>
                                             <!--end::Nav item-->
                                     
@@ -1694,8 +1695,7 @@
                                                         <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="" data-bs-original-title="Specify a target priorty" aria-label="Specify a target priorty"></i>
                                                     </label>
                                                     <!--end::Label-->
-                                                    <tags class="tagify form-control form-control-solid" tabindex="-1"><tag title="Important" contenteditable="false" spellcheck="false" tabindex="-1" class="tagify__tag tagify--noAnim" value="Important"><x title="" class="tagify__tag__removeBtn" role="button" aria-label="remove tag"></x><div><span class="tagify__tag-text">Important</span></div></tag><tag title="Urgent" contenteditable="false" spellcheck="false" tabindex="-1" class="tagify__tag tagify--noAnim" value="Urgent"><x title="" class="tagify__tag__removeBtn" role="button" aria-label="remove tag"></x><div><span class="tagify__tag-text">Urgent</span></div></tag><span contenteditable="" tabindex="0" data-placeholder="​" aria-placeholder="" class="tagify__input" role="textbox" aria-autocomplete="both" aria-multiline="false"></span>
-        </tags><input class="form-control form-control-solid" value="Important, Urgent" name="tags">
+                                                    <tags class="tagify form-control form-control-solid" tabindex="-1"><tag title="Important" contenteditable="false" spellcheck="false" tabindex="-1" class="tagify__tag tagify--noAnim" value="Important"><x title="" class="tagify__tag__removeBtn" role="button" aria-label="remove tag"></x><div><span class="tagify__tag-text">Important</span></div></tag><tag title="Urgent" contenteditable="false" spellcheck="false" tabindex="-1" class="tagify__tag tagify--noAnim" value="Urgent"><x title="" class="tagify__tag__removeBtn" role="button" aria-label="remove tag"></x><div><span class="tagify__tag-text">Urgent</span></div></tag><span contenteditable="" tabindex="0" data-placeholder="​" aria-placeholder="" class="tagify__input" role="textbox" aria-autocomplete="both" aria-multiline="false"></span></tags><input class="form-control form-control-solid" value="Important, Urgent" name="tags">
                                                 </div>
                                                 <!--end::Input group-->
                                                 <!--begin::Input group-->
@@ -1770,279 +1770,578 @@
         
 
                             <!--begin::Container-->
-                            <div class="" id="kt_content_container">
-                            
-                                
-
-                                <div class="card mb-5 mb-xl-10" id="kt_profile_details_view">
-                                    <!--begin::Card header-->
-                                    <div class="card-header cursor-pointer">
-                                        <!--begin::Card title-->
-                                        <div class="card-title m-0">
-                                            <h3 class="fw-bolder m-0">Homework List </h3>
+                            <div class=" tab-content" id="myTabContent">
+                                <div class="tab-pane show fade active" id="homework" role="tabpanel">
+                                    <div class="card">
+                                        <!--begin::Card header-->
+                                        <div class="card-header cursor-pointer">
+                                            <!--begin::Card title-->
+                                            <div class="card-title m-0">
+                                                <h3 class="fw-bolder m-0">Homework List </h3>
+                                            </div>
+                                            <!--end::Card title-->
+                                            <!--begin::Action-->
+                                            <%# TODO:: Edit homework 를 할 수 있는 곳으로 보내주세요 %>
+                                            <a class="btn btn-primary align-self-center">Edit homework</a>
+                                            <!--end::Action-->
                                         </div>
-                                        <!--end::Card title-->
-                                        <!--begin::Action-->
-                                        <%# TODO:: Edit homework 를 할 수 있는 곳으로 보내주세요 %>
-                                        <a class="btn btn-primary align-self-center">Edit homework</a>
-                                        <!--end::Action-->
-                                    </div>
-                                    <!--begin::Card header-->
-                                    <!--begin::Card body-->
-                                    <div class="card-body p-9">
+                                        <!--begin::Card header-->
+                                        <!--begin::Card body-->
+                                        <div class="card-body p-9">
 
 
-                                        <div class="py-5">
-                                            <div class="rounded  px-10">
-                                                <!--begin::Accordion-->
-                                                <div class="accordion accordion-icon-toggle" id="kt_accordion_2">
-                                                    
-                                                    
-                                                    <!--begin::Item-->
-                                                    <div class="mb-5">
-                                                        <!--begin::Header-->
-                                                        <div class="accordion-header py-3 d-flex collapsed" data-bs-toggle="collapse" data-bs-target="#kt_accordion_2_item_1" aria-expanded="false">
-                                                            <span class="accordion-icon">
-                                                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                                                                <span class="svg-icon svg-icon-4">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor"></rect>
-                                                                        <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor"></path>
-                                                                    </svg>
+                                            <div class="py-5">
+                                                <div class="rounded  px-10">
+                                                    <!--begin::Accordion-->
+                                                    <div class="accordion accordion-icon-toggle" id="kt_accordion_2">
+                                                        
+                                                        
+                                                        <!--begin::Item-->
+                                                        <div class="mb-5">
+                                                            <!--begin::Header-->
+                                                            <div class="accordion-header py-3 d-flex collapsed" data-bs-toggle="collapse" data-bs-target="#kt_accordion_2_item_1" aria-expanded="false">
+                                                                <span class="accordion-icon">
+                                                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                                                                    <span class="svg-icon svg-icon-4">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                            <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor"></rect>
+                                                                            <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <!--end::Svg Icon-->
                                                                 </span>
-                                                                <!--end::Svg Icon-->
-                                                            </span>
-                                                            <h3 class="fs-4 fw-bold mb-0 ms-4">Week #1</h3>
-                                                        </div>
-                                                        <!--end::Header-->
-                                                        <!--begin::Body-->
-                                                        <div id="kt_accordion_2_item_1" class="fs-6 ps-10 collapse" data-bs-parent="#kt_accordion_2" style="">
-                                                            
-                                                            <div class="row my-7">
-                                                                <!--begin::Label-->
-                                                                <label class="col-lg-2 fw-bold text-muted">question 1 </label>
-                                                                <!--end::Label-->
-                                                                <!--begin::Col-->
-                                                                <div class="col-lg-8">
-                                                                    <span class="fw-bolder fs-6 text-gray-800">
-                                                                        Summarize one of your favorite parts or one part that you remember. Your response should be 2-3 sentences.
-                                                                    </span>
-                                                                </div>
-                                                                <!--end::Col-->
+                                                                <h3 class="fs-4 fw-bold mb-0 ms-4">Week #1</h3>
                                                             </div>
-
-                                                            <div class="row mb-7">
-                                                                <!--begin::Label-->
-                                                                <label class="col-lg-2 fw-bold text-muted">question 2 </label>
-                                                                <!--end::Label-->
-                                                                <!--begin::Col-->
-                                                                <div class="col-lg-8">
-                                                                    <span class="fw-bolder fs-6 text-gray-800">
-                                                                        Why won’t Father allow his children to follow their dreams and talents? Your response should be at least one paragraph (4 to 5 sentences).
-                                                                    </span>
-                                                                </div>
-                                                                <!--end::Col-->
-                                                            </div>
-
-                                                            <div class="row mb-7">
-                                                                <!--begin::Label-->
-                                                                <label class="col-lg-2 fw-bold text-muted">question 3 </label>
-                                                                <!--end::Label-->
-                                                                <!--begin::Col-->
-                                                                <div class="col-lg-8">
-                                                                    <span class="fw-bolder fs-6 text-gray-800">
-                                                                        Summarize what Neftali experienced when he went to the forest. Your response should be at least one paragraph (4 to 5 sentences).																		
-                                                                    </span>
-                                                                </div>
-                                                                <!--end::Col-->
-                                                            </div>
-
-
-                                                            <div class="row mb-7">
-                                                                <!--begin::Label-->
-                                                                <label class="col-lg-2 fw-bold text-muted">question 4 </label>
-                                                                <!--end::Label-->
-                                                                <!--begin::Col-->
-                                                                <div class="col-lg-8">
-                                                                    <span class="fw-bolder fs-6 text-gray-800">
-                                                                        Analyze what effect Father’s cruelness about forcing him into the ocean has on Neftali. Your response should be at least one paragraph 
-                                                                        (4 to 5 sentences).																		</span>
-                                                                    </span>
-                                                                </div>
-                                                                <!--end::Col-->
-                                                            </div>
-
-                                                            <div class="row mb-7">
-                                                                <!--begin::Label-->
-                                                                <label class="col-lg-2 fw-bold text-muted">question5  </label>
-                                                                <!--end::Label-->
-                                                                <!--begin::Col-->
-                                                                <div class="col-lg-8">
-                                                                    <span class="fw-bolder fs-6 text-gray-800">
-                                                                        Consider the following questions. After thinking about each prompt, mark 2 or 3 that you find most interesting.
-                                                                        <br/><br/>
-                                                                    
-                                                                        <div class="form-check form-check-custom form-check-solid mb-5">
-                                                                            <input class="form-check-input me-5" type="checkbox" value="" id="flexCheckChecked" checked="checked" />
-                                                                            <label class="form-check-label fw-normal" for="flexCheckChecked">
-                                                                                Mamadre is acting just as cruelly as Father for not stopping the swim lessons in the ocean. Agree or disagree. Agree/ disagree.
-                                                                            </label>
-                                                                        </div>
-
-                                                                        <div class="form-check form-check-custom form-check-solid mb-5">
-                                                                            <input class="form-check-input me-5" type="checkbox" value="" id="flexCheckChecked"  />
-                                                                            <label class="form-check-label fw-normal" for="flexCheckChecked">
-                                                                                Mamadre is acting just as cruelly as Father for not stopping the swim lessons in the ocean. Agree or disagree. Agree/ disagree.
-                                                                            </label>
-                                                                        </div>
-
-
-                                                                        <div class="form-check form-check-custom form-check-solid mb-5">
-                                                                            <input class="form-check-input me-5" type="checkbox" value="" id="flexCheckChecked"  />
-                                                                            <label class="form-check-label fw-normal" for="flexCheckChecked">
-                                                                                Father only means well when he wants his sons to become doctors or businessmen. Agree or disagree. Agree/ disagree.
-                                                                            </label>
-                                                                        </div>
-
-
-                                                                        <div class="form-check form-check-custom form-check-solid mb-5">
-                                                                            <input class="form-check-input me-5" type="checkbox" value="" id="flexCheckChecked"  />
-                                                                            <label class="form-check-label fw-normal" for="flexCheckChecked">
-                                                                                Do you think Neftali can really hear voices, or is he just imagining that? Can hear/ imagining it.
-                                                                            </label>
-                                                                        </div>
-
-
-                                                                        <div class="form-check form-check-custom form-check-solid mb-5">
-                                                                            <input class="form-check-input me-5" type="checkbox" value="" id="flexCheckChecked"  />
-                                                                            <label class="form-check-label fw-normal" for="flexCheckChecked">
-                                                                                Do you think the poems and pictures in the book help to understand the story better, or not? Yes/ No.
-                                                                            </label>
-                                                                        </div>
-
-
-                                                                        <div class="form-check form-check-custom form-check-solid mb-5">
-                                                                            <input class="form-check-input me-5" type="checkbox" value="" id="flexCheckChecked"  />
-                                                                            <label class="form-check-label fw-normal" for="flexCheckChecked">
-                                                                                Do you think writing poetry is as important as any other job, like being a doctor? Why or why not? Yes/ No.
-                                                                            </label>
-                                                                        </div>
-
-
-                                                                    
+                                                            <!--end::Header-->
+                                                            <!--begin::Body-->
+                                                            <div id="kt_accordion_2_item_1" class="fs-6 ps-10 collapse" data-bs-parent="#kt_accordion_2" style="">
                                                                 
-                                                                    </span>
+                                                                <div class="row my-7">
+                                                                    <!--begin::Label-->
+                                                                    <label class="col-lg-2 fw-bold text-muted">question 1 </label>
+                                                                    <!--end::Label-->
+                                                                    <!--begin::Col-->
+                                                                    <div class="col-lg-8">
+                                                                        <span class="fw-bolder fs-6 text-gray-800">
+                                                                            Summarize one of your favorite parts or one part that you remember. Your response should be 2-3 sentences.
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Col-->
                                                                 </div>
-                                                                <!--end::Col-->
+
+                                                                <div class="row mb-7">
+                                                                    <!--begin::Label-->
+                                                                    <label class="col-lg-2 fw-bold text-muted">question 2 </label>
+                                                                    <!--end::Label-->
+                                                                    <!--begin::Col-->
+                                                                    <div class="col-lg-8">
+                                                                        <span class="fw-bolder fs-6 text-gray-800">
+                                                                            Why won’t Father allow his children to follow their dreams and talents? Your response should be at least one paragraph (4 to 5 sentences).
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Col-->
+                                                                </div>
+
+                                                                <div class="row mb-7">
+                                                                    <!--begin::Label-->
+                                                                    <label class="col-lg-2 fw-bold text-muted">question 3 </label>
+                                                                    <!--end::Label-->
+                                                                    <!--begin::Col-->
+                                                                    <div class="col-lg-8">
+                                                                        <span class="fw-bolder fs-6 text-gray-800">
+                                                                            Summarize what Neftali experienced when he went to the forest. Your response should be at least one paragraph (4 to 5 sentences).																		
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Col-->
+                                                                </div>
+
+
+                                                                <div class="row mb-7">
+                                                                    <!--begin::Label-->
+                                                                    <label class="col-lg-2 fw-bold text-muted">question 4 </label>
+                                                                    <!--end::Label-->
+                                                                    <!--begin::Col-->
+                                                                    <div class="col-lg-8">
+                                                                        <span class="fw-bolder fs-6 text-gray-800">
+                                                                            Analyze what effect Father’s cruelness about forcing him into the ocean has on Neftali. Your response should be at least one paragraph 
+                                                                            (4 to 5 sentences).																		</span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Col-->
+                                                                </div>
+
+                                                                <div class="row mb-7">
+                                                                    <!--begin::Label-->
+                                                                    <label class="col-lg-2 fw-bold text-muted">question5  </label>
+                                                                    <!--end::Label-->
+                                                                    <!--begin::Col-->
+                                                                    <div class="col-lg-8">
+                                                                        <span class="fw-bolder fs-6 text-gray-800">
+                                                                            Consider the following questions. After thinking about each prompt, mark 2 or 3 that you find most interesting.
+                                                                            <br/><br/>
+                                                                        
+                                                                            <div class="form-check form-check-custom form-check-solid mb-5">
+                                                                                <input class="form-check-input me-5" type="checkbox" value="" id="flexCheckChecked" checked="checked" />
+                                                                                <label class="form-check-label fw-normal" for="flexCheckChecked">
+                                                                                    Mamadre is acting just as cruelly as Father for not stopping the swim lessons in the ocean. Agree or disagree. Agree/ disagree.
+                                                                                </label>
+                                                                            </div>
+
+                                                                            <div class="form-check form-check-custom form-check-solid mb-5">
+                                                                                <input class="form-check-input me-5" type="checkbox" value="" id="flexCheckChecked"  />
+                                                                                <label class="form-check-label fw-normal" for="flexCheckChecked">
+                                                                                    Mamadre is acting just as cruelly as Father for not stopping the swim lessons in the ocean. Agree or disagree. Agree/ disagree.
+                                                                                </label>
+                                                                            </div>
+
+
+                                                                            <div class="form-check form-check-custom form-check-solid mb-5">
+                                                                                <input class="form-check-input me-5" type="checkbox" value="" id="flexCheckChecked"  />
+                                                                                <label class="form-check-label fw-normal" for="flexCheckChecked">
+                                                                                    Father only means well when he wants his sons to become doctors or businessmen. Agree or disagree. Agree/ disagree.
+                                                                                </label>
+                                                                            </div>
+
+
+                                                                            <div class="form-check form-check-custom form-check-solid mb-5">
+                                                                                <input class="form-check-input me-5" type="checkbox" value="" id="flexCheckChecked"  />
+                                                                                <label class="form-check-label fw-normal" for="flexCheckChecked">
+                                                                                    Do you think Neftali can really hear voices, or is he just imagining that? Can hear/ imagining it.
+                                                                                </label>
+                                                                            </div>
+
+
+                                                                            <div class="form-check form-check-custom form-check-solid mb-5">
+                                                                                <input class="form-check-input me-5" type="checkbox" value="" id="flexCheckChecked"  />
+                                                                                <label class="form-check-label fw-normal" for="flexCheckChecked">
+                                                                                    Do you think the poems and pictures in the book help to understand the story better, or not? Yes/ No.
+                                                                                </label>
+                                                                            </div>
+
+
+                                                                            <div class="form-check form-check-custom form-check-solid mb-5">
+                                                                                <input class="form-check-input me-5" type="checkbox" value="" id="flexCheckChecked"  />
+                                                                                <label class="form-check-label fw-normal" for="flexCheckChecked">
+                                                                                    Do you think writing poetry is as important as any other job, like being a doctor? Why or why not? Yes/ No.
+                                                                                </label>
+                                                                            </div>
+
+
+                                                                        
+                                                                    
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Col-->
+                                                                </div>
+
+
+
+
                                                             </div>
-
-
-
-
+                                                            <!--end::Body-->
                                                         </div>
-                                                        <!--end::Body-->
-                                                    </div>
-                                                    <!--end::Item-->
+                                                        <!--end::Item-->
 
 
-                                                    <!--begin::Item-->
-                                                    <div class="mb-5">
-                                                        <!--begin::Header-->
-                                                        <div class="accordion-header py-3 d-flex collapsed" data-bs-toggle="collapse" data-bs-target="#kt_accordion_2_item_2" aria-expanded="false">
-                                                            <span class="accordion-icon">
-                                                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                                                                <span class="svg-icon svg-icon-4">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor"></rect>
-                                                                        <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor"></path>
-                                                                    </svg>
+                                                        <!--begin::Item-->
+                                                        <div class="mb-5">
+                                                            <!--begin::Header-->
+                                                            <div class="accordion-header py-3 d-flex collapsed" data-bs-toggle="collapse" data-bs-target="#kt_accordion_2_item_2" aria-expanded="false">
+                                                                <span class="accordion-icon">
+                                                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                                                                    <span class="svg-icon svg-icon-4">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                            <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor"></rect>
+                                                                            <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <!--end::Svg Icon-->
                                                                 </span>
-                                                                <!--end::Svg Icon-->
-                                                            </span>
-                                                            <h3 class="fs-4 fw-bold mb-0 ms-4">Week #2</h3>
+                                                                <h3 class="fs-4 fw-bold mb-0 ms-4">Week #2</h3>
+                                                            </div>
+                                                            <!--end::Header-->
+                                                            <!--begin::Body-->
+                                                            <div id="kt_accordion_2_item_2" class="collapse fs-6 ps-10" data-bs-parent="#kt_accordion_2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+                                                            <!--end::Body-->
                                                         </div>
-                                                        <!--end::Header-->
-                                                        <!--begin::Body-->
-                                                        <div id="kt_accordion_2_item_2" class="collapse fs-6 ps-10" data-bs-parent="#kt_accordion_2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
-                                                        <!--end::Body-->
-                                                    </div>
-                                                    <!--end::Item-->
-                                                    <!--begin::Item-->
-                                                    <div class="mb-5">
-                                                        <!--begin::Header-->
-                                                        <div class="accordion-header py-3 d-flex collapsed" data-bs-toggle="collapse" data-bs-target="#kt_accordion_2_item_3" aria-expanded="false">
-                                                            <span class="accordion-icon">
-                                                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                                                                <span class="svg-icon svg-icon-4">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor"></rect>
-                                                                        <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor"></path>
-                                                                    </svg>
+                                                        <!--end::Item-->
+                                                        <!--begin::Item-->
+                                                        <div class="mb-5">
+                                                            <!--begin::Header-->
+                                                            <div class="accordion-header py-3 d-flex collapsed" data-bs-toggle="collapse" data-bs-target="#kt_accordion_2_item_3" aria-expanded="false">
+                                                                <span class="accordion-icon">
+                                                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                                                                    <span class="svg-icon svg-icon-4">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                            <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor"></rect>
+                                                                            <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <!--end::Svg Icon-->
                                                                 </span>
-                                                                <!--end::Svg Icon-->
-                                                            </span>
-                                                            <h3 class="fs-4 fw-bold mb-0 ms-4">Week #3</h3>
+                                                                <h3 class="fs-4 fw-bold mb-0 ms-4">Week #3</h3>
+                                                            </div>
+                                                            <!--end::Header-->
+                                                            <!--begin::Body-->
+                                                            <div id="kt_accordion_2_item_3" class="collapse fs-6 ps-10" data-bs-parent="#kt_accordion_2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+                                                            <!--end::Body-->
                                                         </div>
-                                                        <!--end::Header-->
-                                                        <!--begin::Body-->
-                                                        <div id="kt_accordion_2_item_3" class="collapse fs-6 ps-10" data-bs-parent="#kt_accordion_2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
-                                                        <!--end::Body-->
+                                                        <!--end::Item-->
                                                     </div>
-                                                    <!--end::Item-->
+                                                    <!--end::Accordion-->
                                                 </div>
-                                                <!--end::Accordion-->
                                             </div>
-                                        </div>
 
 
 
 
-                                        <!--begin::Row-->
-                                        <div class="d-none row mb-7">
-                                            <!--begin::Label-->
-                                            <label class="col-lg-4 fw-bold text-muted">Full Name</label>
-                                            <!--end::Label-->
-                                            <!--begin::Col-->
-                                            <div class="col-lg-8">
-                                                <span class="fw-bolder fs-6 text-gray-800">Max Smith</span>
-                                            </div>
-                                            <!--end::Col-->
-                                        </div>
-                                        <!--end::Row-->
-                                    
-                                        <!--begin::Notice-->
-                                        <div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6">
-                                            <!--begin::Icon-->
-                                            <!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
-                                            <span class="svg-icon svg-icon-2tx svg-icon-warning me-4">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
-                                                    <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black"></rect>
-                                                    <rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="black"></rect>
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                            <!--end::Icon-->
-                                            <!--begin::Wrapper-->
-                                            <div class="d-flex flex-stack flex-grow-1">
-                                                <!--begin::Content-->
-                                                <div class="fw-bold">
-                                                    <h4 class="text-gray-900 fw-bolder">We need your attention!</h4>
-                                                    <div class="fs-6 text-gray-700">Your payment was declined. To start using tools, please
-                                                    <a class="fw-bolder" href="../../demo4/dist/account/billing.html">Add Payment Method</a>.</div>
+                                            <!--begin::Row-->
+                                            <div class="d-none row mb-7">
+                                                <!--begin::Label-->
+                                                <label class="col-lg-4 fw-bold text-muted">Full Name</label>
+                                                <!--end::Label-->
+                                                <!--begin::Col-->
+                                                <div class="col-lg-8">
+                                                    <span class="fw-bolder fs-6 text-gray-800">Max Smith</span>
                                                 </div>
-                                                <!--end::Content-->
+                                                <!--end::Col-->
                                             </div>
-                                            <!--end::Wrapper-->
+                                            <!--end::Row-->
+                                        
+                                            <!--begin::Notice-->
+                                            <div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6">
+                                                <!--begin::Icon-->
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
+                                                <span class="svg-icon svg-icon-2tx svg-icon-warning me-4">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
+                                                        <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black"></rect>
+                                                        <rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="black"></rect>
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->
+                                                <!--end::Icon-->
+                                                <!--begin::Wrapper-->
+                                                <div class="d-flex flex-stack flex-grow-1">
+                                                    <!--begin::Content-->
+                                                    <div class="fw-bold">
+                                                        <h4 class="text-gray-900 fw-bolder">We need your attention!</h4>
+                                                        <div class="fs-6 text-gray-700">Your payment was declined. To start using tools, please
+                                                        <a class="fw-bolder" href="../../demo4/dist/account/billing.html">Add Payment Method</a>.</div>
+                                                    </div>
+                                                    <!--end::Content-->
+                                                </div>
+                                                <!--end::Wrapper-->
+                                            </div>
+                                            <!--end::Notice-->
                                         </div>
-                                        <!--end::Notice-->
+                                        <!--end::Card body-->
                                     </div>
-                                    <!--end::Card body-->
                                 </div>
+                                <!--end::Container-->
+                                <div class="tab-pane show fade" id="teaching" role="tabpanel">
+                                    <div class="card">
+                                        <!--begin::Card header-->
+                                        <div class="card-header cursor-pointer">
+                                            <!--begin::Card title-->
+                                            <div class="card-title m-0">
+                                                <h3 class="fw-bolder m-0">How to Teaching </h3>
+                                            </div>
+                                            <!--end::Card title-->
+                                            <!--begin::Action-->
+                                            <a href="../../demo4/dist/account/settings.html" class="btn btn-primary align-self-center">Edit Teaching</a>
+                                            <!--end::Action-->
+                                        </div>
+                                        <!--begin::Card header-->
+                                        <!--begin::Card body-->
+                                        <div class="card-body p-9">
 
+
+                                            <div class="py-5">
+                                                <div class="rounded  px-10">
+                                                    <!--begin::Accordion-->
+                                                    <div class="accordion accordion-icon-toggle" id="kt_accordion_2">
+                                                        
+                                                        
+                                                        <!--begin::Item-->
+                                                        <div class="mb-5">
+                                                            <!--begin::Header-->
+                                                            <div class="accordion-header py-3 d-flex collapsed" data-bs-toggle="collapse" data-bs-target="#kt_accordion_2_item_1" aria-expanded="false">
+                                                                <span class="accordion-icon">
+                                                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                                                                    <span class="svg-icon svg-icon-4">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                            <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor"></rect>
+                                                                            <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <!--end::Svg Icon-->
+                                                                </span>
+                                                                <h3 class="fs-4 fw-bold mb-0 ms-4">Week #1 - The Dreamer: Rain to Lagoon</h3>
+                                                            </div>
+                                                            <!--end::Header-->
+                                                            <!--begin::Body-->
+                                                            <div id="kt_accordion_2_item_1" class="fs-6 ps-10 collapse" data-bs-parent="#kt_accordion_2" style="">
+                                                                
+                                                                <div class="row my-7">
+                                                                    <!--begin::Label-->
+                                                                    <label class="col-lg-2 fw-bold text-muted">Welcome/Rules </label>
+                                                                    <!--end::Label-->
+                                                                    <!--begin::Col-->
+                                                                    <div class="col-lg-8">
+                                                                        <span class="fw-bolder fs-6 text-gray-800">
+                                                                            <ul class="fw-normal">
+                                                                                <li>Tech-check </li>
+                                                                                <li>Go over hand signals</li>	 
+                                                                            </ul>
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Col-->
+                                                                </div>
+
+                                                                <div class="row mb-7">
+                                                                    <!--begin::Label-->
+                                                                    <label class="col-lg-2 fw-bold text-muted">Summary </label>
+                                                                    <!--end::Label-->
+                                                                    <!--begin::Col-->
+                                                                    <div class="col-lg-8">
+                                                                        <span class="fw-bolder fs-6 text-gray-800">
+                                                                            Share briefly memorable/favorite chapter or part
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Col-->
+                                                                </div>
+
+                                                                <div class="row mb-7">
+                                                                    <!--begin::Label-->
+                                                                    <label class="col-lg-2 fw-bold text-muted">Review story events  </label>
+                                                                    <!--end::Label-->
+                                                                    <!--begin::Col-->
+                                                                    <div class="col-lg-8">
+                                                                        <span class="fw-bolder fs-6 text-gray-800">
+                                                                            Ask students verbally, have whiteboard shared to create visual support 
+                                                                            <ul class="fw-normal">
+                                                                                <li>Hop from kid to kid sharing main events in the first section of the reading</li>
+                                                                                <li>Can use whiteboard to create visual timeline of major events (ideally 3-6 events total)
+                                                                                </li>
+                                                                            </ul>																		
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Col-->
+                                                                </div>
+
+
+                                                                <div class="row mb-7">
+                                                                    <!--begin::Label-->
+                                                                    <label class="col-lg-2 fw-bold text-muted">Opinions and Making Connections   </label>
+                                                                    <!--end::Label-->
+                                                                    <!--begin::Col-->
+                                                                    <div class="col-lg-8">
+                                                                        <span class="fw-bolder fs-6 text-gray-800">
+                                                                            Pose questions verbally, encourage signals, do not require responses for everyone; just those who want to call out. If needed can pose Qs in the chat if students need more scaffolds. 
+                                                                            <ul class="fw-normal mt-5">
+                                                                                <li>1- Describe Neftali. Why does he write words down on pieces of paper?</li>
+                                                                                <li>1- Who is Rodolfo? What caused him to cry?</li>
+                                                                                <li>1- What made Neftali think his father may be right about him being a scatterbrain?</li>
+                                                                                <li>1- How did a toy sheep become Neftali’s devoted companion?</li>
+                                                                            </ul>
+                                                                            <ul class="fw-normal">
+                                                                                <li>2- Why won’t Father allow his children to follow their dreams and talents?</li>
+                                                                                <li>2- Summarize what Neftali experienced when he went to the forest. </li>
+                                                                                <li>2- How did Neftali feel about finally getting to go into the forest? Why?</li>
+                                                                                <li>2- Explain who the Mapuche are. Why are they in danger?</li>
+                                                                            </ul>
+
+                                                                            <ul class="fw-normal">
+                                                                                <li>3- Why did Neftali think the chucao bird had lied?</li>
+                                                                                <li>3- Compare and contrast Mamadre and Father. </li>
+                                                                                <li>3- Analyze what effect Father’s cruelness about forcing him into the ocean has on Neftali.</li>
+                                                                                <li>3- What does Neftali’s father say to him that haunts him?</li>
+                                                                            </ul>
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Col-->
+                                                                </div>
+
+
+
+                                                                <div class="row mb-7">
+                                                                    <!--begin::Label-->
+                                                                    <label class="col-lg-2 fw-bold text-muted"> Stretch Break </label>
+                                                                    <!--end::Label-->
+                                                                    <!--begin::Col-->
+                                                                    <div class="col-lg-8">
+                                                                        <span class="fw-bolder fs-6 text-gray-800">
+                                                                            (Optional drawing activity as well) - You can use this visual timer and share screen, so kids know how much time they have: https://www.online-stopwatch.com/classroom-timers/ 
+
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Col-->
+                                                                </div>
+
+
+
+                                                                <div class="row mb-7">
+                                                                    <!--begin::Label-->
+                                                                    <label class="col-lg-2 fw-bold text-muted"> Debate Warm Up & Prompts  </label>
+                                                                    <!--end::Label-->
+                                                                    <!--begin::Col-->
+                                                                    <div class="col-lg-8">
+                                                                        <span class="fw-bolder fs-6 text-gray-800">
+                                                                            <ul class="fw-normal">
+                                                                                <li>WUP- Would you rather go on a boat ride or a train ride?</li>
+                                                                                <li>WUP- Would you rather wake up early or go to bed late?</li>
+                                                                                <li>WUP- Are you more scared of sharks or crocodiles?</li>
+                                                                                <li>WUP- If you set a world record, what would it be?
+                                                                                </li>
+                                                                            </ul>
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Col-->
+                                                                </div>
+
+
+
+
+                                                                <div class="row mb-7">
+                                                                    <!--begin::Label-->
+                                                                    <label class="col-lg-2 fw-bold text-muted"> Thinking Beyond </label>
+                                                                    <!--end::Label-->
+                                                                    <!--begin::Col-->
+                                                                    <div class="col-lg-8">
+                                                                        <span class="fw-bolder fs-6 text-gray-800">
+                                                                            <ul class="fw-normal">
+                                                                                <li>Make a prediction about what you think will happen next in this book</li>
+                                                                                <li>What lessons might this book be trying to teach us?</li>
+                                                                            </ul>
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Col-->
+                                                                </div>
+
+
+
+                                                                <div class="row mb-7">
+                                                                    <!--begin::Label-->
+                                                                    <label class="col-lg-2 fw-bold text-muted"> Closing </label>
+                                                                    <!--end::Label-->
+                                                                    <!--begin::Col-->
+                                                                    <div class="col-lg-8">
+                                                                        <span class="fw-bolder fs-6 text-gray-800">
+                                                                            <ul class="fw-normal">
+                                                                                <li>Any questions/last thoughts on this week’s reading?</li>
+                                                                                <li>Review next week’s assignments</li>
+                                                                                <li>Close the book!</li>
+                                                                            </ul>
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Col-->
+                                                                </div>
+
+
+
+                                                            </div>
+                                                            <!--end::Body-->
+                                                        </div>
+                                                        <!--end::Item-->
+
+
+                                                        <!--begin::Item-->
+                                                        <div class="mb-5">
+                                                            <!--begin::Header-->
+                                                            <div class="accordion-header py-3 d-flex collapsed" data-bs-toggle="collapse" data-bs-target="#kt_accordion_2_item_2" aria-expanded="false">
+                                                                <span class="accordion-icon">
+                                                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                                                                    <span class="svg-icon svg-icon-4">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                            <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor"></rect>
+                                                                            <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <!--end::Svg Icon-->
+                                                                </span>
+                                                                <h3 class="fs-4 fw-bold mb-0 ms-4">Week #2 - The Dreamer: Lagoon to the end</h3>
+                                                            </div> 
+                                                            <!--end::Header-->
+                                                            <!--begin::Body-->
+                                                            <div id="kt_accordion_2_item_2" class="collapse fs-6 ps-10" data-bs-parent="#kt_accordion_2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+                                                            <!--end::Body-->
+                                                        </div>
+                                                        <!--end::Item-->
+                                                        <!--begin::Item-->
+                                                        <div class="mb-5">
+                                                            <!--begin::Header-->
+                                                            <div class="accordion-header py-3 d-flex collapsed" data-bs-toggle="collapse" data-bs-target="#kt_accordion_2_item_3" aria-expanded="false">
+                                                                <span class="accordion-icon">
+                                                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                                                                    <span class="svg-icon svg-icon-4">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                            <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor"></rect>
+                                                                            <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <!--end::Svg Icon-->
+                                                                </span>
+                                                                <h3 class="fs-4 fw-bold mb-0 ms-4">Week #3</h3>
+                                                            </div>
+                                                            <!--end::Header-->
+                                                            <!--begin::Body-->
+                                                            <div id="kt_accordion_2_item_3" class="collapse fs-6 ps-10" data-bs-parent="#kt_accordion_2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+                                                            <!--end::Body-->
+                                                        </div>
+                                                        <!--end::Item-->
+                                                    </div>
+                                                    <!--end::Accordion-->
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <!--begin::Row-->
+                                            <div class="d-none row mb-7">
+                                                <!--begin::Label-->
+                                                <label class="col-lg-4 fw-bold text-muted">Full Name</label>
+                                                <!--end::Label-->
+                                                <!--begin::Col-->
+                                                <div class="col-lg-8">
+                                                    <span class="fw-bolder fs-6 text-gray-800">Max Smith</span>
+                                                </div>
+                                                <!--end::Col-->
+                                            </div>
+                                            <!--end::Row-->
+                                        
+                                            <!--begin::Notice-->
+                                            <div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6">
+                                                <!--begin::Icon-->
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
+                                                <span class="svg-icon svg-icon-2tx svg-icon-warning me-4">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
+                                                        <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black"></rect>
+                                                        <rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="black"></rect>
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->
+                                                <!--end::Icon-->
+                                                <!--begin::Wrapper-->
+                                                <div class="d-flex flex-stack flex-grow-1">
+                                                    <!--begin::Content-->
+                                                    <div class="fw-bold">
+                                                        <h4 class="text-gray-900 fw-bolder">We need your attention!</h4>
+                                                        <div class="fs-6 text-gray-700">Your payment was declined. To start using tools, please
+                                                        <a class="fw-bolder" href="../../demo4/dist/account/billing.html">Add Payment Method</a>.</div>
+                                                    </div>
+                                                    <!--end::Content-->
+                                                </div>
+                                                <!--end::Wrapper-->
+                                            </div>
+                                            <!--end::Notice-->
+                                        </div>
+                                        <!--end::Card body-->
+                                    </div>
+                                </div>
                             </div>
-                            <!--end::Container-->
-                            
                         </div>
                         <!--end::Container-->
                 </div>
