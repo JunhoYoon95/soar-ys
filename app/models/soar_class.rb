@@ -1,0 +1,2 @@
+class SoarClass < ApplicationRecord
+end

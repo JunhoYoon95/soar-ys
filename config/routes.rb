@@ -19,6 +19,11 @@ Rails.application.routes.draw do
   # 관지라 School 관련 페이지
   get 'admin/school/interview-list', to: 'interview#interview_list'
 
+  
+  # 관지라 class 관련 페이지
+  get 'admin/class/class-list', to: 'class#class_list'
+
+
 
   # 관리자 유저 관련 페이지
   get 'admin/users/delete-user/:id', to: 'user#delete_user'
