@@ -23,6 +23,10 @@ Rails.application.routes.draw do
   # 관지라 class 관련 페이지
   get 'admin/class/class-list', to: 'class#class_list'
 
+  
+  # 관지라 homework 관련 페이지
+  get 'admin/homework/homwork-list', to: 'homework#admin_homework_list'
+
 
 
   # 관리자 유저 관련 페이지
