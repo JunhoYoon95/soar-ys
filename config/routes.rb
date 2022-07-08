@@ -37,6 +37,10 @@ Rails.application.routes.draw do
   get 'admin/static/admin-payments', to: 'payment#admin_payment_list'
 
   
+  # 관지라 QnA 관련 페이지
+  get 'admin/community/qna', to: 'qna#admin_qna'
+
+  
   # 관지라 book 관련 페이지
   get 'admin/book/book-list', to: 'book#admin_book_list'
   get 'admin/book/book-detail/:id', to: 'book#admin_book_detail'
