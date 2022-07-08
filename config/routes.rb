@@ -29,6 +29,10 @@ Rails.application.routes.draw do
   get 'admin/homework/homwork-list', to: 'homework#admin_homework_list'
 
   
+  # 관지라 Salary 관련 페이지
+  get 'admin/salary/admin-transactions', to: 'salary#admin_transaction'
+
+  
   # 관지라 book 관련 페이지
   get 'admin/book/book-list', to: 'book#admin_book_list'
   get 'admin/book/book-detail/:id', to: 'book#admin_book_detail'
