@@ -30,20 +30,27 @@ Rails.application.routes.draw do
 
   
   # Salary 관련 페이지
-  get 'admin/static/admin-transactions', to: 'salary#admin_transaction'
+  get 'admin/static/transactions', to: 'salary#admin_transaction'
 
   
   # Payment 관련 페이지
-  get 'admin/static/admin-payments', to: 'payment#admin_payment_list'
+  get 'admin/static/payments', to: 'payment#admin_payment_list'
 
   
   # QnA 관련 페이지
   get 'admin/community/qna', to: 'qna#admin_qna'
 
 
-  
   # Review 관련 페이지
   get 'admin/community/review', to: 'review#admin_review'
+
+
+  # Coupon 관련 페이지
+  get 'admin/settings/coupon', to: 'coupon#admin_coupon'
+
+
+  # Applicants 관련 페이지
+  get 'admin/users/applicants', to: 'applicant#admin_applicant_list'
 
   
   # book 관련 페이지
