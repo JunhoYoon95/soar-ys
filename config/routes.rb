@@ -30,7 +30,11 @@ Rails.application.routes.draw do
 
   
   # 관지라 Salary 관련 페이지
-  get 'admin/salary/admin-transactions', to: 'salary#admin_transaction'
+  get 'admin/static/admin-transactions', to: 'salary#admin_transaction'
+
+  
+  # 관지라 Payment 관련 페이지
+  get 'admin/static/admin-payments', to: 'payment#admin_payment_list'
 
   
   # 관지라 book 관련 페이지
