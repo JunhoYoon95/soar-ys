@@ -16,39 +16,44 @@ Rails.application.routes.draw do
   post 'teacher/create_teacher', to: 'teacher#create_teacher'
   
   
-  # 관지라 School 관련 페이지
+  # School 관련 페이지
   get 'admin/school/interview-list', to: 'interview#interview_list'
 
   
-  # 관지라 class 관련 페이지
+  # class 관련 페이지
   get 'admin/class/class-list', to: 'class#class_list'
   get 'admin/class/class-detail/:id', to: 'class#admin_class_detail'
 
   
-  # 관지라 homework 관련 페이지
+  # homework 관련 페이지
   get 'admin/homework/homwork-list', to: 'homework#admin_homework_list'
 
   
-  # 관지라 Salary 관련 페이지
+  # Salary 관련 페이지
   get 'admin/static/admin-transactions', to: 'salary#admin_transaction'
 
   
-  # 관지라 Payment 관련 페이지
+  # Payment 관련 페이지
   get 'admin/static/admin-payments', to: 'payment#admin_payment_list'
 
   
-  # 관지라 QnA 관련 페이지
+  # QnA 관련 페이지
   get 'admin/community/qna', to: 'qna#admin_qna'
 
+
   
-  # 관지라 book 관련 페이지
+  # Review 관련 페이지
+  get 'admin/community/review', to: 'review#admin_review'
+
+  
+  # book 관련 페이지
   get 'admin/book/book-list', to: 'book#admin_book_list'
   get 'admin/book/book-detail/:id', to: 'book#admin_book_detail'
 
 
 
 
-  # 관리자 유저 관련 페이지
+  # 유저 관련 페이지
   get 'admin/users/delete-user/:id', to: 'user#delete_user'
   get 'admin/users/parent-detail/:id', to: 'user#parent_detail'
   get 'admin/users/teacher-detail/:id', to: 'user#teacher_detail'
