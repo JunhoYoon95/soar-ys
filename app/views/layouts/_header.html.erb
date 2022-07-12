@@ -41,184 +41,206 @@
 			<div class="d-flex align-items-stretch" id="kt_header_nav">
 				<!--begin::Menu wrapper-->
 				<div class="header-menu align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_header_menu_mobile_toggle" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}">
-					
-					
-				<!--begin::Menu 헤더 메뉴-->
-				<div class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-600 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold fs-6 my-5 my-lg-0 align-items-stretch" id="#kt_header_menu" data-kt-menu="true">
-				
-					<% if @user && @user.role ==10%>
+					<!--begin::Menu 헤더 메뉴-->
+					<div class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-600 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold fs-6 my-5 my-lg-0 align-items-stretch" id="#kt_header_menu" data-kt-menu="true">
+						<%# Home 탭 %>
 						<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
-							<span class="menu-link py-3">
-								<span class="menu-title">User</span>
-								<span class="menu-arrow d-lg-none"></span>
-							</span>
-							<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-								<div class="menu-item">
-									<a class="menu-link py-3" href="/admin/users" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-										<span class="menu-title">Users</span>
-									</a>
-								</div>
-								<div class="menu-item">
-									<a class="menu-link py-3" href="/admin/users/applicants" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-										<span class="menu-title">Applicant</span>
-									</a>
-								</div>
-							
-							
-							</div>
-						</div>
-					<% end %>
-
-					<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
-						<span class="menu-link py-3 ">
-							<span class="menu-title">School</span>
-							<span class="menu-arrow d-lg-none"></span>
-						</span>
-						<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
 							<div class="menu-item">
-								<a class="menu-link py-3" href="/admin/school/interview-list" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">Interview</span>
+								<a class="menu-link py-3" href="/" title="Move to MyPage" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+									<span class="menu-title">Home</span>
 								</a>
 							</div>
-							<div class="menu-item">
-								<a class="menu-link py-3" href="/admin/class/class-list" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">Class
-										<span class="fs-lg-9 badge badge-danger px-2 py-1 ms-2">New</span>
+						</div>
+
+
+						<%# 로그인 한 상태 %>
+						<% if current_user %>
+							<%# 일반 유저인 경우의 탭 %>
+							<% if @user && @user.role != 10 %>
+								<%# Comunity 탭 %>
+								<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+									<span class="menu-link py-3 ">
+										<span class="menu-title">Community</span>
+										<span class="menu-arrow d-lg-none"></span>
 									</span>
-								</a>
-							</div>
-							<div class="menu-item">
-								<a class="menu-link py-3" href="/admin/homework/homwork-list" title="Build your layout, preview and export HTML for server side integration" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">Homework</span>
-								</a>
-							</div>
-							<div class="menu-item">
-								<a class="menu-link py-3" href="/admin/book/book-list" title="Build your layout, preview and export HTML for server side integration" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">Book</span>
-								</a>
-							</div>
-							<div class="menu-item">
-								<a class="menu-link py-3" href="../../demo4/dist/admin_school_report.html" title="Build your layout, preview and export HTML for server side integration" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">Report</span>
-								</a>
-							</div>
+									<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/admin/community/qna" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Q & A</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/admin/community/review" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">review</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							  	<%# Teacher 탭 %>
+								<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+									<span class="menu-link py-3 ">
+										<span class="menu-title">Teacher</span>
+										<span class="menu-arrow d-lg-none"></span>
+									</span>
+									<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/teacher/home" title="Go to Teacher page" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Teacher's Home</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/teacher/new-teacher" title="Join Soar as a teacher" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Join as teacher</span>
+											</a>
+										</div>
+										<% if @user.role == 5 %>
+											<div class="menu-item">
+													<a class="menu-link py-3" href="/teacher/mypage/<%=@user.id%>" title="Move to MyPage" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+														<span class="menu-title">My page</span>
+													</a>
+											</div>
+										<% end %>
+									</div>
+								</div>
+							<% end %>
+							<%# admin 인 경우의 탭 %>
+							<% if @user && @user.role == 10%>
+								<%# User 탭 %>
+								<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+									<span class="menu-link py-3">
+										<span class="menu-title">User</span>
+										<span class="menu-arrow d-lg-none"></span>
+									</span>
+									<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/admin/users" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Users</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/admin/users/applicants" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Applicant</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<%# School 탭 %>
+								<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+									<span class="menu-link py-3 ">
+										<span class="menu-title">School</span>
+										<span class="menu-arrow d-lg-none"></span>
+									</span>
+									<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/admin/school/interview-list" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Interview</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/admin/class/class-list" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Class
+													<span class="fs-lg-9 badge badge-danger px-2 py-1 ms-2">New</span>
+												</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/admin/homework/homwork-list" title="Build your layout, preview and export HTML for server side integration" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Homework</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/admin/book/book-list" title="Build your layout, preview and export HTML for server side integration" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Book</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link py-3" href="../../demo4/dist/admin_school_report.html" title="Build your layout, preview and export HTML for server side integration" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Report</span>
+											</a>
+										</div>
+									
+									</div>
+								</div>
+								<%# Static 탭 %>
+								<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+									<span class="menu-link py-3 ">
+										<span class="menu-title">Static</span>
+										<span class="menu-arrow d-lg-none"></span>
+									</span>
+									<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/admin/static/payments" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">payments</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/admin/static/transactions" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">transaction</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<%# Reference 탭 %>
+								<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+									<span class="menu-link py-3 ">
+										<span class="menu-title">Reference</span>
+										<span class="menu-arrow d-lg-none"></span>
+									</span>
+									<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+										<div class="menu-item">
+											<a class="menu-link py-3" href="../../demo4/dist/admin_reference_level.html" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Level</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link py-3" href="../../demo4/dist/admin_reference_report.html" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Report</span>
+											</a>
+										</div>
+									
+									</div>
+								</div>
+								<%# Settings 탭 %>
+								<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+									<span class="menu-link py-3 ">
+										<span class="menu-title">Settings</span>
+										<span class="menu-arrow d-lg-none"></span>
+									</span>
+									<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/admin/settings/coupon" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Coupon</span>
+											</a>
+										</div>
+										
+									</div>
+								</div>
+								<%# Comunity 탭 %>
+								<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+									<span class="menu-link py-3 ">
+										<span class="menu-title">Community</span>
+										<span class="menu-arrow d-lg-none"></span>
+									</span>
+									<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/admin/community/qna" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Q & A</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/admin/community/review" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">review</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							<% end %>
+						<% end %>
+
 						
-						</div>
-					</div>
-					
-					<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
-						<span class="menu-link py-3 ">
-							<span class="menu-title">Static</span>
-							<span class="menu-arrow d-lg-none"></span>
-						</span>
-						<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-							<div class="menu-item">
-								<a class="menu-link py-3" href="/admin/static/payments" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">payments</span>
-								</a>
-							</div>
-							<div class="menu-item">
-								<a class="menu-link py-3" href="/admin/static/transactions" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">transaction</span>
-								</a>
-							</div>
-						</div>
-					</div>
-
-					
-					<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
-						<span class="menu-link py-3 ">
-							<span class="menu-title">Community</span>
-							<span class="menu-arrow d-lg-none"></span>
-						</span>
-						<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-							<div class="menu-item">
-								<a class="menu-link py-3" href="/admin/community/qna" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">Q & A</span>
-								</a>
-							</div>
-							<div class="menu-item">
-								<a class="menu-link py-3" href="/admin/community/review" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">review</span>
-								</a>
-							</div>
-							<%# TODO:: 대화 부분은 아직 작업을 하기에 이르다고 판단했습니다 %>
-							<%# <div class="menu-item">
-								<a class="menu-link py-3" href="../../demo4/dist/admin_community_talk.html" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">talk</span>
-								</a>
-							</div> %>
-						</div>
-					</div>
-
-
-					<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
-						<span class="menu-link py-3 ">
-							<span class="menu-title">Reference</span>
-							<span class="menu-arrow d-lg-none"></span>
-						</span>
-						<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-							<div class="menu-item">
-								<a class="menu-link py-3" href="../../demo4/dist/admin_reference_level.html" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">Level</span>
-								</a>
-							</div>
-							<div class="menu-item">
-								<a class="menu-link py-3" href="../../demo4/dist/admin_reference_report.html" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-									<span class="menu-title">Report</span>
-								</a>
-							</div>
-						
-						</div>
-					</div>
-
-					<% if current_user %>
-					  <% if @user.role == 10 %>
-						<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
-							<span class="menu-link py-3 ">
-								<span class="menu-title">Settings</span>
-								<span class="menu-arrow d-lg-none"></span>
-							</span>
-							<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-								<div class="menu-item">
-									<a class="menu-link py-3" href="/admin/settings/coupon" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-										<span class="menu-title">Coupon</span>
-									</a>
-								</div>
-								
-							</div>
-						</div>
-					  <% end %>
-					  <% if @user.role == 5 || 10%>
-						<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
-
-							<span class="menu-link py-3 ">
-								<span class="menu-title">Teacher</span>
-								<span class="menu-arrow d-lg-none"></span>
-							</span>
-							<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-								<div class="menu-item">
-									<a class="menu-link py-3" href="/teacher/home" title="Go to Teacher page" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-										<span class="menu-title">Home</span>
-									</a>
-								</div>
-								<div class="menu-item">
-									<a class="menu-link py-3" href="/teacher/mypage/<%=@user.id%>" title="Move to MyPage" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-										<span class="menu-title">My page</span>
-									</a>
-								</div>
 							
-							</div>
-						</div>
-					  <% end %>
-					<% end %>
-
-					
-				</div>
-				<!--end::Menu-->
-
-
-
+					</div>
+					<!--end::Menu-->
 				</div>
 				<!--end::Menu wrapper-->
 			</div>
