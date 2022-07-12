@@ -58,6 +58,9 @@ Rails.application.routes.draw do
   get 'admin/book/book-list', to: 'book#admin_book_list'
   get 'admin/book/book-detail/:id', to: 'book#admin_book_detail'
 
+  
+  # student 관련 페이지
+  get 'student/home/:id', to: 'student#student_home'
 
 
 
