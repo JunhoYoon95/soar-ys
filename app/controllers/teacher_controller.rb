@@ -12,4 +12,8 @@ class TeacherController < ApplicationController
     def mypage
         # @teacher = Teacher.find(params[:id])
     end
+
+    def mycalendar
+        
+    end
 end
