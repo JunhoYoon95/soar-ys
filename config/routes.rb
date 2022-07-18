@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   
   # class 관련 페이지
   get 'admin/class/class-list', to: 'class#class_list'
+  get 'admin/class/class-bidding', to: 'class#class_bidding'
   get 'admin/class/class-detail/:id', to: 'class#admin_class_detail'
 
   
