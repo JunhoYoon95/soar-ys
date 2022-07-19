@@ -95,13 +95,8 @@
 										</div>
 										<% if @user.role == 5 %>
 											<div class="menu-item">
-													<a class="menu-link py-3" href="/teacher/mypage/<%=@user.id%>" title="Move to MyPage" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-														<span class="menu-title">My page</span>
-													</a>
-											</div>
-											<div class="menu-item">
-												<a class="menu-link py-3" href="/teacher/mycalendar/<%=@user.id%>" title="My schedule calendar" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-													<span class="menu-title">My Schedule calendar</span>
+												<a class="menu-link py-3" href="/teacher/mypage/<%=@user.id%>" title="Move to MyPage" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+													<span class="menu-title">My page</span>
 												</a>
 											</div>
 										<% end %>
@@ -153,6 +148,11 @@
 												<span class="menu-title">Bidding
 													<span class="fs-lg-9 badge badge-danger px-2 py-1 ms-2">New</span>
 												</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link py-3" href="/teacher/class-teacher" title="Class - teacher calendar" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-title">Class Teacher Calendar</span>
 											</a>
 										</div>
 										<div class="menu-item">

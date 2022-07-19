@@ -13,7 +13,7 @@ class TeacherController < ApplicationController
         # @teacher = Teacher.find(params[:id])
     end
 
-    def mycalendar
+    def class_teacher_calendar
         
     end
 end

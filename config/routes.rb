@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/teacher', to: 'teacher#home'
   get 'teacher/home', to: 'teacher#home'
   get 'teacher/mypage/:id', to: 'teacher#mypage'
-  get 'teacher/mycalendar/:id', to: 'teacher#mycalendar'
+  get 'teacher/class-teacher', to: 'teacher#class_teacher_calendar'
   get 'teacher/new-teacher', to: 'teacher#new_teacher'
   post 'teacher/create_teacher', to: 'teacher#create_teacher'
   
