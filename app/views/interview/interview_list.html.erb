@@ -1,345 +1,729 @@
-<!DOCTYPE html>
-<html lang="en">
-	<!--begin::Body-->
-	<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-fixed aside-secondary-disabled">
-		<!--begin::Main-->
-		<!--begin::Root-->
-		<div class="d-flex flex-column flex-root">
-			<!--begin::Page-->
-			<div class="page d-flex flex-row flex-column-fluid">
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-fixed aside-secondary-disabled">
+	<!--begin::Main-->
+	<!--begin::Root-->
+	<div class="d-flex flex-column flex-root">
+		<!--begin::Page-->
+		<div class="page d-flex flex-row flex-column-fluid">
+
+			<!--begin::Wrapper-->
+			<div class="d-flex flex-column flex-row-fluid" id="kt_wrapper">
+			
+				<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+					<!--begin::Container-->
+					<div class=" " id="kt_content_container"  style="padding:0 10%">
+
+						<!--begin::Layout-->
+						<div class="d-flex flex-column flex-xl-row">
+
+							<!--begin::Content-->
+							<div class="flex-lg-row-fluid ms-lg-10">
+
+								<ul class=" nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-bold mb-8">
+									<!--begin:::Tab item-->													
 	
-				<!--begin::Wrapper-->
-				<div class="d-flex flex-column flex-row-fluid" id="kt_wrapper">
-				
-					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-						<!--begin::Container-->
-						<div class="container-xxl" id="kt_content_container">
-							<!--begin::Layout-->
-							<div class="d-flex flex-column flex-xl-row">
-							
-								<!--begin::Content-->
-								<div class="flex-lg-row-fluid ms-lg-10">
-									<!--begin::Card-->
-									<div class="card card-flush mb-6 mb-xl-9">
-										<!--begin::Card header-->
-										<div class="card-header pt-5">
-											<!--begin::Card title-->
-											<div class="card-title">
-												<h2 class="d-flex align-items-center">Interview List
-												<span class="text-gray-600 fs-6 ms-1">(14)</span></h2>
-											</div>
+									<li class="nav-item">
+										<a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab" href="#class_ProtoInterview">Proto Interview </a>
+									</li>
+									<!--end:::Tab item-->
+	
+									<!--begin:::Tab item-->
+									<li class="nav-item">
+										<a class="nav-link text-active-primary pb-4" data-bs-toggle="tab" href="#class_InterviewStudent ">Interview-Student   </a>
+									</li>
+									<!--end:::Tab item-->
 
-											<!--end::Card title-->
-											<!--begin::Card toolbar-->
-											<div class="card-toolbar">
-												<!--begin::Search-->
-												<div class="d-flex align-items-center position-relative my-1 me-4" data-kt-view-roles-table-toolbar="base">
-													<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
-													<span class="svg-icon svg-icon-1 position-absolute ms-6">
-														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-															<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="black"></rect>
-															<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="black"></path>
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-													<input type="text" data-kt-roles-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search Users">
-												</div>
-												<!--end::Search-->
-												<!--begin::Group actions-->
-												<div class="d-flex justify-content-end align-items-center d-none" data-kt-view-roles-table-toolbar="selected">
-													<div class="fw-bolder me-5">
-													<span class="me-2" data-kt-view-roles-table-select="selected_count"></span>Selected</div>
-													<button type="button" class="btn btn-danger" data-kt-view-roles-table-select="delete_selected">Delete Selected</button>
-												</div>
-												<!--end::Group actions-->
-
-											<!--begin::Filter-->
-											<button type="button" class="btn btn-light-primary me-3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-												<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-												<span class="svg-icon svg-icon-2">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-														<path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="black"></path>
-													</svg>
-												</span>
-												<!--end::Svg Icon-->Filter</button>
-												<!--begin::Menu 1-->
-												<div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true">
-													<!--begin::Header-->
-													<div class="px-7 py-5">
-														<div class="fs-5 text-dark fw-bolder">Filter Options</div>
-													</div>
-													<!--end::Header-->
-													<!--begin::Separator-->
-													<div class="separator border-gray-200"></div>
-													<!--end::Separator-->
-													<!--begin::Content-->
-													<div class="px-7 py-5" data-kt-user-table-filter="form">
-														<!--begin::Input group-->
-														<div class="mb-10">
-															<label class="form-label fs-6 fw-bold">Role:</label>
-															<select class="form-select form-select-solid fw-bolder select2-hidden-accessible" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-user-table-filter="role" data-hide-search="true" data-select2-id="select2-data-7-8f9g" tabindex="-1" aria-hidden="true">
-																<option data-select2-id="select2-data-9-3lh1"></option>
-																<option value="Administrator">Administrator</option>
-																<option value="Analyst">Analyst</option>
-																<option value="Developer">Developer</option>
-																<option value="Support">Support</option>
-																<option value="Trial">Trial</option>
-															</select><span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-8-2sfq" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single form-select form-select-solid fw-bolder" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-a7f7-container" aria-controls="select2-a7f7-container"><span class="select2-selection__rendered" id="select2-a7f7-container" role="textbox" aria-readonly="true" title="Select option"><span class="select2-selection__placeholder">Select option</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-														</div>
-														<!--end::Input group-->
-														<!--begin::Input group-->
-														<div class="mb-10">
-															<label class="form-label fs-6 fw-bold">Two Step Verification:</label>
-															<select class="form-select form-select-solid fw-bolder select2-hidden-accessible" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-user-table-filter="two-step" data-hide-search="true" data-select2-id="select2-data-10-08vl" tabindex="-1" aria-hidden="true">
-																<option data-select2-id="select2-data-12-cl8n"></option>
-																<option value="Enabled">Enabled</option>
-															</select><span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-11-m314" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single form-select form-select-solid fw-bolder" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-zzjf-container" aria-controls="select2-zzjf-container"><span class="select2-selection__rendered" id="select2-zzjf-container" role="textbox" aria-readonly="true" title="Select option"><span class="select2-selection__placeholder">Select option</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-														</div>
-														<!--end::Input group-->
-														<!--begin::Actions-->
-														<div class="d-flex justify-content-end">
-															<button type="reset" class="btn btn-light btn-active-light-primary fw-bold me-2 px-6" data-kt-menu-dismiss="true" data-kt-user-table-filter="reset">Reset</button>
-															<button type="submit" class="btn btn-primary fw-bold px-6" data-kt-menu-dismiss="true" data-kt-user-table-filter="filter">Apply</button>
-														</div>
-														<!--end::Actions-->
-													</div>
-													<!--end::Content-->
-												</div>
-												<!--end::Menu 1-->
-												<!--end::Filter-->
-
-
-
-												<!--begin::Add user-->
-												<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_user">
-													Send </button>
-												<!--end::Add user-->
-
-											</div>
-											<!--end::Card toolbar-->
-										</div>
-										<!--end::Card header-->
-
-										<!--begin::Card body-->
-										<div class="card-body pt-0">
-											<!--begin::Table-->
-											<div id="kt_roles_view_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="table-responsive"><table class="table align-middle table-row-dashed fs-6 gy-5 mb-0 dataTable no-footer" id="kt_roles_view_table">
-												<!--begin::Table head-->
-												<thead>
-													<!--begin::Table row-->
-													<tr class="text-start text-muted fw-bolder fs-7 text-uppercase gs-0">
-														<th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
-														" style="width: 29.25px;">
-															<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
-																<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_roles_view_table .form-check-input" value="1">
-															</div>
-														</th>
-														<th class="min-w-100px sorting" tabindex="0" aria-controls="kt_roles_view_table" rowspan="1" colspan="1" aria-label="ID: activate to sort column ascending" style="width: 120px;">Apply</th>
-														<th class="min-w-150px sorting" tabindex="0" aria-controls="kt_roles_view_table" rowspan="1" colspan="1" aria-label="User: activate to sort column ascending" >Student</th>
-														<th class="min-w-150px sorting" tabindex="0" aria-controls="kt_roles_view_table" rowspan="1" colspan="1" aria-label="User: activate to sort column ascending" >Parents</th>
-														<th class="min-w-125px sorting sorting_desc" tabindex="0" aria-controls="kt_roles_view_table" rowspan="1" colspan="1" aria-label="Joined Date: activate to sort column ascending" aria-sort="descending" >Reserved </th>
-														<th class="min-w-125px sorting sorting_desc" tabindex="0" aria-controls="kt_roles_view_table" rowspan="1" colspan="1" aria-label="Joined Date: activate to sort column ascending" aria-sort="descending" >Status </th>
-														<th class="text-end min-w-100px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" >Actions</th></tr>	
-													<!--end::Table row-->
-												</thead>
-												<!--end::Table head-->
-												<!--begin::Table body-->
-												<tbody class="fw-bold text-gray-600">
-													
-													
-													<tr class="odd">
-														<!--begin::Checkbox-->
-														<td>
-															<div class="form-check form-check-sm form-check-custom form-check-solid">
-																<input class="form-check-input" type="checkbox" value="1">
-															</div>
-														</td>
-														<!--end::Checkbox-->
-														<td>
-															2023.06.20
-														</td>
+									<!--begin:::Tab item-->
+									<li class="nav-item ms-auto d-none">
+	
+										<!--begin::Action menu-->
+										<a href="#" class="btn btn-primary ps-7" data-bs-toggle="modal" data-bs-target="#kt_modal_add_user">Make Class </a>
 										
+									</li>
+									<!--end:::Tab item-->
+								</ul>
 
-														<td>
-															<!--begin::User details-->
-															<div class="d-flex flex-column">
-                                                                <%# TODO:: 학생 디테일 링크를 연결 %>
-																<a href="#" class="text-gray-800 text-hover-primary mb-1">Jr. Dan</a>
-																<span>Boy / Grade 6 </span>
-																<span>2011.01 </span>
-
-															</div>
-															<!--begin::User details-->
-														</td>
-
-														<!--begin::User=-->
-														<td class="d-flex align-items-center">
-															<!--begin::User details-->
-															<div class="d-flex flex-column">
-                                                                <%# TODO:: User 디테일을 연결 %>
-																<%# admin/users/parent-detail/:id %>
-																<a href="#" class="text-gray-800 text-hover-primary mb-1">Dan Wilson</a>
-																<span>dam@consilting.com</span>
-																<span>+82-10-2988-1229</span>
-
-															</div>
-															<!--begin::User details-->
-														</td>
-														<!--end::user=-->
-
-													
-
-														<!--begin::Joined date=-->
-														<td data-order="2021-12-20T17:30:00+09:00" class="sorting_1">20 Dec 2023, 5:30 pm</td>
-														<!--end::Joined date=-->
-
-														<!--begin::Joined date=-->
-														<td data-order="2021-12-20T17:30:00+09:00" class="sorting_1">completed</td>
-														<!--end::Joined date=-->
-
-														<!--begin::Action=-->
-														<td class="text-end">
-															<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#modal_interview_schedule">Actions
-														</td>
-														<!--end::Action=-->
-													</tr>
-
-													<tr class="even">
-														<!--begin::Checkbox-->
-														<td>
-															<div class="form-check form-check-sm form-check-custom form-check-solid">
-																<input class="form-check-input" type="checkbox" value="1">
-															</div>
-														</td>
-														<!--end::Checkbox-->
-														<td>
-															2023.06.20
-														</td>
-										
-
-														<td>
-															<!--begin::User details-->
-															<div class="d-flex flex-column">
-																<a href="#" class="text-gray-800 text-hover-primary mb-1">Jr. Dan</a>
-																<span>Boy / Grade 6 </span>
-																<span>2011.01 </span>
-
-															</div>
-															<!--begin::User details-->
-														</td>
-
-														<!--begin::User=-->
-														<td class="d-flex align-items-center">
-															<!--begin::User details-->
-															<div class="d-flex flex-column">
-																<a href="#" class="text-gray-800 text-hover-primary mb-1">Dan Wilson</a>
-																<span>dam@consilting.com</span>
-																<span>+82-10-2988-1229</span>
-
-															</div>
-															<!--begin::User details-->
-														</td>
-														<!--end::user=-->
-
-													
-
-														<!--begin::Joined date=-->
-														<td data-order="2021-12-20T17:30:00+09:00" class="sorting_1">20 Dec 2023, 5:30 pm</td>
-														<!--end::Joined date=-->
-
-														<!--begin::Joined date=-->
-														<td data-order="2021-12-20T17:30:00+09:00" class="sorting_1 text-primary">waiting</td>
-														<!--end::Joined date=-->
-
-														<!--begin::Action=-->
-														<td class="text-end">
-															<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#modal_interview_schedule">Actions
-														</td>
-														<!--end::Action=-->
-													</tr>
-													
-													<tr class="odd">
-														<!--begin::Checkbox-->
-														<td>
-															<div class="form-check form-check-sm form-check-custom form-check-solid">
-																<input class="form-check-input" type="checkbox" value="1">
-															</div>
-														</td>
-														<!--end::Checkbox-->
-														<td>
-															2023.06.20
-														</td>
-										
-
-														<td>
-															<!--begin::User details-->
-															<div class="d-flex flex-column">
-																<a href="#" class="text-gray-800 text-hover-primary mb-1">Jr. Dan</a>
-																<span>Boy / Grade 6 </span>
-																<span>2011.01 </span>
-
-															</div>
-															<!--begin::User details-->
-														</td>
-
-														<!--begin::User=-->
-														<td class="d-flex align-items-center">
-															<!--begin::User details-->
-															<div class="d-flex flex-column">
-																<a href="#" class="text-gray-800 text-hover-primary mb-1">Dan Wilson</a>
-																<span>dam@consilting.com</span>
-																<span>+82-10-2988-1229</span>
-
-															</div>
-															<!--begin::User details-->
-														</td>
-														<!--end::user=-->
-
-													
-
-														<!--begin::Joined date=-->
-														<td data-order="2021-12-20T17:30:00+09:00" class="sorting_1">20 Dec 2023, 5:30 pm</td>
-														<!--end::Joined date=-->
-
-														<!--begin::Joined date=-->
-														<td data-order="2021-12-20T17:30:00+09:00" class="sorting_1 text-danger">canceled</td>
-														<!--end::Joined date=-->
-
-														<!--begin::Action=-->
-														<td class="text-end">
-															<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#modal_interview_schedule">Actions
-														</td>
-														<!--end::Action=-->
-													</tr>
-
-
-
-
+								<div class="tab-content" id="myTabContent">
+									<!--start: class -->
+									<div class="tab-pane show fade active" id="class_ProtoInterview" role="tabpanel">
+									
+										<div class="card">
+											<!--begin::Card header-->
+											<div class="card-header border-0 pt-6">
+	
+												<div class="card-title flex-column">
+													<h3 class="fw-bolder mb-1">Proto Class </h3>
+													<div class="fs-6 text-gray-400">Total 12,000 exist </div>
+												</div>
 												
-												</tbody>
-												<!--end::Table body-->
-											</table></div><div class="row"><div class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start"></div><div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end"><div class="dataTables_paginate paging_simple_numbers" id="kt_roles_view_table_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="kt_roles_view_table_previous"><a href="#" aria-controls="kt_roles_view_table" data-dt-idx="0" tabindex="0" class="page-link"><i class="previous"></i></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="kt_roles_view_table" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_roles_view_table" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_roles_view_table" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item next" id="kt_roles_view_table_next"><a href="#" aria-controls="kt_roles_view_table" data-dt-idx="4" tabindex="0" class="page-link"><i class="next"></i></a></li></ul></div></div></div></div>
-											<!--end::Table-->
-										</div>
-										<!--end::Card body-->
+												<!--begin::Card toolbar-->
+												<div class="card-toolbar">
+													<!--begin::Search-->
+													<div class=" d-flex align-items-center position-relative my-1 me-3">
+														<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+														<span class="svg-icon svg-icon-1 position-absolute ms-6">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="black"></rect>
+																<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="black"></path>
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+														<input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Search user">
+													</div>
+													<!--end::Search-->
+	
+	
+	
+													<!--begin::Toolbar-->
+													<div class="  d-flex justify-content-end" data-kt-user-table-toolbar="base">
+	
+	
+														<!--begin::Filter-->
+														<button type="button" class="d-none  btn btn-light-primary me-3 py-1 " data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+														<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
+														<span class="svg-icon svg-icon-2">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																<path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="black"></path>
+															</svg>
+														</span>
+														<!--end::Svg Icon-->Filter</button>
+														<!--begin::Menu 1-->
+														<div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true">
+															<!--begin::Header-->
+															<div class="px-7 py-5">
+																<div class="fs-5 text-dark fw-bolder">Filter Options</div>
+															</div>
+															<!--end::Header-->
+															<!--begin::Separator-->
+															<div class="separator border-gray-200"></div>
+															<!--end::Separator-->
+															<!--begin::Content-->
+															<div class="px-7 py-5" data-kt-user-table-filter="form">
+																<!--begin::Input group-->
+																<div class="mb-10">
+																	<label class="form-label fs-6 fw-bold">Role:</label>
+																	<select class="form-select form-select-solid fw-bolder" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-user-table-filter="role" data-hide-search="true" tabindex="-1" aria-hidden="false">
+																		<option></option>
+																		<option value="Administrator">Administrator</option>
+																		<option value="Analyst">Analyst</option>
+																		<option value="Developer">Developer</option>
+																		<option value="Support">Support</option>
+																		<option value="Trial">Trial</option>
+																	</select><span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-8-2sfq" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single form-select form-select-solid fw-bolder" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-a7f7-container" aria-controls="select2-a7f7-container"><span class="select2-selection__rendered" id="select2-a7f7-container" role="textbox" aria-readonly="true" title="Select option"><span class="select2-selection__placeholder">Select option</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+																</div>
+																<!--end::Input group-->
+																<!--begin::Input group-->
+																<div class="mb-10">
+																	<label class="form-label fs-6 fw-bold">Two Step Verification:</label>
+																	<select class="form-select form-select-solid fw-bolder" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-user-table-filter="two-step" data-hide-search="true" tabindex="-1" aria-hidden="false">
+																		<option></option>
+																		<option value="Enabled">Enabled</option>
+																	</select><span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-11-m314" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single form-select form-select-solid fw-bolder" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-zzjf-container" aria-controls="select2-zzjf-container"><span class="select2-selection__rendered" id="select2-zzjf-container" role="textbox" aria-readonly="true" title="Select option"><span class="select2-selection__placeholder">Select option</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+																</div>
+																<!--end::Input group-->
+																<!--begin::Actions-->
+																<div class="d-flex justify-content-end">
+																	<button type="reset" class="btn btn-light btn-active-light-primary fw-bold me-2 px-6" data-kt-menu-dismiss="true" data-kt-user-table-filter="reset">Reset</button>
+																	<button type="submit" class="btn btn-primary fw-bold px-6" data-kt-menu-dismiss="true" data-kt-user-table-filter="filter">Apply</button>
+																</div>
+																<!--end::Actions-->
+															</div>
+															<!--end::Content-->
+														</div>
+														<!--end::Menu 1-->
+														<!--end::Filter-->
+	
+														
+														<!--begin::Export-->
+														<button type="button" class="d-none  btn btn-light-primary me-3 btn-sm " data-bs-toggle="modal" data-bs-target="#kt_modal_export_users">
+														<!--end::Svg Icon-->Request</button>
+														
+	
+													<!--begin::Action menu-->
+													<a href="#" class="btn btn-primary ps-7  " data-bs-toggle="modal" data-bs-target="#kt_modal_add_user">
+													+ Add Interview  </a>
+	
+														<!--end::Add user-->
+													</div>
+													<!--end::Toolbar-->
+													
+													<!--begin::Group actions-->
+													<div class="d-flex justify-content-end align-items-center d-none" data-kt-user-table-toolbar="selected">
+														<div class="fw-bolder me-5">
+														<span class="me-2" data-kt-user-table-select="selected_count"></span>Selected</div>
+														<button type="button" class="btn btn-danger" data-kt-user-table-select="delete_selected">Delete Selected</button>
+													</div>
+													<!--end::Group actions-->
+													<!--begin::Modal - Adjust Balance-->
+													<div class="modal fade" id="kt_modal_export_users" tabindex="-1" aria-hidden="true">
+														<!--begin::Modal dialog-->
+														<div class="modal-dialog modal-dialog-centered mw-650px">
+															<!--begin::Modal content-->
+															<div class="modal-content">
+																<!--begin::Modal header-->
+																<div class="modal-header">
+																	<!--begin::Modal title-->
+																	<h2 class="fw-bolder">Who is requesting</h2>
+																	<!--end::Modal title-->
+																	<!--begin::Close-->
+																	<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+																		<span class="svg-icon svg-icon-1">
+																			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																				<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black"></rect>
+																				<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black"></rect>
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon-->
+																	</div>
+																	<!--end::Close-->
+																</div>
+																<!--end::Modal header-->
+																<!--begin::Modal body-->
+																<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+																	<!--begin::Form-->
+																	<form id="kt_modal_export_users_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" action="#">
+																		<!--begin::Input group-->
+																		<div class="fv-row mb-10">
+																			<!--begin::Label-->
+																			<label class="fs-6 fw-bold form-label mb-2">Target</label>
+																			<!--end::Label-->
+																			<!--begin::Input-->
+																			<select name="role" data-control="select2" data-placeholder="Select a role" data-hide-search="true" class="form-select fw-bolder" tabindex="-1" aria-hidden="false">
+																				<option value="Administrator">All</option>
+																				<option value="Analyst">Only Level</option>
+																				<option value="Developer">Person</option>
+																			</select>
+																			<!--end::Input-->
+																		</div>
+																		<!--end::Input group-->
+	
+																		<!--begin::Input group-->
+																		<div class="fv-row mb-10">
+																			<!--begin::Label-->
+																			<label class="fs-6 fw-bold form-label mb-2">Search  </label>
+																			<!--end::Label-->
+																
+																			<input type="text" name="user_name" class="form-control form-control-solid mb-3 
+																				mb-lg-0" placeholder="Full name" value="Anderson Thom ">
+															
+																		</div>
+																		<!--end::Input group-->
+	
+	
+																		
+																		<div class="mh-75px scroll-y me-n7 pe-7 mb-10 ">
+																			<!--begin::User-->
+																			<div class="d-flex flex-stack  border-bottom border-gray-300 border-bottom-dashed">
+																			
+																			
+																				<table class="table">
+																					<tbody class="align-middle ">
+																						<tr>
+																							<td>
+																								<div class="d-flex">
+				
+																									<div class="symbol symbol-35px symbol-circle">
+																										<img src="assets/media/ysmeta/img_parent.jpeg" alt="Sean Bean" class="w-100">
+																									</div>
+																								
+																									<div class="ms-3">
+																										<!--begin::Name-->
+																										<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Emma Smith 
+																										</a>
+																										<!--end::Name-->
+																					
+																									</div>
+				
+																								</div>
+																							</td>
+																						
+				
+																							<td class="d-felx justify-content-end ">
+																								<div class="form-check form-check-custom   text-end ">
+																									<input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+																								</div>
+																								
+																							</td>
+																						
+																						</tr>
+																					</tbody>
+																				</table>
+				
+																			
+																			</div>
+																			<!--end::User-->
+	
+	
+																			<!--begin::User-->
+																			<div class="d-flex flex-stack  border-bottom border-gray-300 border-bottom-dashed">
+																		
+																		
+																			
+																			</div>
+																			<!--end::User-->
+	
+																
+				
+				
+				
+																		</div>
+	
+	
+	
+																
+	
+	
+	
+																		<!--begin::Actions-->
+																		<div class="text-center">
+																			<button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Cancel</button>
+																			<button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
+																				<span class="indicator-label">Proceed </span>
+																				<span class="indicator-progress">Please wait...
+																				<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+																			</button>
+																		</div>
+																		<!--end::Actions-->
+																	<div></div></form>
+																	<!--end::Form-->
+																</div>
+																<!--end::Modal body-->
+															</div>
+															<!--end::Modal content-->
+														</div>
+														<!--end::Modal dialog-->
+													</div>
+													<!--end::Modal - New Card-->
+													
+													<!--begin::Modal - Add task-->
+													<div class="modal fade" id="kt_modal_add_user" tabindex="-1" aria-hidden="true">
+														<!--begin::Modal dialog-->
+														<div class="modal-dialog modal-dialog-centered mw-650px">
+															<!--begin::Modal content-->
+															<div class="modal-content">
+																<!--begin::Modal header-->
+																<div class="modal-header" id="kt_modal_add_user_header">
+																	<!--begin::Modal title-->
+																	<h2 class="fw-bolder">Add Interview </h2>
+																	<!--end::Modal title-->
+																	<!--begin::Close-->
+																	<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+																		<span class="svg-icon svg-icon-1">
+																			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																				<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black"></rect>
+																				<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black"></rect>
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon-->
+																	</div>
+																	<!--end::Close-->
+																</div>
+																<!--end::Modal header-->
+	
+	
+																<!--begin::Modal body-->
+																<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+																	<!--begin::Form-->
+																	<form id="kt_modal_add_user_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" action="#">
+																	
+																		<!--begin::Scroll-->
+																		<div class="d-flex flex-column scroll-y me-n7 pe-7" id="kt_modal_add_user_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_add_user_header" data-kt-scroll-wrappers="#kt_modal_add_user_scroll" data-kt-scroll-offset="300px" style="max-height: 644px;">
+																		
+																						
+																			<h3 class="mb-5">
+																				<i class="bi bi-calendar fs-2 text-dark  me-1"></i>
+																				
+																				인터뷰 일정 만들기 
+																			</h3>
+																			
+																			
+																		
+																			<div class="fv-row mb-7 fv-plugins-icon-container">
+																				<label class="required fw-bold fs-6 mb-2">Title</label>
+																				<input type="text" name="user_name" class="form-control form-control-solid mb-3 
+																				mb-lg-0" placeholder="Full name" value="기본영어 인터뷰 ">
+																				<div class="fv-plugins-message-container invalid-feedback"></div>
+																			</div>
+	
+	
+																			<div>
+			
+																					<div class="mb-7 fv-row fv-plugins-icon-container" data-select2-id="select2-data-68-sal4">
+																					
+																						<div class="row">
+			
+			
+																							<div class="">
+			
+																								<label class="required fs-6 fw-bold mb-2">Month   </label>
+																								<select class="form-select select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="기간을 선택해주세요." name="target_assign" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-21-4mxb">
+				
+																									<option value="1" data-select2-id="select2-data-23-ya6s">기간을 선택해주세요.</option>
+																									<option value="2">Frb</option>
+																									<option value="3">Mar</option>
+																									<option value="4">Apr</option>
+																									<option value="5">May</option>
+																									<option value="6">Jun</option>
+					
+																								</select>
+																							</div>
+				
+																							<div class="d-none col-6">
+			
+																								<label class="required fs-6 fw-bold mb-2">End Date  </label>
+			
+				
+																								<select class="form-select select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="기간을 선택해주세요." name="target_assign" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-24-4hse">
+				
+																									<option value="1" data-select2-id="select2-data-26-totr">기간을 선택해주세요.</option>
+																									<option value="2">Frb</option>
+																									<option value="3">Mar</option>
+																									<option value="4">Apr</option>
+																									<option value="5">May</option>
+																									<option value="6">Jun</option>
+					
+																								</select>
+					
+																							</div>
+																						</div>
+																					
+																					</div>
+			
+			
+																					<div class="mb-7 fv-row fv-plugins-icon-container" data-select2-id="select2-data-68-sal4">
+																					
+																						
+																						<div class="d-none  row mb-4">
+			
+			
+																							<div class="col-4">
+																								<label class="required fs-6 fw-bold mb-2">Day  </label>
+			
+																								<select class="form-select select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="Mon" name="target_assign" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-27-i9i2">
+				
+			
+																									<option value="1" data-select2-id="select2-data-29-g825">Mon</option>
+																									<option value="2">Tues</option>
+																									<option value="3">Wen</option>
+																									<option value="4">Thir</option>
+																									<option value="5">Fir</option>
+																									<option value="6">Sat</option>
+																									<option value="7">Sun</option>
+			
+																								</select>
+																							</div>
+				
+																							<div class="col-4">
+																								<label class="required fs-6 fw-bold mb-2">Time  </label>
+				
+																								<select class="form-select select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="09:00 ~ 10:00 " name="target_assign" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-30-eyqj">
+				
+																									<option value="1" data-select2-id="select2-data-32-3ugc">09:00 ~ 10:00</option>
+																									<option value="2">10:00 ~ 11:00</option>
+																									<option value="3">11:00 ~ 12:00</option>
+																									<option value="4">12:00 ~ 13:00</option>
+					
+																								</select>
+					
+																							</div>
+																							<div class="col-4">
+																								<label class="required fs-6 fw-bold mb-2">Qty  </label>
+			
+																								<input type="number  " class="form-control" placeholder="1">
+			
+																							</div>
+			
+			
+			
+			
+																						</div>
 
+
+																						<div class="row mb-4">
+			
+			
+																							<div class="col-4">
+																								<label class="required fs-6 fw-bold mb-2">Day  </label>
+			
+																								<select class="form-select select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="Mon" name="target_assign" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-27-i9i2">
+				
+			
+																									<option value="1" data-select2-id="select2-data-29-g825">1</option>
+																									<option value="2">2</option>
+																									<option value="3">3</option>
+																									<option value="4">4</option>
+																									<option value="5">5</option>
+																									<option value="6">6</option>
+																									<option value="7">7</option>
+																									<option value="7">...</option>
+																									<option value="7">30</option>
+
+																								</select>
+																							</div>
+				
+																							<div class="col-4">
+																								<label class="required fs-6 fw-bold mb-2">Time  </label>
+				
+																								<select class="form-select select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="09:00 ~ 10:00 " name="target_assign" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-30-eyqj">
+				
+																									<option value="1" data-select2-id="select2-data-32-3ugc">09:00 ~ 10:00</option>
+																									<option value="2">10:00 ~ 11:00</option>
+																									<option value="3">11:00 ~ 12:00</option>
+																									<option value="4">12:00 ~ 13:00</option>
+					
+																								</select>
+					
+																							</div>
+																							<div class="col-4">
+																								<label class="required fs-6 fw-bold mb-2">Qty  </label>
+			
+																								<input type="number  " class="form-control" placeholder="1">
+			
+																							</div>
+			
+			
+			
+			
+																						</div>
+																					
+																					</div>
+	
+																			</div>
+	
+	
+																			<div class="fv-row mb-7 fv-plugins-icon-container">
+																				<a class="btn fw-bold fs-6 ps-0 text-primary ">+ Add Day &amp; Time </a>
+																			</div>
+	
+	
+	
+																		</div>
+	
+
+																		<!--begin::Actions-->
+																		<div class="text-center pt-15">
+																			<button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Discard</button>
+																			<button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
+																				<span class="indicator-label">Submit</span>
+																				<span class="indicator-progress">Please wait...
+																				<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+																			</button>
+																		</div>
+																		<!--end::Actions-->
+																	<div></div>
+																	</form>
+																	<!--end::Form-->
+																</div>
+																<!--end::Modal body-->
+															</div>
+															<!--end::Modal content-->
+														</div>
+														<!--end::Modal dialog-->
+													</div>
+													<!--end::Modal - Add task-->
+												</div>
+												<!--end::Card toolbar-->
+											</div>
+											<!--end::Card header-->
+	
+											<!--begin::Card body-->
+											<div class="card-body pt-0">
+												<!--begin::Table-->
+												<div id="kt_table_users_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+													
+													<div class="table-responsive ">
+														<table class="table  border  align-middle table-row-dashed fs-6 gy-3 dataTable no-footer" id="kt_table_users">
+															<!--begin::Table head-->
+															<thead class=" ">
+																<!--begin::Table row-->
+	
+																<tr class="text-center ">
+																		
+																	<th rowspan="2" class="w-10px pe-2 sorting_disabled" aria-label="
+																	" style="width: 29.25px;">
+																		<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+																			<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_table_users .form-check-input" value="1">
+																		</div>
+																	</th>
+																	<th rowspan="2" class="min-w-125px sorting">Class</th>
+																	<th colspan="3" class="bg-gray-100  border border-right-0 border-top-0 border-bottom-0 ">프로토-인터뷰 생성</th>
+																	<th colspan="2" class="bg-gray-200 border border-right-0 border-top-0 border-bottom-0 ">선생님매칭</th>
+																	<th colspan="2" class="bg-gray-300 border border-right-0 border-top-0 border-bottom-0 ">인터뷰개설</th>
+																	<th rowspan="2" class=" min-w-100px  border border-right-0 border-top-0 border-bottom-0">Actions</th>
+																</tr>
+																
+	
+	
+																<tr class=" text-muted fw-bolder fs-7 text-uppercase gs-0">
+																
+																	
+																	<th class="bg-gray-100 " tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending">Interview  </th>
+																	<th class="bg-gray-100 sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending">Qty </th>
+																	<th class="bg-gray-100 sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending">Schedules </th>
+	
+	
+																	<th class="bg-gray-200 sorting  border border-right-0 border-top-0 border-bottom-0" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending">Teacher 
+																		<button type="button" class="btn p-0 ms-1 " data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="선생님 응답자수">
+																			<i class="bi bi-info-circle fs-7 text-dark "></i>
+																		</button>
+																	</th>
+																	<th class="bg-gray-200 sorting " tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending"> Interview Open </th>
+																	
+																	
+																	<th class="bg-gray-300 sorting  border border-right-0 border-top-0 border-bottom-0" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending">Opened  </th>
+																	<th class="bg-gray-300 sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending">Student   </th>
+	
+	
+	
+																
+																</tr>
+																<!--end::Table row-->
+															</thead>
+															<!--end::Table head-->
+															<!--begin::Table body-->
+															<tbody class="text-gray-600 fw-bold">
+																
+																<tr class="odd text-center ">
+																	
+																	<!--begin::Checkbox-->
+																	<td>
+																		<div class="form-check form-check-sm form-check-custom form-check-solid">
+																			<input class="form-check-input" type="checkbox" value="1">
+																		</div>
+																	</td>
+																	<!--end::Checkbox-->
+																	<!--begin::User=-->
+																	<td class="text-start ">
+																	
+	
+																		<!--begin::User details-->
+																		<div class="d-flex flex-column">
+																			<a href="../../demo4/dist/admin_school_bidding_view.html" class="text-gray-800 text-hover-primary mb-1">기본영어 인터뷰 </a>
+																			<span class="fw-normal fs-7 ">8 August  </span>
+																		</div>
+																		<!--begin::User details-->
+																	</td>
+	
+	
+																	<td>
+																		7
+																	</td>
+	
+																	
+																	
+																	<td>
+																		<span class="">40</span>
+																	</td>
+																	
+																	<td>
+																		<a href="#" class="btn btn-outline btn-outline-default btn-sm " data-bs-toggle="modal" data-bs-target="#modal_class_schedules ">Request </a>
+																	</td>
+	
+	
+	
+																	<td class=" border border-right-0 border-top-0 border-bottom-0  ">
+																		<span class="text-primary">28</span>
+																	</td>
+	
+	
+	
+																	<td>
+																		<a href="#" class="btn btn-outline btn-outline-default btn-sm " data-bs-toggle="modal" data-bs-target="#kt_modal_view_teacher ">View  </a>
+																	</td>
+	
+	
+																	<td class=" border border-right-0 border-top-0 border-bottom-0  ">
+																		<span class=" fw-bolder">14</span>
+																	</td>
+	
+																	<td>
+																		<span class="text-danger fw-bolder">12</span>/12
+																	</td>
+	
+	
+	
+	
+																	
+																	<!--begin::Joined-->
+																	<!--begin::Action=-->
+																	<td class="d-none text-end">
+																		<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#modal_school_class">Actions
+																	</a></td>
+																	<!--end::Action=-->
+	
+																	<!--begin::Action=-->
+																	<td class=" border border-right-0 border-top-0 border-bottom-0  ">
+																		<a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+																		<span class="svg-icon svg-icon-5 m-0">
+																			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																				<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black"></path>
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon--></a>
+																		<!--begin::Menu-->
+																		<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
+																			
+																			
+																			
+																			
+																			<!--begin::Menu item-->
+																			<div class="menu-item px-3">
+																				<a href="../../demo4/dist/apps/user-management/users/view.html" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_add_user">Edit</a>
+																			
+																			</div>
+																			
+																		
+																			<!--begin::Menu item-->
+																			<div class="menu-item px-3">
+																				<a href="#" class="menu-link px-3" data-kt-users-table-filter="delete_row">Delete</a>
+																			</div>
+																			<!--end::Menu item-->
+																		</div>
+																		<!--end::Menu-->
+																	</td>
+																	<!--end::Action=-->
+	
+	
+	
+																</tr>
+	
 										
-										<!--begin::Modal schedule-->
-
-										<div class="modal fade" id="modal_interview_schedule" tabindex="-1" style="display: none;" aria-hidden="true">
-											<!--begin::Modal dialog-->
-											<div class="modal-dialog modal-dialog-centered mw-650px">
+																
+															</tbody>
+															<!--end::Table body-->
+														</table>
+	
+	
+													</div>
+	
+	
+													
+													<div class="row">
+														<div class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start"></div>
+														<div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+															<div class="dataTables_paginate paging_simple_numbers" id="kt_table_users_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="kt_table_users_previous"><a href="#" aria-controls="kt_table_users" data-dt-idx="0" tabindex="0" class="page-link"><i class="previous"></i></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="kt_table_users" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_table_users" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_table_users" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item next" id="kt_table_users_next"><a href="#" aria-controls="kt_table_users" data-dt-idx="4" tabindex="0" class="page-link"><i class="next"></i></a></li></ul></div></div></div></div>
+														<!--end::Table-->
+											</div>
+											<!--end::Card body-->
+										</div>
+	
+									
+										<!--begin::Modal - view teacher-->
+										<div class="modal fade" id="modal_class_schedules" tabindex="-1" aria-hidden="true">
+											<div class="modal-dialog mw-650px">
 												<!--begin::Modal content-->
-												<div class="modal-content rounded">
+												<div class="modal-content">
 													<!--begin::Modal header-->
 													<div class="modal-header pb-0 border-0 justify-content-end">
 														<!--begin::Close-->
 														<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
 															<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
 															<span class="svg-icon svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black"></rect>
-																	<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black"></rect>
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor"></rect>
+																	<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor"></rect>
 																</svg>
 															</span>
 															<!--end::Svg Icon-->
@@ -348,141 +732,1208 @@
 													</div>
 													<!--begin::Modal header-->
 													<!--begin::Modal body-->
-													<div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
-														<!--begin:Form-->
-														<form id="kt_modal_new_target_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" action="#">
-															<!--begin::Heading-->
-															<div class="mb-13 text-center">
-																<!--begin::Title-->
-																<h1 class="mb-3">Student Evaluation</h1>
-																<!--end::Title-->
-																<!--begin::Description-->
-																<div class="text-muted fw-bold fs-5">If you need more info, please check
-																<a href="#" class="fw-bolder link-primary">Project Guidelines</a>.</div>
-																<!--end::Description-->
+													<div class="modal-body scroll-y mx-5 mx-xl-18 pt-0 pb-15">
+														<!--begin::Heading-->
+														<div class="text-center mb-10">
+															<!--begin::Title-->
+															<h1 class="mb-3">Schedule List (7) 
+														
+															</h1>
+															<!--end::Title-->
+															<!--begin::Description-->
+															<div class="text-muted fw-semibold fs-5">
+															<a href="#" class="link-primary fw-bold">8 August </a>
 															</div>
-															<!--end::Heading-->
+															<!--end::Description-->
+														</div>
+														<!--end::Heading-->
+	
+	
+														<!--begin::Users-->
+														<div class="mb-10">
+															<!--begin::List-->
+															<div class="mh-375px scroll-y me-n7 pe-7 mb-5">
+	
+	
+																<div class="table-responsive ">
+																	<table class="table table-row-dashed gx-5 gy-3">
+																		<thead class=" ">
+																			<tr class=" fs-7 fw-bolder ">
+																				<th>Day</th>
+																				<th>Time</th>
+																				<th class="text-center ">Qty</th>
+																				<th></th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<td>
+																					1st
+																				</td>
+																				<td>
+																					13:00 ~ 14:00 
+																				</td>
+	
+																				<td class="text-center">
+																					4 
+																				</td>
 
 
+																				<td>
+																					<!--begin::Switch-->
+																					<label class=" form-check form-switch form-check-custom form-check-solid ">
+																						<input class="form-check-input h-20px w-30px" type="checkbox" value="" id="flexSwitch20x30" checked="checked">
+																					</label>
+																					<!--end::Switch-->
+																				</td>
 
-															<!--begin::Input group-->
-															<div class="d-flex flex-column mb-8 fv-row fv-plugins-icon-container">
-																<!--begin::Label-->
-																<label class="d-flex align-items-center fs-6 fw-bold mb-2">
-																	<span class="required">Student</span>
-																</label>
-																<!--end::Label-->
-																<input type="text" class="form-control form-control-solid" placeholder="Enter Target Title" name="target_title">
-															<div class="fv-plugins-message-container invalid-feedback"></div></div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="row g-9 mb-8">
-																<!--begin::Col-->
-																<div class=" fv-row fv-plugins-icon-container">
-																	<label class="required fs-6 fw-bold mb-2">Evaluation</label>
-																	<select class="form-select form-select-solid select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="Select a Team Member" name="target_assign" data-select2-id="select2-data-7-e2yy" tabindex="-1" aria-hidden="true">
-																		<option value="" data-select2-id="select2-data-9-htb8">Select user...</option>
-																		<option value="1">Success</option>
-																		<option value="2">Failure</option>
-																		<option value="3">Temp</option>
+
+																				
+																			</tr>
+																			<tr>
+																				<td>
+																					1st
+																				</td>
+																				<td>
+																					14:00 ~ 15:00 
+																				</td>
+	
+																				<td class="text-center">
+																					4 
+																				</td>
+
+																				<td>
+																					<!--begin::Switch-->
+																					<label class=" form-check form-switch form-check-custom form-check-solid ">
+																						<input class="form-check-input h-20px w-30px" type="checkbox" value="" id="flexSwitch20x30" >
+																					</label>
+																					<!--end::Switch-->
+																				</td>
+																			</tr>
+																			<tr>
+																				<td>
+																					2nd
+																				</td>
+																				<td>
+																					9:00 ~ 10:00 
+																				</td>
+	
+																				<td class="text-center">
+																					10
+																				</td>
+
+
+																				<td>
+																					<!--begin::Switch-->
+																					<label class=" form-check form-switch form-check-custom form-check-solid ">
+																						<input class="form-check-input h-20px w-30px" type="checkbox" value="" id="flexSwitch20x30" >
+																					</label>
+																					<!--end::Switch-->
+																				</td>
+																			</tr>
+																			<tr>
+																				<td>
+																					3rd
+																				</td>
+																				<td>
+																					9:00 ~ 10:00 
+																				</td>
+	
+																				<td class="text-center">
+																					4
+																				</td>
+
+
+																				<td>
+																					<!--begin::Switch-->
+																					<label class=" form-check form-switch form-check-custom form-check-solid ">
+																						<input class="form-check-input h-20px w-30px" type="checkbox" value="" id="flexSwitch20x30" >
+																					</label>
+																					<!--end::Switch-->
+																				</td>
+																			</tr>
+																			<tr>
+																				<td>
+																					4th
+																				</td>
+																				<td>
+																					13:00 ~ 14:00 
+																				</td>
+	
+																				<td class="text-center">
+																					2
+																				</td>
+
+
+																				<td>
+																					<!--begin::Switch-->
+																					<label class=" form-check form-switch form-check-custom form-check-solid ">
+																						<input class="form-check-input h-20px w-30px" type="checkbox" value="" id="flexSwitch20x30" >
+																					</label>
+																					<!--end::Switch-->
+																				</td>
+																			</tr>
+																			<tr>
+																				<td>
+																					5th
+																				</td>
+																				<td>
+																					13:00 ~ 14:00 
+																				</td>
+	
+																				<td class="text-center">
+																					2
+																				</td>
+
+
+																				<td>
+																					<!--begin::Switch-->
+																					<label class=" form-check form-switch form-check-custom form-check-solid ">
+																						<input class="form-check-input h-20px w-30px" type="checkbox" value="" id="flexSwitch20x30" >
+																					</label>
+																					<!--end::Switch-->
+																				</td>
+																			</tr>
+																			<tr>
+																				<td>
+																					6th
+																				</td>
+																				<td>
+																					13:00 ~ 14:00 
+																				</td>
+	
+																				<td class="text-center">
+																					2
+																				</td>
+
+
+																				<td>
+																					<!--begin::Switch-->
+																					<label class=" form-check form-switch form-check-custom form-check-solid ">
+																						<input class="form-check-input h-20px w-30px" type="checkbox" value="" id="flexSwitch20x30" >
+																					</label>
+																					<!--end::Switch-->
+																				</td>
+																			</tr>
+																			<tr>
+																				<td>
+																					6th
+																				</td>
+																				<td>
+																					9:00 ~ 10:00 
+																				</td>
+	
+																				<td class="text-center">
+																					4
+																				</td>
+
+																				<td>
+																					<!--begin::Switch-->
+																					<label class=" form-check form-switch form-check-custom form-check-solid ">
+																						<input class="form-check-input h-20px w-30px" type="checkbox" value="" id="flexSwitch20x30" >
+																					</label>
+																					<!--end::Switch-->
+																				</td>
+																			</tr>
+																			<tr>
+																				<td>
+																					7th 
+																				</td>
+																				<td>
+																					9:00 ~ 10:00 
+																				</td>
+	
+																				<td class="text-center">
+																					4
+																				</td>
+
+																				<td>
+																					<!--begin::Switch-->
+																					<label class=" form-check form-switch form-check-custom form-check-solid ">
+																						<input class="form-check-input h-20px w-30px" type="checkbox" value="" id="flexSwitch20x30" >
+																					</label>
+																					<!--end::Switch-->
+																				</td>
+																			</tr>
+	
+	
+	
+	
+	
+																		</tbody>
+																	</table>
+
+
 																	
-																	</select>
-																	
-																<div class="fv-plugins-message-container invalid-feedback"></div></div>
-																<!--end::Col-->
-															
+
+
+																</div>
+	
+	
 															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="d-flex flex-column mb-8">
-																<label class="fs-6 fw-bold mb-2">Memo</label>
-																<textarea class="form-control form-control-solid" rows="3" name="target_details" placeholder="Type Target Details"></textarea>
-															</div>
-															<!--end::Input group-->
-															
-															<!--begin::Input group-->
-															<div class="d-flex flex-stack mb-8">
+															<!--end::List-->
+
+
+															<div class=" d-flex justify-content-between mb-10">
 																<!--begin::Label-->
-																<div class="me-5">
-																	<label class="fs-6 fw-bold">Adding Users by Team Members</label>
-																	<div class="fs-7 fw-bold text-muted">If you need more info, please check budget planning</div>
+																<div class="fw-semibold">
+																	<label class="fs-6">
+																		<i class="bi bi-toggles fs-6 text-dark me-2"></i>
+		
+																		Open classes for All teachers.</label>
 																</div>
 																<!--end::Label-->
 																<!--begin::Switch-->
-																<label class="form-check form-switch form-check-custom form-check-solid">
-																	<input class="form-check-input" type="checkbox" value="1" checked="checked">
-																	<span class="form-check-label fw-bold text-muted">Allowed</span>
+																<label class=" form-check form-switch form-check-custom form-check-solid">
+																	<input class="form-check-input" type="checkbox" value="">
+																	<span class="form-check-label fw-semibold text-muted">Allowed</span>
 																</label>
 																<!--end::Switch-->
 															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="mb-15 fv-row">
-																<!--begin::Wrapper-->
-																<div class="d-flex flex-stack">
-																	<!--begin::Label-->
-																	<div class="fw-bold me-5">
-																		<label class="fs-6">Notifications</label>
-																		<div class="fs-7 text-muted">Allow Notifications by Phone or Email</div>
+														</div>
+														<!--end::Users-->
+
+														
+
+														<form id="kt_modal_export_users_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" action="#">
+															
+															<div class="row">
+																<div class="col-6">
+																	<!--begin::Input group-->
+																	<div class="fv-row mb-10">
+																		<!--begin::Label-->
+																		<label class="fs-6 fw-bold form-label mb-2">Target</label>
+																		<!--end::Label-->
+																		<!--begin::Input-->
+																		<select name="role" data-control="select2" data-placeholder="Select a role" data-hide-search="true" class="form-select fw-bolder select2-hidden-accessible" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-13-qx7c">
+																			<option value="Administrator" data-select2-id="select2-data-15-i08m">All</option>
+																			<option value="Analyst">Only Level</option>
+																			<option value="Developer">Person</option>
+																		</select>
+																		<!--end::Input-->
 																	</div>
-																	<!--end::Label-->
-																	<!--begin::Checkboxes-->
-																	<div class="d-flex align-items-center">
-																		<!--begin::Checkbox-->
-																		<label class="form-check form-check-custom form-check-solid me-10">
-																			<input class="form-check-input h-20px w-20px" type="checkbox" name="communication[]" value="email" checked="checked">
-																			<span class="form-check-label fw-bold">Email</span>
-																		</label>
-																		<!--end::Checkbox-->
-																		<!--begin::Checkbox-->
-																		<label class="form-check form-check-custom form-check-solid">
-																			<input class="form-check-input h-20px w-20px" type="checkbox" name="communication[]" value="phone">
-																			<span class="form-check-label fw-bold">Phone</span>
-																		</label>
-																		<!--end::Checkbox-->
+																	<!--end::Input group-->
+
+																																</div>
+
+																<div class="col-6">
+																			
+																	<!--begin::Input group-->
+																	<div class="fv-row mb-10">
+																		<!--begin::Label-->
+																		<label class="fs-6 fw-bold form-label mb-2">Search  </label>
+																		<!--end::Label-->
+															
+																		<input type="text" name="user_name" class="form-control form-control-solid mb-3 
+																			mb-lg-0" placeholder="Full name" value="Anderson Thom ">
+														
 																	</div>
-																	<!--end::Checkboxes-->
-																</div>
-																<!--end::Wrapper-->
-															</div>
-															<!--end::Input group-->
-															<!--begin::Actions-->
-															<div class="text-center" data-bs-dismiss="modal">
-																<button type="reset" id="kt_modal_new_target_cancel" class="btn btn-light me-3">Cancel</button>
-																<button type="submit" id="kt_modal_new_target_submit" class="btn btn-primary">
-																	<span class="indicator-label">Submit</span>
-																	<span class="indicator-progress">Please wait...
-																	<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-																</button>
-															</div>
-															<!--end::Actions-->
+																	<!--end::Input group-->
+
+																		</div>
+
+																	</div>
 
 															
-														<div></div></form>
-														<!--end:Form-->
+															<div class="mh-75px scroll-y me-n7 pe-7 mb-10 ">
+																<!--begin::User-->
+																<div class="d-flex flex-stack  border-bottom border-gray-300 border-bottom-dashed">
+																
+																
+																	<table class="table">
+																		<tbody class="align-middle ">
+																			<tr>
+																				<td>
+																					<div class="d-flex">
+	
+																						<div class="symbol symbol-35px symbol-circle">
+																							<img src="assets/media/ysmeta/img_parent.jpeg" alt="Sean Bean" class="w-100">
+																						</div>
+																					
+																						<div class="ms-3">
+																							<!--begin::Name-->
+																							<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Emma Smith 
+																							</a>
+																							<!--end::Name-->
+																		
+																						</div>
+	
+																					</div>
+																				</td>
+																			
+	
+																				<td class="d-felx justify-content-end ">
+																					<div class="form-check form-check-custom   text-end ">
+																						<input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+																					</div>
+																					
+																				</td>
+																			
+																			</tr>
+																		</tbody>
+																	</table>
+	
+																
+																</div>
+																<!--end::User-->
+
+
+																<!--begin::User-->
+																<div class="d-flex flex-stack  border-bottom border-gray-300 border-bottom-dashed">
+															
+															
+																
+																</div>
+																<!--end::User-->
+
+													
+	
+	
+	
+															</div>
+
+												
+
+															<div class="d-grid ">
+																<button class="btn btn-primary  rounded-pill "> Request   </button>
+															</div>
+
+
+														<div></div>
+														</form>
+														
+	
+														
+	
+														<div class="d-none  d-grid ">
+															<button class="btn btn-primary  rounded-pill"> Open Class  </button>
+														</div>
+	
+	
 													</div>
 													<!--end::Modal body-->
 												</div>
 												<!--end::Modal content-->
 											</div>
-											<!--end::Modal dialog-->
 										</div>
+										<!--end::Modal - view teacher-->
+	
+	
+										<!--begin::Modal - view teacher-->
+										<div class="modal fade" id="kt_modal_view_teacher" tabindex="-1" aria-hidden="true">
+											<div class="modal-dialog mw-1000px">
+												<!--begin::Modal content-->
+												<div class="modal-content">
+													<!--begin::Modal header-->
+													<div class="modal-header pb-0 border-0 justify-content-end">
+														<!--begin::Close-->
+														<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+															<span class="svg-icon svg-icon-1">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor"></rect>
+																	<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor"></rect>
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</div>
+														<!--end::Close-->
+													</div>
+													<!--begin::Modal header-->
+													<!--begin::Modal body-->
+													<div class="modal-body scroll-y mx-5 mx-xl-18 pt-0 pb-15">
+														<!--begin::Heading-->
+														<div class="text-center mb-13">
+															<!--begin::Title-->
+															<h1 class="mb-3">
+																
+																
+																Interview Open 
+	
+																<span class="d-none  fs-4">(</span>
+																<span class="d-none fw-boler text-primary  ">28</span>
+																<span class="d-none fs-4">) </span>
+																	
+															</h1>
+															<!--end::Title-->
+															<!--begin::Description-->
+															<a href="#" class="fs-2 link-primary fw-bold">8 August </a>
+															<!--end::Description-->
+														</div>
+														<!--end::Heading-->
+	
+														<div class="col-6">
+															<div id="" style="d-none  margin: 1em"></div>
+														</div>
+	
+	
+	
+														<div class="col-6">
+	
+															<!--begin::User Group-->
+															<div class="mb-10">
+																<!--begin::List-->
+																<div class="mh-375px scroll-y me-n7 pe-7">
+																	<!--begin::User-->
+																	<div class="d-flex flex-stack  border-bottom border-gray-300 border-bottom-dashed">
+																	
+																		<table class="table">
+																			<tbody class="align-middle ">
+																				<tr>
+																					<td>
+																						<div class="d-flex">
+		
+																							<div class="symbol symbol-35px symbol-circle">
+																								<img src="assets/media/ysmeta/img_parent.jpeg" alt="Sean Bean" class="w-100">
+																							</div>
+																						
+																							<div class="ms-3">
+																								<!--begin::Name-->
+																								<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Emma Smith 
+																								</a>
+																								<!--end::Name-->
+																								<!--begin::Email-->
+																								<div class="fs-7 text-primary  ">인터뷰개설 20개 </div>
+																								<!--end::Email-->
+																							</div>
+		
+																						</div>
+																					</td>
+																					<td>
+																						1st <br>
+																						
+																					</td>
+																				
+		
+																					<td>
+																						13:00 ~ 14:00 
+																					</td>
+		
+																					<td>
+																						<!--begin::Switch-->
+																						<label class=" form-check form-switch form-check-custom form-check-solid ">
+																							<input class="form-check-input h-20px w-30px" type="checkbox" value="" id="flexSwitch20x30" checked="checked">
+																						</label>
+																						<!--end::Switch-->
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+		
+			
+																	
+																	
+																	</div>
+																	<!--end::User-->
+
+																	<!--begin::User-->
+																	<div class="d-flex flex-stack  border-bottom border-gray-300 border-bottom-dashed">
+															
+																		<table class="table">
+																			<tbody class="align-middle ">
+																				<tr>
+																					<td>
+																						<div class="d-flex">
+		
+																							<div class="symbol symbol-35px symbol-circle">
+																								<img src="assets/media/ysmeta/img_parent.jpeg" alt="Sean Bean" class="w-100">
+																							</div>
+																						
+																							<div class="ms-3">
+																								<!--begin::Name-->
+																								<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Emma Smith 
+																								</a>
+																								<!--end::Name-->
+																								<!--begin::Email-->
+																								<div class="fs-7 text-primary  ">인터뷰개설 20개 </div>
+																								<!--end::Email-->
+																							</div>
+		
+																						</div>
+																					</td>
+																					<td>
+																						1st <br>
+																						
+																					</td>
+																				
+		
+																					<td>
+																						13:00 ~ 14:00 
+																					</td>
+		
+																					<td>
+																						<!--begin::Switch-->
+																						<label class=" form-check form-switch form-check-custom form-check-solid ">
+																							<input class="form-check-input h-20px w-30px" type="checkbox" value="" id="flexSwitch20x30" checked="checked">
+																						</label>
+																						<!--end::Switch-->
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+		
+			
+																	
+																	
+																	</div>
+																	<!--end::User-->
+
+
+																	<!--begin::User-->
+																	<div class="d-flex flex-stack  border-bottom border-gray-300 border-bottom-dashed">
+															
+																		<table class="table">
+																			<tbody class="align-middle ">
+																				<tr>
+																					<td>
+																						<div class="d-flex">
+		
+																							<div class="symbol symbol-35px symbol-circle">
+																								<img src="assets/media/ysmeta/img_parent.jpeg" alt="Sean Bean" class="w-100">
+																							</div>
+																						
+																							<div class="ms-3">
+																								<!--begin::Name-->
+																								<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Emma Smith 
+																								</a>
+																								<!--end::Name-->
+																								<!--begin::Email-->
+																								<div class="fs-7 text-primary  ">인터뷰개설 20개 </div>
+																								<!--end::Email-->
+																							</div>
+		
+																						</div>
+																					</td>
+																					<td>
+																						2nd <br>
+																						
+																					</td>
+																				
+		
+																					<td>
+																						13:00 ~ 14:00 
+																					</td>
+		
+																					<td>
+																						<!--begin::Switch-->
+																						<label class=" form-check form-switch form-check-custom form-check-solid ">
+																							<input class="form-check-input h-20px w-30px" type="checkbox" value="" id="flexSwitch20x30" checked="checked">
+																						</label>
+																						<!--end::Switch-->
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+		
+			
+																	
+																	
+																	</div>
+																	<!--end::User-->
+
+
+																	<!--begin::User-->
+																	<div class="d-flex flex-stack  border-bottom border-gray-300 border-bottom-dashed">
+															
+																		<table class="table">
+																			<tbody class="align-middle ">
+																				<tr>
+																					<td>
+																						<div class="d-flex">
+		
+																							<div class="symbol symbol-35px symbol-circle">
+																								<img src="assets/media/ysmeta/img_parent.jpeg" alt="Sean Bean" class="w-100">
+																							</div>
+																						
+																							<div class="ms-3">
+																								<!--begin::Name-->
+																								<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Emma Smith 
+																								</a>
+																								<!--end::Name-->
+																								<!--begin::Email-->
+																								<div class="fs-7 text-primary  ">인터뷰개설 20개 </div>
+																								<!--end::Email-->
+																							</div>
+		
+																						</div>
+																					</td>
+																					<td>
+																						3rd <br>
+																						
+																					</td>
+																				
+		
+																					<td>
+																						13:00 ~ 14:00 
+																					</td>
+		
+																					<td>
+																						<!--begin::Switch-->
+																						<label class=" form-check form-switch form-check-custom form-check-solid ">
+																							<input class="form-check-input h-20px w-30px" type="checkbox" value="" id="flexSwitch20x30" checked="checked">
+																						</label>
+																						<!--end::Switch-->
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+		
+			
+																	
+																	
+																	</div>
+																	<!--end::User-->
+
+																	<!--begin::User-->
+																	<div class="d-flex flex-stack  border-bottom border-gray-300 border-bottom-dashed">
+															
+																		<table class="table">
+																			<tbody class="align-middle ">
+																				<tr>
+																					<td>
+																						<div class="d-flex">
+		
+																							<div class="symbol symbol-35px symbol-circle">
+																								<img src="assets/media/ysmeta/img_parent.jpeg" alt="Sean Bean" class="w-100">
+																							</div>
+																						
+																							<div class="ms-3">
+																								<!--begin::Name-->
+																								<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Emma Smith 
+																								</a>
+																								<!--end::Name-->
+																								<!--begin::Email-->
+																								<div class="fs-7 text-primary  ">인터뷰개설 20개 </div>
+																								<!--end::Email-->
+																							</div>
+		
+																						</div>
+																					</td>
+																					<td>
+																						4th  <br>
+																						
+																					</td>
+																				
+		
+																					<td>
+																						13:00 ~ 14:00 
+																					</td>
+		
+																					<td>
+																						<!--begin::Switch-->
+																						<label class=" form-check form-switch form-check-custom form-check-solid ">
+																							<input class="form-check-input h-20px w-30px" type="checkbox" value="" id="flexSwitch20x30" checked="checked">
+																						</label>
+																						<!--end::Switch-->
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+		
+			
+																	
+																	
+																	</div>
+																	<!--end::User-->
+
+
+
+
+															
+		
+		
+		
+																</div>
+																<!--end::List-->
+															</div>
+															<!--end::User Group-->
+		
+															<!--begin::Notice-->
+															<div class=" d-flex justify-content-between mb-10">
+																<!--begin::Label-->
+																<div class="fw-semibold">
+																	<label class="fs-6">
+																		<i class="bi bi-toggles fs-6 text-dark me-2"></i>
+		
+																		Open classes for All teachers.</label>
+																</div>
+																<!--end::Label-->
+																<!--begin::Switch-->
+																<label class=" form-check form-switch form-check-custom form-check-solid">
+																	<input class="form-check-input" type="checkbox" value="">
+																	<span class="form-check-label fw-semibold text-muted">Allowed</span>
+																</label>
+																<!--end::Switch-->
+															</div>
+															<!--end::Notice-->
+		
+		
+															<div class="d-grid ">
+																<button class="btn btn-primary  rounded-pill"> Open Class  </button>
+															</div>
+	
+														</div>
+	
+	
+	
+													</div>
+													<!--end::Modal body-->
+												</div>
+												<!--end::Modal content-->
+											</div>
+										</div>
+										<!--end::Modal - view teacher-->
+	
+	
+										
 										
 									</div>
-									<!--end::Card-->
+	
+	
+									<!--start: class-teacher -->
+									<div class="tab-pane show fade" id="class_InterviewStudent" role="tabpanel">
+									
+										
+							<!--begin::Interview-Student -->
+							<div class=" card card-flush mb-6 mb-xl-9">
+
+								<!--begin::Card header-->
+								<div class="card-header pt-5">
+									<!--begin::Card title-->
+									<div class="card-title">
+										<h2 class="d-flex align-items-center">Interview-Student 
+										<span class="text-gray-600 fs-6 ms-1">(14)</span></h2>
+									</div>
+
+									<!--end::Card title-->
+									<!--begin::Card toolbar-->
+									<div class="card-toolbar">
+										<!--begin::Search-->
+										<div class="d-flex align-items-center position-relative my-1 me-4" data-kt-view-roles-table-toolbar="base">
+											<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+											<span class="svg-icon svg-icon-1 position-absolute ms-6">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="black"></rect>
+													<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="black"></path>
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+											<input type="text" data-kt-roles-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search Users">
+										</div>
+										<!--end::Search-->
+										<!--begin::Group actions-->
+										<div class="d-flex justify-content-end align-items-center d-none" data-kt-view-roles-table-toolbar="selected">
+											<div class="fw-bolder me-5">
+											<span class="me-2" data-kt-view-roles-table-select="selected_count"></span>Selected</div>
+											<button type="button" class="btn btn-danger" data-kt-view-roles-table-select="delete_selected">Delete Selected</button>
+										</div>
+										<!--end::Group actions-->
+
+									<!--begin::Filter-->
+									<button type="button" class="btn btn-light-primary me-3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+										<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
+										<span class="svg-icon svg-icon-2">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+												<path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="black"></path>
+											</svg>
+										</span>
+										<!--end::Svg Icon-->Filter</button>
+										<!--begin::Menu 1-->
+										<div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true">
+											<!--begin::Header-->
+											<div class="px-7 py-5">
+												<div class="fs-5 text-dark fw-bolder">Filter Options</div>
+											</div>
+											<!--end::Header-->
+											<!--begin::Separator-->
+											<div class="separator border-gray-200"></div>
+											<!--end::Separator-->
+											<!--begin::Content-->
+											<div class="px-7 py-5" data-kt-user-table-filter="form">
+												<!--begin::Input group-->
+												<div class="mb-10">
+													<label class="form-label fs-6 fw-bold">Role:</label>
+													<select class="form-select form-select-solid fw-bolder select2-hidden-accessible" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-user-table-filter="role" data-hide-search="true" data-select2-id="select2-data-7-8f9g" tabindex="-1" aria-hidden="true">
+														<option data-select2-id="select2-data-9-3lh1"></option>
+														<option value="Administrator">Administrator</option>
+														<option value="Analyst">Analyst</option>
+														<option value="Developer">Developer</option>
+														<option value="Support">Support</option>
+														<option value="Trial">Trial</option>
+													</select><span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-8-2sfq" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single form-select form-select-solid fw-bolder" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-a7f7-container" aria-controls="select2-a7f7-container"><span class="select2-selection__rendered" id="select2-a7f7-container" role="textbox" aria-readonly="true" title="Select option"><span class="select2-selection__placeholder">Select option</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+												</div>
+												<!--end::Input group-->
+												<!--begin::Input group-->
+												<div class="mb-10">
+													<label class="form-label fs-6 fw-bold">Two Step Verification:</label>
+													<select class="form-select form-select-solid fw-bolder select2-hidden-accessible" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-user-table-filter="two-step" data-hide-search="true" data-select2-id="select2-data-10-08vl" tabindex="-1" aria-hidden="true">
+														<option data-select2-id="select2-data-12-cl8n"></option>
+														<option value="Enabled">Enabled</option>
+													</select><span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-11-m314" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single form-select form-select-solid fw-bolder" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-zzjf-container" aria-controls="select2-zzjf-container"><span class="select2-selection__rendered" id="select2-zzjf-container" role="textbox" aria-readonly="true" title="Select option"><span class="select2-selection__placeholder">Select option</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+												</div>
+												<!--end::Input group-->
+												<!--begin::Actions-->
+												<div class="d-flex justify-content-end">
+													<button type="reset" class="btn btn-light btn-active-light-primary fw-bold me-2 px-6" data-kt-menu-dismiss="true" data-kt-user-table-filter="reset">Reset</button>
+													<button type="submit" class="btn btn-primary fw-bold px-6" data-kt-menu-dismiss="true" data-kt-user-table-filter="filter">Apply</button>
+												</div>
+												<!--end::Actions-->
+											</div>
+											<!--end::Content-->
+										</div>
+										<!--end::Menu 1-->
+										<!--end::Filter-->
+
+
+
+										<!--begin::Add user-->
+										<button type="button" class="d-none  btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_user">
+											Send </button>
+										<!--end::Add user-->
+
+									</div>
+									<!--end::Card toolbar-->
 								</div>
-								<!--end::Content-->
+								<!--end::Card header-->
+
+								<!--begin::Card body-->
+								<div class="card-body pt-0">
+									<!--begin::Table-->
+									<div id="kt_roles_view_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+										<div class="table-responsive">
+											
+											
+										<table class="table table-hover  align-middle table-row-dashed fs-6 gy-5 mb-0 dataTable no-footer" id="kt_roles_view_table">
+										<!--begin::Table head-->
+										<thead>
+											<!--begin::Table row-->
+											<tr class="text-start text-muted fw-bolder fs-7 text-uppercase gs-0">
+												<th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
+												" style="width: 29.25px;">
+													<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+														<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_roles_view_table .form-check-input" value="1">
+													</div>
+												</th>
+												<th class="min-w-100px sorting" tabindex="0" aria-controls="kt_roles_view_table" rowspan="1" colspan="1" style="width: 120px;">Class</th>
+												<th class="min-w-125px sorting " tabindex="0" aria-controls="kt_roles_view_table" rowspan="1" colspan="1"   >Reserved </th>
+												<th class="min-w-100px sorting" tabindex="0" aria-controls="kt_roles_view_table" rowspan="1" colspan="1" style="width: 120px;">Teacher</th>
+												<th class="min-w-150px sorting" tabindex="0" aria-controls="kt_roles_view_table" rowspan="1" colspan="1"  >Parents</th>
+												<th class="min-w-150px sorting" tabindex="0" aria-controls="kt_roles_view_table" rowspan="1" colspan="1"  >Student</th>
+												<th class="min-w-125px sorting sorting_desc" tabindex="0" aria-controls="kt_roles_view_table" rowspan="1" colspan="1"  aria-sort="descending" >Payment </th>
+												<th class="min-w-125px sorting sorting_desc" tabindex="0" aria-controls="kt_roles_view_table" rowspan="1" colspan="1"  aria-sort="descending" >Status </th>
+												<th class="text-end min-w-100px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" >Actions</th></tr>	
+											<!--end::Table row-->
+										</thead>
+										<!--end::Table head-->
+										<!--begin::Table body-->
+										<tbody class="fw-bold text-gray-600">
+											
+											
+											<tr class="odd">
+												<!--begin::Checkbox-->
+												<td>
+													<div class="form-check form-check-sm form-check-custom form-check-solid">
+														<input class="form-check-input" type="checkbox" value="1">
+													</div>
+												</td>
+												<!--end::Checkbox-->
+												<td>
+													<div class="d-flex flex-column">
+														<a href="" class="text-gray-800 text-hover-primary mb-1">기본영어 인터뷰 </a>
+													</div>
+
+												</td>
+
+												<!--begin::Joined date=-->
+												<td data-order="2021-12-20T17:30:00+09:00" class="sorting_1">20 Aug  5:30 pm</td>
+												<!--end::Joined date=-->
+
+					
+												<td>
+													Emma Smith
+												</td>
+
+
+												<!--begin::User=-->
+												<td class="d-flex align-items-center">
+													<!--begin::User details-->
+													<div class="d-flex flex-column">
+														<a href="#" class="text-gray-800 text-hover-primary mb-1"> Dan Wilson</a>
+														<span>dam@consilting.com</span>
+														<span>+82-10-2988-1229</span>
+
+													</div>
+													<!--begin::User details-->
+												</td>
+												<!--end::user=-->
+																							
+
+												<td>
+													<!--begin::User details-->
+													<div class="d-flex flex-column">
+														<a href="#" class="text-gray-800 text-hover-primary mb-1">🐥 Jr. Dan</a>
+														<span>Boy / Grade 6 / 2011.01</span>
+
+													</div>
+													<!--begin::User details-->
+												</td>
+
+												<!--begin::Joined date=-->
+												<td data-order="2021-12-20T17:30:00+09:00" class="sorting_1">
+													
+													<span class="text-danger">Not yet</span> <br />
+													done  <br />
+
+												<!--end::Joined date=-->
+
+											
+
+									
+												<!--begin::Joined date=-->
+												<td data-order="2021-12-20T17:30:00+09:00" class="sorting_1">
+													
+													opened <br />
+													ongoing <br />
+													closed</td>
+
+												<!--end::Joined date=-->
+
+												<!--begin::Action=-->
+												<td class="text-end d-none ">
+
+													<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#modal_interview_schedule">Actions
+												</td>
+												<!--end::Action=-->
+
+
+												<td class="   ">
+													<a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+													<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+													<span class="svg-icon svg-icon-5 m-0">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black"></path>
+														</svg>
+													</span>
+													<!--end::Svg Icon--></a>
+													<!--begin::Menu-->
+													<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
+														
+														<!--end::Menu item-->
+														<div class="menu-item px-3">
+															<a href="#" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#modal_interview_schedule">Evaluation 
+
+
+														</div>
+														
+														
+														<!--begin::Menu item-->
+														<div class="menu-item px-3">
+															<a href="../../demo4/dist/apps/user-management/users/view.html" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_add_user">Edit</a>
+														
+														</div>
+														
+													
+														<!--begin::Menu item-->
+														<div class="menu-item px-3">
+															<a href="#" class="menu-link px-3" data-kt-users-table-filter="delete_row">Delete</a>
+														</div>
+														<!--end::Menu item-->
+													</div>
+													<!--end::Menu-->
+												</td>
+
+
+
+
+											</tr>
+
+										
+
+
+
+										
+										</tbody>
+										<!--end::Table body-->
+									</table></div><div class="row"><div class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start"></div><div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end"><div class="dataTables_paginate paging_simple_numbers" id="kt_roles_view_table_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="kt_roles_view_table_previous"><a href="#" aria-controls="kt_roles_view_table" data-dt-idx="0" tabindex="0" class="page-link"><i class="previous"></i></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="kt_roles_view_table" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_roles_view_table" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_roles_view_table" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item next" id="kt_roles_view_table_next"><a href="#" aria-controls="kt_roles_view_table" data-dt-idx="4" tabindex="0" class="page-link"><i class="next"></i></a></li></ul></div></div></div></div>
+									<!--end::Table-->
+								</div>
+								<!--end::Card body-->
+
+								
+								<!--begin::Modal schedule-->
+
+								<div class="modal fade" id="modal_interview_schedule" tabindex="-1" style="display: none;" aria-hidden="true">
+									<!--begin::Modal dialog-->
+									<div class="modal-dialog modal-dialog-centered mw-650px">
+										<!--begin::Modal content-->
+										<div class="modal-content rounded">
+											<!--begin::Modal header-->
+											<div class="modal-header pb-0 border-0 justify-content-end">
+												<!--begin::Close-->
+												<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+													<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+													<span class="svg-icon svg-icon-1">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black"></rect>
+															<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black"></rect>
+														</svg>
+													</span>
+													<!--end::Svg Icon-->
+												</div>
+												<!--end::Close-->
+											</div>
+											<!--begin::Modal header-->
+											<!--begin::Modal body-->
+											<div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+												<!--begin:Form-->
+												<form id="kt_modal_new_target_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" action="#">
+													<!--begin::Heading-->
+													<div class="mb-13 text-center">
+														<!--begin::Title-->
+														<h1 class="mb-3">Student Evaluation</h1>
+														<!--end::Title-->
+														<!--begin::Description-->
+														<div class="text-muted fw-bold fs-5">If you need more info, please check
+														<a href="#" class="fw-bolder link-primary">Project Guidelines</a>.</div>
+														<!--end::Description-->
+													</div>
+													<!--end::Heading-->
+
+
+
+													<!--begin::Input group-->
+													<div class="d-flex flex-column mb-8 fv-row fv-plugins-icon-container">
+														<!--begin::Label-->
+														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+															<span class="required">Student</span>
+														</label>
+														<!--end::Label-->
+														<input type="text" class="form-control form-control-solid" placeholder="Enter Target Title" name="target_title">
+													<div class="fv-plugins-message-container invalid-feedback"></div></div>
+													<!--end::Input group-->
+													<!--begin::Input group-->
+													<div class="row g-9 mb-8">
+														<!--begin::Col-->
+														<div class=" fv-row fv-plugins-icon-container">
+															<label class="required fs-6 fw-bold mb-2">Evaluation</label>
+															<select class="form-select form-select-solid select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="Select a Team Member" name="target_assign" data-select2-id="select2-data-7-e2yy" tabindex="-1" aria-hidden="true">
+																<option value="" data-select2-id="select2-data-9-htb8">Select user...</option>
+																<option value="1">Success</option>
+																<option value="2">Failure</option>
+																<option value="3">Temp</option>
+															
+															</select>
+															
+														<div class="fv-plugins-message-container invalid-feedback"></div></div>
+														<!--end::Col-->
+													
+													</div>
+													<!--end::Input group-->
+													<!--begin::Input group-->
+													<div class="d-flex flex-column mb-8">
+														<label class="fs-6 fw-bold mb-2">Memo</label>
+														<textarea class="form-control form-control-solid" rows="3" name="target_details" placeholder="Type Target Details"></textarea>
+													</div>
+													<!--end::Input group-->
+													
+													<!--begin::Input group-->
+													<div class="d-flex flex-stack mb-8">
+														<!--begin::Label-->
+														<div class="me-5">
+															<label class="fs-6 fw-bold">Adding Users by Team Members</label>
+															<div class="fs-7 fw-bold text-muted">If you need more info, please check budget planning</div>
+														</div>
+														<!--end::Label-->
+														<!--begin::Switch-->
+														<label class="form-check form-switch form-check-custom form-check-solid">
+															<input class="form-check-input" type="checkbox" value="1" checked="checked">
+															<span class="form-check-label fw-bold text-muted">Allowed</span>
+														</label>
+														<!--end::Switch-->
+													</div>
+													<!--end::Input group-->
+													<!--begin::Input group-->
+													<div class="mb-15 fv-row">
+														<!--begin::Wrapper-->
+														<div class="d-flex flex-stack">
+															<!--begin::Label-->
+															<div class="fw-bold me-5">
+																<label class="fs-6">Notifications</label>
+																<div class="fs-7 text-muted">Allow Notifications by Phone or Email</div>
+															</div>
+															<!--end::Label-->
+															<!--begin::Checkboxes-->
+															<div class="d-flex align-items-center">
+																<!--begin::Checkbox-->
+																<label class="form-check form-check-custom form-check-solid me-10">
+																	<input class="form-check-input h-20px w-20px" type="checkbox" name="communication[]" value="email" checked="checked">
+																	<span class="form-check-label fw-bold">Email</span>
+																</label>
+																<!--end::Checkbox-->
+																<!--begin::Checkbox-->
+																<label class="form-check form-check-custom form-check-solid">
+																	<input class="form-check-input h-20px w-20px" type="checkbox" name="communication[]" value="phone">
+																	<span class="form-check-label fw-bold">Phone</span>
+																</label>
+																<!--end::Checkbox-->
+															</div>
+															<!--end::Checkboxes-->
+														</div>
+														<!--end::Wrapper-->
+													</div>
+													<!--end::Input group-->
+													<!--begin::Actions-->
+													<div class="text-center">
+														<button type="reset" id="kt_modal_new_target_cancel" class="btn btn-light me-3">Cancel</button>
+														<button type="submit" id="kt_modal_new_target_submit" class="btn btn-primary">
+															<span class="indicator-label">Submit</span>
+															<span class="indicator-progress">Please wait...
+															<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+														</button>
+													</div>
+													<!--end::Actions-->
+
+													
+												<div></div></form>
+												<!--end:Form-->
+											</div>
+											<!--end::Modal body-->
+										</div>
+										<!--end::Modal content-->
+									</div>
+									<!--end::Modal dialog-->
+								</div>
+
+
+
+
+								
 							</div>
-							<!--end::Layout-->
+							<!--end::Card-->
+	
+									</div>
+	
+
+	
+	
+								</div>
+
+
+							</div>
+							<!--end::Content-->
+							
 						</div>
-						<!--end::Container-->
+						<!--end::Layout-->
 					</div>
+					<!--end::Container-->
 				</div>
-				<!--end::Wrapper-->
-				
+
 			</div>
-			<!--end::Page-->
+			<!--end::Wrapper-->
+			
 		</div>
-		<!--end::Root-->
-	</body>
-</html>
+		<!--end::Page-->
+	</div>
+	<!--end::Root-->
+
+</body>

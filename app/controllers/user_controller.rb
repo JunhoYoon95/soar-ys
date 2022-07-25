@@ -19,6 +19,7 @@ class UserController < ApplicationController
         @users = User.all
         @admins = User.where(role: 10).all
         @teachers = User.where(role: 5).all
+        @parents = User.where(role: 1).all
     end
     def parent_detail
         admin_check("admin/parent")
