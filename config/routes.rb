@@ -23,7 +23,8 @@ Rails.application.routes.draw do
 
   
   # class 관련 페이지
-  get 'class/classrom/:id', to: 'class#class_room'
+  get 'class/classrom-student/:id', to: 'class#class_room_student'
+  get 'class/classrom-teacher/:id', to: 'class#class_room_teacher'
   get 'admin/class/class-list', to: 'class#class_list'
   get 'admin/class/class-bidding', to: 'class#class_bidding'
   get 'admin/class/class-detail/:id', to: 'class#admin_class_detail'
