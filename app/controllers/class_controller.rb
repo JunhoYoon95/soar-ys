@@ -8,4 +8,6 @@ class ClassController < ApplicationController
     def admin_class_detail
         # @class_detail = SoarClass.find(params[:id])
     end
+    def class_room
+    end
 end
