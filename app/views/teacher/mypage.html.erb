@@ -274,310 +274,61 @@
 										<!--end::Info-->
 									</div>
 									<!--end::Details-->
+									<div class="separator"></div>
+									<div class="d-flex overflow-auto h-55px">
 									<!--begin::Navs-->
-									<ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bolder">
-										<!--begin::Nav item-->
-										<li class="nav-item">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5 active" data-bs-toggle="tab" href="#class_schedule">Class</a>
-										</li>
-										<!--end::Nav item-->
-										<!--begin::Nav item-->
-										<li class="nav-item">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5" data-bs-toggle="tab" href="#classroom">Classroom</a>
-										</li>
-										<!--end::Nav item-->
-										<!--begin::Nav item-->
-										<li class="nav-item">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5"data-bs-toggle="tab" href="#class_teacher">Class-Teacher</a>
-										</li>
-										<!--end::Nav item-->
-										<!--begin::Nav item-->
-										<li class="nav-item">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5" data-bs-toggle="tab" href="#transaction">Transaction</a>
-										</li>
-										<!--end::Nav item-->
+										<ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bolder">
+											<!--begin::Nav item-->
+											<li class="nav-item">
+												<a class="nav-link text-active-primary me-6 " onclick="renderClass()">Class</a>
+											</li>
+											<!--end::Nav item-->
+											<!--begin::Nav item-->
+											<li class="nav-item">
+												<a class="nav-link text-active-primary me-6 " onclick="renderClassroom()">Classroom</a>
+											</li>
+											<!--end::Nav item-->
+											<!--begin::Nav item-->
+											<li class="nav-item">
+												<a class="nav-link text-active-primary me-6 " onclick="renderClassTeacher()">Class-Teacher</a>
+											</li>
+											<!--end::Nav item-->
+											<!--begin::Nav item-->
+											<li class="nav-item">
+												<a class="nav-link text-active-primary me-6 " onclick="renderTransaction()">Transaction</a>
+											</li>
+											<!--end::Nav item-->
 
-										<!--begin::Nav item-->
-										<li class="nav-item">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5" data-bs-toggle="tab" href="#interview">Interview</a>
-										</li>
-										<!--end::Nav item-->
+											<!--begin::Nav item-->
+											<li class="nav-item">
+												<a class="nav-link text-active-primary me-6 " onclick="renderInterview()">Interview</a>
+											</li>
+											<!--end::Nav item-->
 
-										<!--begin::Nav item-->
-										<li class="nav-item">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5" data-bs-toggle="tab" href="#schedule">Schedule</a>
-										</li>
-										<!--end::Nav item-->
+											<!--begin::Nav item-->
+											<li class="nav-item">
+												<a class="nav-link text-active-primary me-6 " onclick="renderSchedule()">Schedule</a>
+											</li>
+											<!--end::Nav item-->
 
-									</ul>
+										</ul>
 									<!--begin::Navs-->
+									</div>
 								</div>
 							</div>
 							<!--end::Navbar-->
 
 
-							
+							<!--begin::Table-->
+							<div class="card card-flush mt-6 mt-xl-9" id="render-partial-tabs">
+								<%= render :partial => 'layouts/teacher/class' %>
+							</div>
+							<!--end::Card-->
 
 							<div class=" tab-content" id="myTabContent">
 							
 
-								<%# Claass 탭 %>
-								<div class="tab-pane show fade active" id="class_schedule" role="tabpanel">
-									<!--begin::Toolbar-->
-									<div class="d-flex flex-wrap flex-stack mb-6">
-										<!--begin::Heading-->
-										<h3 class="fw-bolder my-2">My Classes
-										<span class="fs-6 text-gray-400 fw-bold ms-1">Active</span></h3>
-										<!--end::Heading-->
-										<!--begin::Actions-->
-										<div class=" d-flex flex-wrap my-2">
-											<div class="me-4">
-												<!--begin::Select-->
-												<select name="status" data-control="select2" data-hide-search="true" class="form-select form-select-sm form-select-white w-125px select2-hidden-accessible" data-select2-id="select2-data-7-gs11" tabindex="-1" aria-hidden="true">
-													<option value="Active" selected="selected" data-select2-id="select2-data-9-6ij1">Active</option>
-													<option value="Approved" data-select2-id="select2-data-144-b02c">In Progress</option>
-													<option value="Declined" data-select2-id="select2-data-145-7dyn">To Do</option>
-													<option value="In Progress" data-select2-id="select2-data-146-orqp">Completed</option>
-												</select>
-												
-											
-												<!--end::Select-->
-											</div>
-										</div>
-										<!--end::Actions-->
-									</div>
-									<!--end::Toolbar-->
-									<div class=" row g-6 g-xl-9">
-										<!--begin::Col-->
-										<%# TODO:: 클래스 하나씩 시작하는 곳 %>
-										<div class="col-md-6 col-xl-4" class="tab-pane show fade active" id="class_schedule" role="tabpanel">
-											<!--begin::Card-->
-											<a href="/class/classrom-teacher/2" class="card border-hover-primary">
-												<!--begin::Card header-->
-												<div class="card-header border-0 pt-9">
-													<!--begin::Card Title-->
-													<div class="card-title m-0">
-														<!--begin::Avatar-->
-														<div class="symbol symbol-50px w-50px bg-light">
-															<img src="/images/avatars/img_01.jpg" alt="image" class="">
-														</div>
-														<!--end::Avatar-->
-													</div>
-													<!--end::Car Title-->
-													<!--begin::Card toolbar-->
-													<div class="card-toolbar">
-														<span class="badge badge-light-primary fw-bolder me-auto px-4 py-3">In Progress</span>
-													</div>
-													<!--end::Card toolbar-->
-												</div>
-												<!--end:: Card header-->
-												<!--begin:: Card body-->
-												<div class="card-body p-9">
-													<!--begin::Name-->
-													<div class="fs-3 fw-bolder text-dark">5학년 A1 - BH2 북클럽</div>
-													<!--end::Name-->
-													<!--begin::Description-->
-													<p class="text-gray-400 fw-bold fs-5 mt-1 mb-7">Bookclub class</p>
-													<!--end::Description-->
-													<!--begin::Info-->
-													<div class="d-flex flex-wrap mb-5">
-														<!--begin::Due-->
-														<div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-7 mb-3">
-															<div class="fs-6 text-gray-800 fw-bolder">Aug 19, 2022</div>
-															<div class="fw-bold text-gray-400">Start Date</div>
-														</div>
-														<!--end::Due-->
-														<!--begin::Budget-->
-														<div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 mb-3">
-															<div class="fs-6 text-gray-800 fw-bolder">Oct 19, 2022</div>
-															<div class="fw-bold text-gray-400">End Date</div>
-														</div>
-														<!--end::Budget-->
-													</div>
-													<!--end::Info-->
-													<!--begin::Progress-->
-													<div class="h-4px w-100 bg-light mb-5" data-bs-toggle="tooltip" title="" data-bs-original-title="This project 50% completed">
-														<div class="bg-primary rounded h-4px" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-													</div>
-													<!--end::Progress-->
-													<!--begin::Users-->
-													<div class="symbol-group symbol-hover">
-														<!--begin::User-->
-														<div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="" data-bs-original-title="Emma Smith">
-															<img alt="Pic" src="/images/avatars/150-1.jpg">
-														</div>
-														<!--begin::User-->
-														<!--begin::User-->
-														<div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="" data-bs-original-title="Rudy Stone">
-															<img alt="Pic" src="/images/avatars/150-2.jpg">
-														</div>
-														<!--begin::User-->
-														<!--begin::User-->
-														<div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="" data-bs-original-title="Susan Redwood">
-															<span class="symbol-label bg-primary text-inverse-primary fw-bolder">S</span>
-														</div>
-														<!--begin::User-->
-													</div>
-													<!--end::Users-->
-												</div>
-												<!--end:: Card body-->
-											</a>
-											<!--end::Card-->
-										</div>
-										<!--end::Col-->
-
-										<!--begin::Col-->
-										<div class="col-md-6 col-xl-4">
-											<!--begin::Card-->
-											<a href="../../demo4/dist/teacher_class_homework_writing.html" class="card border-hover-primary">
-												<!--begin::Card header-->
-												<div class="card-header border-0 pt-9">
-													<!--begin::Card Title-->
-													<div class="card-title m-0">
-														<!--begin::Avatar-->
-														<div class="symbol symbol-50px w-50px bg-light">
-															<img src="/images/avatars/img_01.jpg" alt="image" class="">
-														</div>
-														<!--end::Avatar-->
-													</div>
-													<!--end::Car Title-->
-													<!--begin::Card toolbar-->
-													<div class="card-toolbar">
-														<span class="badge badge-light fw-bolder me-auto px-4 py-3">Pending</span>
-													</div>
-													<!--end::Card toolbar-->
-												</div>
-												<!--end:: Card header-->
-												<!--begin:: Card body-->
-												<div class="card-body p-9">
-													<!--begin::Name-->
-													<div class="fs-3 fw-bolder text-dark">3학년 A1 - BH2 라이팅수업 </div>
-													<!--end::Name-->
-													<!--begin::Description-->
-													<p class="text-gray-400 fw-bold fs-5 mt-1 mb-7">Writing class
-														<span class="badge badge-success" >Academic</span>
-													</p>
-													<!--end::Description-->
-													<!--begin::Info-->
-													<div class="d-flex flex-wrap mb-5">
-														<!--begin::Due-->
-														<div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-7 mb-3">
-															<div class="fs-6 text-gray-800 fw-bolder">May 10, 2021</div>
-															<div class="fw-bold text-gray-400">Start Date</div>
-														</div>
-														<!--end::Due-->
-														<!--begin::Budget-->
-														<div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 mb-3">
-															<div class="fs-6 text-gray-800 fw-bolder">June 10, 2021</div>
-															<div class="fw-bold text-gray-400">End Date</div>
-														</div>
-														<!--end::Budget-->
-													</div>
-													<!--end::Info-->
-													<!--begin::Progress-->
-													<div class="h-4px w-100 bg-light mb-5" data-bs-toggle="tooltip" title="" data-bs-original-title="This project 30% completed">
-														<div class="bg-info rounded h-4px" role="progressbar" style="width: 0%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-													</div>
-													<!--end::Progress-->
-													<!--begin::Users-->
-													<div class="symbol-group symbol-hover">
-														<!--begin::User-->
-														<div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="" data-bs-original-title="Alan Warden">
-															<span class="symbol-label bg-warning text-inverse-warning fw-bolder">A</span>
-														</div>
-														<!--begin::User-->
-														<!--begin::User-->
-														<div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="" data-bs-original-title="Brian Cox">
-															<img alt="Pic" src="/images/avatars/150-4.jpg">
-														</div>
-														<!--begin::User-->
-													</div>
-													<!--end::Users-->
-												</div>
-												<!--end:: Card body-->
-											</a>
-											<!--end::Card-->
-										</div>
-										<!--end::Col-->
-
-										<!--begin::Col-->
-										<div class="col-md-6 col-xl-4">
-											<!--begin::Card-->
-											<a href="../../demo4/dist/index_classes.html" class="card border-hover-primary">
-												<!--begin::Card header-->
-												<div class="card-header border-0 pt-9">
-													<!--begin::Card Title-->
-													<div class="card-title m-0">
-														<!--begin::Avatar-->
-														<div class="symbol symbol-50px w-50px bg-light">
-															<img src="/images/avatars/img_01.jpg" alt="image" class="">
-														</div>
-														<!--end::Avatar-->
-													</div>
-													<!--end::Car Title-->
-													<!--begin::Card toolbar-->
-													<div class="card-toolbar">
-														<span class="badge badge-light fw-bolder me-auto px-4 py-3">Close</span>
-													</div>
-													<!--end::Card toolbar-->
-												</div>
-												<!--end:: Card header-->
-												<!--begin:: Card body-->
-												<div class="card-body p-9">
-													<!--begin::Name-->
-													<div class="fs-3 fw-bolder text-dark">7학년 A1 - BH2 디베이팅수업 </div>
-													<!--end::Name-->
-													<!--begin::Description-->
-													<p class="text-gray-400 fw-bold fs-5 mt-1 mb-7">Debating class</p>
-													<!--end::Description-->
-													<!--begin::Info-->
-													<div class="d-flex flex-wrap mb-5">
-														<!--begin::Due-->
-														<div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-7 mb-3">
-															<div class="fs-6 text-gray-800 fw-bolder">May 10, 2021</div>
-															<div class="fw-bold text-gray-400">Start Date</div>
-														</div>
-														<!--end::Due-->
-														<!--begin::Budget-->
-														<div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 mb-3">
-															<div class="fs-6 text-gray-800 fw-bolder">July 10, 2021</div>
-															<div class="fw-bold text-gray-400">End Date</div>
-														</div>
-														<!--end::Budget-->
-													</div>
-													<!--end::Info-->
-													<!--begin::Progress-->
-													<div class="h-4px w-100 bg-light mb-5" data-bs-toggle="tooltip" title="" data-bs-original-title="This project 30% completed">
-														<div class="bg-info rounded h-4px" role="progressbar" style="width: 100%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-													</div>
-													<!--end::Progress-->
-													<!--begin::Users-->
-													<div class="symbol-group symbol-hover">
-														<!--begin::User-->
-														<div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="" data-bs-original-title="Alan Warden">
-															<span class="symbol-label bg-warning text-inverse-warning fw-bolder">A</span>
-														</div>
-														<!--begin::User-->
-														<!--begin::User-->
-														<div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="" data-bs-original-title="Brian Cox">
-															<img alt="Pic" src="/images/avatars/150-4.jpg">
-														</div>
-														<!--begin::User-->
-													</div>
-													<!--end::Users-->
-												</div>
-												<!--end:: Card body-->
-											</a>
-											<!--end::Card-->
-										</div>
-										<!--end::Col-->
-									
-
-
-									</div>
 								
-								</div>
-
 								<%# Classroom 탭 %>
 								<div class="tab-pane show fade" id="classroom" role="tabpanel">
 									<!--begin::Toolbar-->
@@ -3575,9 +3326,7 @@
 																<!--begin::Input group-->
 																<div class="fv-row mb-8 fv-plugins-icon-container">
 																	<label class="required fs-6 fw-bold mb-2">Tags</label>
-																	<tags class="tagify form-control form-control-solid" tabindex="-1">
-            <tag title="Important" contenteditable="false" spellcheck="false" tabindex="-1" class="tagify__tag tagify--noAnim" value="Important"><x title="" class="tagify__tag__removeBtn" role="button" aria-label="remove tag"></x><div><span class="tagify__tag-text">Important</span></div></tag><tag title="Urgent" contenteditable="false" spellcheck="false" tabindex="-1" class="tagify__tag tagify--noAnim" value="Urgent"><x title="" class="tagify__tag__removeBtn" role="button" aria-label="remove tag"></x><div><span class="tagify__tag-text">Urgent</span></div></tag><span contenteditable="" tabindex="0" data-placeholder="​" aria-placeholder="" class="tagify__input" role="textbox" aria-autocomplete="both" aria-multiline="false"></span>
-        </tags><input class="form-control form-control-solid" value="Important, Urgent" name="target_tags">
+																	<tags class="tagify form-control form-control-solid" tabindex="-1"><tag title="Important" contenteditable="false" spellcheck="false" tabindex="-1" class="tagify__tag tagify--noAnim" value="Important"><x title="" class="tagify__tag__removeBtn" role="button" aria-label="remove tag"></x><div><span class="tagify__tag-text">Important</span></div></tag><tag title="Urgent" contenteditable="false" spellcheck="false" tabindex="-1" class="tagify__tag tagify--noAnim" value="Urgent"><x title="" class="tagify__tag__removeBtn" role="button" aria-label="remove tag"></x><div><span class="tagify__tag-text">Urgent</span></div></tag><span contenteditable="" tabindex="0" data-placeholder="​" aria-placeholder="" class="tagify__input" role="textbox" aria-autocomplete="both" aria-multiline="false"></span></tags><input class="form-control form-control-solid" value="Important, Urgent" name="target_tags">
 																<div class="fv-plugins-message-container invalid-feedback"></div></div>
 																<!--end::Input group-->
 																<!--begin::Input group-->
@@ -4390,3 +4139,24 @@
 	</body>
 	<!--end::Body-->
 </html>
+
+<script>
+    function renderClass(){
+        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/teacher/class') %>");
+    }
+    function renderClassroom(){
+        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/teacher/classroom') %>");
+    }
+    function renderClassTeacher(){
+        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/teacher/classteacher') %>");
+    }
+    function renderTransaction(){
+        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/teacher/transaction') %>");
+    }
+    function renderInterview(){
+        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/teacher/interview') %>");
+    }
+    function renderSchedule(){
+        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/teacher/schedule') %>");
+    }
+</script>
