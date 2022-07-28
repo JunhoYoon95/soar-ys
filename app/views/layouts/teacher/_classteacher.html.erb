@@ -1,201 +1,820 @@
-<%# Class-teacher 탭 %>
+<%# Schedule 탭 %>
 <div style="width:90%; margin: 40px auto">
-    <div class="bg-primary mb-5 py-3  ps-3 rounded d-flex justify-content-between align-items-center"> 
+    <div class="bg-primary     mb-5 py-3  ps-3 rounded d-flex justify-content-between align-items-center"> 
         <a onclick="history.back()" class="btn  text-white ">    </a>
         <span class=" text-white">🌈  "✨ Please check the schedule for season 3 from May to August. ✨" </span>
         <span></span>
 
     </div>
 
-    <div class=" d-flex flex-wrap flex-stack mb-6">
+
+
+    <div class="d-none  d-flex flex-wrap flex-stack mb-6">
         <!--begin::Heading-->
         <h3 class="fw-bolder my-2">Available classes
         <span class="fs-6 text-gray-400 fw-bold ms-1">Active</span></h3>
         <!--end::Heading-->
+
     </div>
 
-    <div class="card mb-10">
-        <!--begin::Card header-->
-        <div class="card-header border-0 pt-6">
-            <!--begin::Card title-->
-            <div class="card-title">
-                <!--begin::Search-->
-                <div class="d-flex align-items-center position-relative my-1">
-                    <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
-                    <span class="svg-icon svg-icon-1 position-absolute ms-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="black"></rect>
-                            <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="black"></path>
-                        </svg>
-                    </span>
-                    <!--end::Svg Icon-->
-                    <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Search user">
+
+
+
+    <ul class=" nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-bold mb-8">
+        <!--begin:::Tab item-->													
+
+        <li class="nav-item">
+            <a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab" href="#teacher_request">Requested</a>
+        </li>
+        <!--end:::Tab item-->
+
+        <!--begin:::Tab item-->
+        <li class="nav-item">
+            <a class="  nav-link  text-active-primary pb-4 " data-bs-toggle="tab" href="#teacher-response">Response</a>
+
+        </li>
+        <!--end:::Tab item-->
+        
+
+    </ul>
+
+    
+
+    <div class=" tab-content" id="myTabContent">
+    
+
+        <!--start: class -->
+        <div class="tab-pane show fade active" id="teacher_request" role="tabpanel">
+        
+            
+
+            <div class="card mb-10">
+
+
+
+                <!--begin::Card header-->
+                <div class="card-header border-0 pt-6">
+                    <!--begin::Card title-->
+                    <div class="card-title">
+                        <h1 class="d-flex align-items-center">8 August 
+                            <span class="fs-6 ms-1 fw-normal">(</span>
+                            <span class="text-danger  fs-6 ">2</span>
+                            <span class="fs-6 fw-normal">)</span>
+                        
+                        </h1>
+                            
+                    </div>
+                    <!--begin::Card title-->
+                    <div class="card-toolbar">
+                        <!--begin::Search-->
+                        <div class="d-flex align-items-center position-relative my-1">
+                            <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+                            <span class="svg-icon svg-icon-1 position-absolute ms-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="black"></rect>
+                                    <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="black"></path>
+                                </svg>
+                            </span>
+                            <!--end::Svg Icon-->
+                            <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Search user">
+                        </div>
+                        <!--end::Search-->
+                    </div>
+            
                 </div>
-                <!--end::Search-->
+                <!--end::Card header-->
+            
+                <!--begin::Card body-->
+                <div class="card-body pt-0">
+                    <!--begin::Table-->
+                    <div id="kt_table_users_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                        
+                        <div class="table-responsive">
+                            <table class="table align-middle table-hover table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_table_users">
+                                <!--begin::Table head-->
+                                <thead>
+                                    <!--begin::Table row-->
+                                    <tr class="text-start text-muted fw-bolder fs-7 text-uppercase gs-0"><th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
+                                        " style="width: 29.25px;">
+                                            <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+                                                <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_table_users .form-check-input" value="1">
+                                            </div>
+                                        </th>
+                                        
+                                        <th class=" sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" ">Class</th>
+                                        <th class=" sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" ">Start/End</th>
+
+                                        <th class=" sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" ">level </th>
+                                        <th class=" sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" ">Grade</th>
+                                        <th class=" sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" ">Shedule</th>
+                                        <th class=" sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" ">Due</th>
+
+
+                                        
+
+                                        <th class="text-end min-w-100px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 113.43px;">Actions</th></tr>
+                                    <!--end::Table row-->
+                                </thead>
+                                <!--end::Table head-->
+                                <!--begin::Table body-->
+                                <tbody class="text-gray-600 fw-bold align-middle">
+                                    
+                                    <tr class="odd">
+                                        <!--begin::Checkbox-->
+                                        <td>
+                                            <div class="form-check form-check-sm form-check-custom form-check-solid">
+                                                <input class="form-check-input" type="checkbox" value="1">
+                                            </div>
+                                        </td>
+                                        <!--end::Checkbox-->
+
+                                        <!--begin::User=-->
+                                        <td class="">
+
+                                            <a href="../../demo4/dist/admin_school_class_view.html" class="text-gray-800 text-hover-primary mb-1">5학년 A1 - BH2 북클럽</a>
+
+                                            <!--begin:: Avatar -->
+                                            <div class="d-none symbol  symbol-50px overflow-hidden me-3">
+                                                <a href="../../demo4/dist/admin_school_class_view.html">
+                                                    <div class="symbol-label fs-3 bg-light-danger text-danger">BH</div>
+                                                </a>
+                                            </div>
+                                            <!--end::Avatar-->
+
+                                        </td>
+                                        <!--end::User=-->
+
+                                        <td>
+                                            <span >2022.08.01 ~ 2022.08.31 </span>
+                                        </td>
+                                    
+                                        <td>
+                                            BH-1 
+                                        </td>
+
+                                        <!--begin::Role=-->
+                                        <td>5,6,7</td>
+                                        <!--end::Role=-->
+
+                                    
+                                        <!--begin::Action=-->
+                                        <td class="">
+                                            <a href="#" class="btn btn-outline btn-outline-default  btn-sm" data-bs-toggle="modal" data-bs-target="#modal_teacher_assign">View
+                                            </a>
+                                        </td>
+                                        <!--end::Action=-->
+                                        
+                                        <td>
+                                            <span class="text-danger "> ~ 2022.07.20 </span>
+                                        </td>
+
+
+                                        <!--begin::Action=-->
+                                        <td class="text-center">
+                                            <a href="#" class="btn btn-primary btn-active-primary btn-sm" >Assign
+                                            </a>
+                                        </td>
+                                        <!--end::Action=-->
+
+
+                                    </tr>
+
+                                        
+                                    <tr class="even">
+                                        <!--begin::Checkbox-->
+                                        <td>
+                                            <div class="form-check form-check-sm form-check-custom form-check-solid">
+                                                <input class="form-check-input" type="checkbox" value="1">
+                                            </div>
+                                        </td>
+                                        <!--end::Checkbox-->
+
+                                        <!--begin::User=-->
+                                        <td class="">
+
+                                            <a href="../../demo4/dist/admin_school_class_view.html" class="text-gray-800 text-hover-primary mb-1">5학년 A1 - BH2 북클럽</a>
+
+                                            <!--begin:: Avatar -->
+                                            <div class="d-none symbol  symbol-50px overflow-hidden me-3">
+                                                <a href="../../demo4/dist/admin_school_class_view.html">
+                                                    <div class="symbol-label fs-3 bg-light-danger text-danger">BH</div>
+                                                </a>
+                                            </div>
+                                            <!--end::Avatar-->
+
+                                            <!--begin::User details-->
+                                            <div class="d-none d-flex flex-column">
+                                                <a href="../../demo4/dist/admin_school_class_view.html" class="text-gray-800 text-hover-primary mb-1">5학년 A1 - BH2 북클럽</a>
+                                            </div>
+                                            <!--begin::User details-->
+                                        </td>
+                                        <!--end::User=-->
+
+                                        <td>
+                                            <span >2022.08.01 ~ 2022.08.31 </span>
+                                        </td>
+                                    
+                                        <td>
+                                            BH-1 
+                                        </td>
+
+                                        <!--begin::Role=-->
+                                        <td>5,6,7</td>
+                                        <!--end::Role=-->
+
+
+                                        <td>
+
+                                            <span class="border rounded-pill px-2 py-1 fs-8 border-gray-400 me-2 "> 1st  13:00~14:00  </span>
+                                            <span class="border rounded-pill px-2 py-1 fs-8 border-gray-400 me-2 "> 1st  13:00~14:00  </span>
+                                            <span class="border rounded-pill px-2 py-1 fs-8 border-gray-400 me-2 "> 1st  13:00~14:00  </span>
+                                        
+                                        </td>
+                                        
+                                        <td>
+                                            <span class="text-danger "> ~ 2022.07.20 </span>
+                                        </td>
+
+                                    
+
+                                    
+                                        <td class="text-center">
+                                            <button class="btn btn-sm  btn-outline btn-outline-default ">Cancel</button>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr class="odd">
+                                        <!--begin::Checkbox-->
+                                        <td>
+                                            <div class="form-check form-check-sm form-check-custom form-check-solid">
+                                                <input class="form-check-input" type="checkbox" value="1">
+                                            </div>
+                                        </td>
+                                        <!--end::Checkbox-->
+
+                                        <!--begin::User=-->
+                                        <td class="">
+
+                                            <a href="../../demo4/dist/admin_school_class_view.html" class="text-gray-800 text-hover-primary mb-1">5학년 A1 - BH2 북클럽</a>
+
+                                            <!--begin:: Avatar -->
+                                            <div class="d-none symbol  symbol-50px overflow-hidden me-3">
+                                                <a href="../../demo4/dist/admin_school_class_view.html">
+                                                    <div class="symbol-label fs-3 bg-light-danger text-danger">BH</div>
+                                                </a>
+                                            </div>
+                                            <!--end::Avatar-->
+
+                                            <!--begin::User details-->
+                                            <div class="d-none d-flex flex-column">
+                                                <a href="../../demo4/dist/admin_school_class_view.html" class="text-gray-800 text-hover-primary mb-1">5학년 A1 - BH2 북클럽</a>
+                                            </div>
+                                            <!--begin::User details-->
+                                        </td>
+                                        <!--end::User=-->
+
+                                        <td>
+                                            <span >2022.08.01 ~ 2022.08.31 </span>
+                                        </td>
+
+                                        <td>
+                                            BH-1 
+                                        </td>
+
+                                        <!--begin::Role=-->
+                                        <td>5,6,7</td>
+                                        <!--end::Role=-->
+
+
+                                        <td>
+
+                                            <span class="border rounded-pill px-2 py-1 fs-8 border-gray-400 me-2 "> 1st  13:00~14:00  </span>
+                                            <span class="border rounded-pill px-2 py-1 fs-8 border-gray-400 me-2 "> 1st  13:00~14:00  </span>
+                                            <span class="border rounded-pill px-2 py-1 fs-8 border-gray-400 me-2 "> 1st  13:00~14:00  </span>
+                                        
+                                        </td>
+                                        
+                                        
+                                        <td>
+                                            <span class="text-danger ">  </span>
+                                        </td>
+
+
+
+                                        <!--begin::Role=-->
+                                        <td class="d-none ">	
+                                            <div class="" data-select2-id="select2-data-68-sal4">
+                                                                
+                                                
+                                                <select class="form-select  select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="Monday" name="target_assign" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-12-o1wy">
+
+                                                    <option value="1" data-select2-id="select2-data-14-845c">Monday</option>
+                                                    <option value="2" data-select2-id="select2-data-138-nc2b">Tuesday</option>
+                                                    <option value="3" data-select2-id="select2-data-139-0c7f">Wednesday</option>
+                                                    <option value="4" data-select2-id="select2-data-140-gc3u">Thursday</option>
+                                                    <option value="5" data-select2-id="select2-data-140-gc3u">Friday</option>
+                                                    <option value="6" data-select2-id="select2-data-140-gc3u">Saturday</option>
+                                                    <option value="7" data-select2-id="select2-data-140-gc3u">Sunday</option>
+
+                                                </select>
+                                                
+                                            </div>
+
+
+
+                                        </td>
+                                        <!--end::Role=-->
+
+                                        <td class="text-center">
+                                            <i class="bi bi-check-circle fs-2 text-success  "></i>
+                                        </td>
+
+                                    
+
+
+                                    </tr>
+
+
+
+                                </tbody>
+                                <!--end::Table body-->
+                            </table>
+                        </div>
+                        
+                        <div class="row"><div class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start"></div><div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end"><div class="dataTables_paginate paging_simple_numbers" id="kt_table_users_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="kt_table_users_previous"><a href="#" aria-controls="kt_table_users" data-dt-idx="0" tabindex="0" class="page-link"><i class="previous"></i></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="kt_table_users" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_table_users" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_table_users" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item next" id="kt_table_users_next"><a href="#" aria-controls="kt_table_users" data-dt-idx="4" tabindex="0" class="page-link"><i class="next"></i></a></li></ul></div></div></div></div>
+                        <!--end::Table-->
+                </div>
+                <!--end::Card body-->
             </div>
-            <!--begin::Card title-->
-    
-        </div>
-        <!--end::Card header-->
-    
-        <!--begin::Card body-->
-        <div class="card-body pt-0">
-            <!--begin::Table-->
-            <div id="kt_table_users_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-                
-                <div class="table-responsive">
-                    <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_table_users">
-                <!--begin::Table head-->
-                <thead>
-                    <!--begin::Table row-->
-                    <tr class="text-start text-muted fw-bolder fs-7 text-uppercase gs-0"><th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
-                        " style="width: 29.25px;">
-                            <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
-                                <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_table_users .form-check-input" value="1">
-                            </div>
-                        </th>
-                        
-                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="User: activate to sort column ascending" ">Class</th>
-                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending">	PERIOD</th>
-                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending">DAY</th>
-                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending" >TIME</th>
-                        <th class="text-end min-w-100px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 113.43px;">Actions</th></tr>
-                    <!--end::Table row-->
-                </thead>
-                <!--end::Table head-->
-                <!--begin::Table body-->
-                <tbody class="text-gray-600 fw-bold">
-                    
-                    <tr class="odd">
-                        <!--begin::Checkbox-->
-                        <td>
-                            <div class="form-check form-check-sm form-check-custom form-check-solid">
-                                <input class="form-check-input" type="checkbox" value="1">
-                            </div>
-                        </td>
-                        <!--end::Checkbox-->
-                        <!--begin::User=-->
-                        <td class="d-flex align-items-center">
-                            <!--begin:: Avatar -->
-                            <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
-                                <a href="../../demo4/dist/admin_school_class_view.html">
-                                    <div class="symbol-label fs-3 bg-light-danger text-danger">BH</div>
-                                </a>
-                            </div>
-                            <!--end::Avatar-->
 
-                            <!--begin::User details-->
-                            <div class="d-flex flex-column">
-                                <a href="../../demo4/dist/admin_school_class_view.html" class="text-gray-800 text-hover-primary mb-1">5학년 A1 - BH2 북클럽</a>
-                                <span class="fs-8">Jun 17, 2022</span>
+        
+            <!--begin::Modal - view teacher-->
+            <div class="modal fade" id="modal_teacher_assign" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog mw-650px">
+                    <!--begin::Modal content-->
+                    <div class="modal-content">
+                        <!--begin::Modal header-->
+                        <div class="modal-header pb-0 border-0 justify-content-end">
+                            <!--begin::Close-->
+                            <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                <span class="svg-icon svg-icon-1">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor"></rect>
+                                        <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor"></rect>
+                                    </svg>
+                                </span>
+                                <!--end::Svg Icon-->
                             </div>
-                            <!--begin::User details-->
-                        </td>
-                        <!--end::User=-->
-                        <!--begin::Role=-->
-                        <td>May~June</td>
-                        <!--end::Role=-->
-                        
-                        <!--begin::Role=-->
-                        <td>
-                            SAT,SUN
-                        </td>
-                        <!--end::Role=-->
-
-                        <!--begin::Role=-->
-                        <td>	PM 13:00 ~ 14:00</td>
-                        <!--end::Role=-->
-
-                
-                    
-                        <!--begin::Action=-->
-                        <td class="d-none text-end">
-                            <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#modal_school_class">Actions
-                        </td>
-                        <!--end::Action=-->
-
-                        <!--begin::Action=-->
-                        <td class="text-end">
-                            <a href="#" class="btn btn-primary btn-active-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Assign
-                            </a>
+                            <!--end::Close-->
+                        </div>
+                        <!--begin::Modal header-->
+                        <!--begin::Modal body-->
+                        <div class="modal-body scroll-y mx-5 mx-xl-18 pt-0 pb-15">
+                            <!--begin::Heading-->
+                            <div class="text-center mb-10">
+                                <!--begin::Title-->
+                                <h1 class="mb-3">Schedule List (40) 
                             
-                        </td>
-                        <!--end::Action=-->
-
-
-
-                    </tr>
-
-
-                    <tr class="odd">
-                        <!--begin::Checkbox-->
-                        <td>
-                            <div class="form-check form-check-sm form-check-custom form-check-solid">
-                                <input class="form-check-input" type="checkbox" value="1">
+                                </h1>
+                                <!--end::Title-->
+                                <!--begin::Description-->
+                                <div class="text-muted fw-semibold fs-5">
+                                <a href="#" class="link-primary fw-bold">2022.08.04 ~ 2022.08.30</a>
+                                </div>
+                                <!--end::Description-->
                             </div>
-                        </td>
-                        <!--end::Checkbox-->
-                        <!--begin::User=-->
-                        <td class="d-flex align-items-center">
-                            <!--begin:: Avatar -->
-                            <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
-                                <a href="../../demo4/dist/admin_school_class_view.html">
-                                    <div class="symbol-label fs-3 bg-light-success text-success">BH</div>
-                                </a>
+                            <!--end::Heading-->
+
+
+                            <!--begin::Users-->
+                            <div class="mb-10">
+                                <!--begin::List-->
+                                <div class="mh-375px scroll-y me-n7 pe-7 mb-3">
+
+
+                                    <div class="table-responsive ">
+                                        <table class="table table-row-dashed gx-5 gy-3">
+                                            <thead>
+                                                <tr class="bg-light fs-7 fw-bolder ">
+
+
+
+                                                    <th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
+                                                    " style="width: 29.25px;">
+                                                        
+                                                    </th>
+                                                    
+                                                    <th>Day</th>
+                                                    <th>Time</th>
+                                                    <th class="text-center ">Period</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody class="align-middle ">
+                                                <tr>
+
+                                                    <td class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
+                                                    " style="width: 29.25px;">
+                                                        <div class="form-check form-check-sm form-check-custom  me-3">
+                                                            <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_table_users .form-check-input" value="1">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        WED
+                                                    </td>
+                                                    <td>
+                                                        13:00 ~ 14:00 
+                                                    </td>
+
+                                                    <td class=" ">
+                                                        <select class=" form-select select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="" name="target_assign" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-12-wrr7">
+                                                            <option value="1" data-select2-id="select2-data-14-96h7">4 week</option>
+                                                            <option value="2">8 week</option>
+                                                            <option value="3">12 week</option>
+                                                            <option value="4">16 week</option>
+
+                                                        </select>
+
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
+                                                    " style="width: 29.25px;">
+                                                        <div class="form-check form-check-sm form-check-custom  me-3">
+                                                            <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_table_users .form-check-input" value="1">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        WED
+                                                    </td>
+                                                    <td>
+                                                        13:00 ~ 14:00 
+                                                    </td>
+
+                                                    <td class="text-center">
+                                                        <select class="form-select select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="Bookclub" name="target_assign" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-12-wrr7">
+
+                                                            <option value="1" data-select2-id="select2-data-14-96h7">4</option>
+                                                            <option value="2">8</option>
+                                                            <option value="3">12</option>
+                                                            <option value="4">16</option>
+
+                                                        </select>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
+                                                    " style="width: 29.25px;">
+                                                        <div class="form-check form-check-sm form-check-custom  me-3">
+                                                            <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_table_users .form-check-input" value="1">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        WED
+                                                    </td>
+                                                    <td>
+                                                        13:00 ~ 14:00 
+                                                    </td>
+
+                                                    <td class="text-center">
+                                                        <select class="form-select select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="Bookclub" name="target_assign" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-12-wrr7">
+
+                                                            <option value="1" data-select2-id="select2-data-14-96h7">4</option>
+                                                            <option value="2">8</option>
+                                                            <option value="3">12</option>
+                                                            <option value="4">16</option>
+
+                                                        </select>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
+                                                    " style="width: 29.25px;">
+                                                        <div class="form-check form-check-sm form-check-custom  me-3">
+                                                            <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_table_users .form-check-input" value="1">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        WED
+                                                    </td>
+                                                    <td>
+                                                        13:00 ~ 14:00 
+                                                    </td>
+
+                                                    <td class="text-center">
+                                                        <select class="form-select select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="Bookclub" name="target_assign" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-12-wrr7">
+
+                                                            <option value="1" data-select2-id="select2-data-14-96h7">4</option>
+                                                            <option value="2">8</option>
+                                                            <option value="3">12</option>
+                                                            <option value="4">16</option>
+
+                                                        </select>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
+                                                    " style="width: 29.25px;">
+                                                        <div class="form-check form-check-sm form-check-custom  me-3">
+                                                            <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_table_users .form-check-input" value="1">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        WED
+                                                    </td>
+                                                    <td>
+                                                        13:00 ~ 14:00 
+                                                    </td>
+
+                                                    <td class="text-center">
+                                                        <select class="form-select select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="Bookclub" name="target_assign" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-12-wrr7">
+
+                                                            <option value="1" data-select2-id="select2-data-14-96h7">4</option>
+                                                            <option value="2">8</option>
+                                                            <option value="3">12</option>
+                                                            <option value="4">16</option>
+
+                                                        </select>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
+                                                    " style="width: 29.25px;">
+                                                        <div class="form-check form-check-sm form-check-custom  me-3">
+                                                            <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_table_users .form-check-input" value="1">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        WED
+                                                    </td>
+                                                    <td>
+                                                        13:00 ~ 14:00 
+                                                    </td>
+
+                                                    <td class="text-center">
+                                                        <select class="form-select select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="Bookclub" name="target_assign" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-12-wrr7">
+
+                                                            <option value="1" data-select2-id="select2-data-14-96h7">4</option>
+                                                            <option value="2">8</option>
+                                                            <option value="3">12</option>
+                                                            <option value="4">16</option>
+
+                                                        </select>
+
+                                                    </td>
+                                                </tr>
+
+
+                                            </tbody>
+                                        </table>
+
+                                        
+                                    </div>
+
+                                
+                                </div>
+                                <!--end::List-->
+
+                                <div  class="mb-10">
+                                    선생님 수업 잔여수량이 총 <strong>5</strong>개 남았습니다.
+                                </div>
+
+
+                                <div class="d-grid">
+                                    <button class="btn btn-primary  rounded-pill "> Check  </button>
+                                </div>
                             </div>
-                            <!--end::Avatar-->
+                            <!--end::Users-->
 
-                            <!--begin::User details-->
-                            <div class="d-flex flex-column">
-                                <a href="../../demo4/dist/admin_school_class_view.html" class="text-gray-800 text-hover-primary mb-1">5학년 A1 - BH2 북클럽</a>
-                                <span class="fs-8">Jun 17, 2022</span>
-                            </div>
-                            <!--begin::User details-->
-                        </td>
-                        <!--end::User=-->
-                        <!--begin::Role=-->
-                        <td>May~June</td>
-                        <!--end::Role=-->
-                        
-                        <!--begin::Role=-->
-                        <td>
-                            SAT,SUN
-                        </td>
-                        <!--end::Role=-->
-
-                        <!--begin::Role=-->
-                        <td>	PM 13:00 ~ 14:00</td>
-                        <!--end::Role=-->
-
-                
-                    
-                        <!--begin::Action=-->
-                        <td class="d-none text-end">
-                            <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#modal_school_class">Actions
-                        </td>
-                        <!--end::Action=-->
-
-                        <!--begin::Action=-->
-                        <td class="text-end">
-                            <a href="#" class="btn btn-primary btn-active-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Assign
-                            </a>
                             
-                        </td>
-                        <!--end::Action=-->
+
+                            <div class="d-none  d-grid ">
+                                <button class="btn btn-primary  rounded-pill"> Open Class  </button>
+                            </div>
 
 
+                        </div>
+                        <!--end::Modal body-->
+                    </div>
+                    <!--end::Modal content-->
+                </div>
+            </div>
+            <!--end::Modal - view teacher-->
 
-                    </tr>
-                
-
-                
-                    
-                </tbody>
-                <!--end::Table body-->
-            </table></div><div class="row"><div class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start"></div><div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end"><div class="dataTables_paginate paging_simple_numbers" id="kt_table_users_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="kt_table_users_previous"><a href="#" aria-controls="kt_table_users" data-dt-idx="0" tabindex="0" class="page-link"><i class="previous"></i></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="kt_table_users" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_table_users" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_table_users" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item next" id="kt_table_users_next"><a href="#" aria-controls="kt_table_users" data-dt-idx="4" tabindex="0" class="page-link"><i class="next"></i></a></li></ul></div></div></div></div>
-            <!--end::Table-->
+            
         </div>
-        <!--end::Card body-->
+
+
+        <!--start: class-teacher -->
+        <div class="tab-pane show fade" id="teacher-response" role="tabpanel">
+        
+            
+            <div class="card mb-10">
+
+
+
+                <!--begin::Card header-->
+                <div class="card-header border-0 pt-6">
+                    <!--begin::Card title-->
+                    <div class="card-title">
+                        <h1 class="d-flex align-items-center">Assigned Class  
+                            <span class="fs-6 ms-1 fw-normal">(</span>
+                            <span class="text-danger  fs-6 ">2</span>
+                            <span class="fs-6 fw-normal">)</span>
+                        
+                        </h1>
+                            
+                    </div>
+                    <!--begin::Card title-->
+                    <div class="card-toolbar">
+                        <!--begin::Search-->
+                        <div class="d-flex align-items-center position-relative my-1">
+                            <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+                            <span class="svg-icon svg-icon-1 position-absolute ms-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="black"></rect>
+                                    <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="black"></path>
+                                </svg>
+                            </span>
+                            <!--end::Svg Icon-->
+                            <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Search user">
+                        </div>
+                        <!--end::Search-->
+                    </div>
+            
+                </div>
+                <!--end::Card header-->
+            
+                <!--begin::Card body-->
+                <div class="card-body pt-0">
+                    <!--begin::Table-->
+                    <div id="kt_table_users_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                        
+                        <div class="table-responsive">
+                            <table class="table align-middle table-row-dashed fs-6 gy-3 dataTable no-footer" id="kt_table_users">
+                        <!--begin::Table head-->
+                        <thead>
+                            <!--begin::Table row-->
+                            <tr class="text-start text-muted fw-bolder fs-7 text-uppercase gs-0">
+                                
+                                <th class=" sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="User: activate to sort column ascending" ">Class</th>
+                                <th class=" sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="User: activate to sort column ascending" ">Grade</th>
+                                <th class=" sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending">DAY</th>
+                                <th class=" sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending" >TIME</th>
+                                <th class=" sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending" >Period</th>
+
+                                <th class="d-none text-end min-w-100px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 113.43px;">Actions</th></tr>
+                            <!--end::Table row-->
+                        </thead>
+                        <!--end::Table head-->
+                        <!--begin::Table body-->
+                        <tbody class="text-gray-600 fw-bold align-middle">
+                            
+                        
+
+
+                            <tr class="odd">
+                            
+                                <!--begin::User=-->
+                                <td class="d-flex align-items-center">
+                                    <!--begin:: Avatar -->
+                                    <div class="symbol  symbol-50px overflow-hidden me-3">
+                                        <a href="../../demo4/dist/admin_school_class_view.html">
+                                            <div class="symbol-label fs-3 bg-light-danger text-danger">BH</div>
+                                        </a>
+                                    </div>
+                                    <!--end::Avatar-->
+
+                                    <!--begin::User details-->
+                                    <div class="d-flex flex-column">
+                                        <a href="../../demo4/dist/admin_school_class_view.html" class="text-gray-800 text-hover-primary mb-1">5학년 A1 - BH2 북클럽</a>
+                                        <span class="fs-8">2022.08.01 ~ 2022.08.31</span>
+                                    </div>
+                                    <!--begin::User details-->
+                                </td>
+                                <!--end::User=-->
+                                <!--begin::Role=-->
+                                <td>5,6,7</td>
+                                <!--end::Role=-->
+                                
+                        
+
+                                <!--begin::Role=-->
+                                <td>	
+                                    Sunday
+                                </td>
+                                <!--end::Role=-->
+
+                                <!--begin::Role=-->
+                                <td>
+                                    12:00 ~ 13:00
+                                </td>
+                                <!--end::Role=-->
+                                <!--begin::Role=-->
+                                <td>
+
+                                    8 weeks
+                                </td>
+                                <!--end::Role=-->
+                        
+                            
+                                <!--begin::Action=-->
+                                <td class="d-none text-end">
+                                    <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#modal_school_class">Actions
+                                </td>
+                                <!--end::Action=-->
+
+                                <!--begin::Action=-->
+                                <td class="d-none  text-center">
+                                    <i class="bi bi-check-circle fs-2 text-success  "></i>
+
+                                    
+                                </td>
+                                <!--end::Action=-->
+
+
+                            </tr>
+
+
+                            <tr class="even">
+                            
+                                <!--begin::User=-->
+                                <td class="d-flex align-items-center">
+                                    <!--begin:: Avatar -->
+                                    <div class="symbol  symbol-50px overflow-hidden me-3">
+                                        <a href="../../demo4/dist/admin_school_class_view.html">
+                                            <div class="symbol-label fs-3 bg-light-danger text-danger">BH</div>
+                                        </a>
+                                    </div>
+                                    <!--end::Avatar-->
+
+                                    <!--begin::User details-->
+                                    <div class="d-flex flex-column">
+                                        <a href="../../demo4/dist/admin_school_class_view.html" class="text-gray-800 text-hover-primary mb-1">5학년 A1 - BH2 북클럽</a>
+                                        <span class="fs-8">2022.08.01 ~ 2022.08.31</span>
+                                    </div>
+                                    <!--begin::User details-->
+                                </td>
+                                <!--end::User=-->
+                                <!--begin::Role=-->
+                                <td>5,6,7</td>
+                                <!--end::Role=-->
+                                
+                        
+
+                                <!--begin::Role=-->
+                                <td>	
+                                    Sunday
+                                </td>
+                                <!--end::Role=-->
+
+                                <!--begin::Role=-->
+                                <td>
+                                    12:00 ~ 13:00
+                                </td>
+                                <!--end::Role=-->
+                                <!--begin::Role=-->
+                                <td>
+
+                                    8 weeks
+                                </td>
+                                <!--end::Role=-->
+                        
+                            
+                                <!--begin::Action=-->
+                                <td class="d-none text-end">
+                                    <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#modal_school_class">Actions
+                                </td>
+                                <!--end::Action=-->
+
+                                <!--begin::Action=-->
+                                <td class="text-center d-none ">
+                                    <button class="btn btn-sm  btn-outline btn-outline-default ">Cancel</button>
+                                </td>
+                                <!--end::Action=-->
+                            </tr>
+                        </tbody>
+                        <!--end::Table body-->
+                    </table></div><div class="row"><div class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start"></div><div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end"><div class="dataTables_paginate paging_simple_numbers" id="kt_table_users_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="kt_table_users_previous"><a href="#" aria-controls="kt_table_users" data-dt-idx="0" tabindex="0" class="page-link"><i class="previous"></i></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="kt_table_users" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_table_users" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_table_users" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item next" id="kt_table_users_next"><a href="#" aria-controls="kt_table_users" data-dt-idx="4" tabindex="0" class="page-link"><i class="next"></i></a></li></ul></div></div></div></div>
+                    <!--end::Table-->
+                </div>
+                <!--end::Card body-->
+            </div>
+
+        </div>
     </div>
 
 </div>
