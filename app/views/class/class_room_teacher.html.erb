@@ -1741,7 +1741,7 @@
 
                         <!--begin::Table-->
                         <div class=" card card-flush mt-6 mt-xl-9" id="render-partial-tabs">
-                            <%= render :partial => 'layouts/class-teacher/homework' %>
+                            <%= render :partial => 'layouts/teacher-class/homework' %>
                         </div>
                         <!--end::Card-->
 
@@ -4575,21 +4575,21 @@
 </body>
 <script>
     function renderHomework(){
-        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/class-teacher/homework') %>");
+        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/teacher-class/homework') %>");
     }
     function renderEvaluation(){
-        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/class-teacher/evaluation') %>");
+        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/teacher-class/evaluation') %>");
     }
     function renderMember(){
-        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/class-teacher/members') %>");
+        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/teacher-class/members') %>");
     }
     function renderTextbook(){
-        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/class-teacher/textbook') %>");
+        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/teacher-class/textbook') %>");
     }
     function renderTextbook(){
-        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/class-teacher/textbook') %>");
+        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/teacher-class/textbook') %>");
     }
     function renderTeaching(){
-        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/class-teacher/teaching') %>");
+        $("#render-partial-tabs").html("<%= escape_javascript(render :partial => 'layouts/teacher-class/teaching') %>");
     }
 </script>
