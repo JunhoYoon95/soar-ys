@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20220712070307) do
+ActiveRecord::Schema.define(version: 20220718024726) do
 
   create_table "applicants", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin" do |t|
     t.datetime "created_at", null: false
@@ -18,6 +18,11 @@ ActiveRecord::Schema.define(version: 20220712070307) do
   end
 
   create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin" do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -57,15 +62,34 @@ ActiveRecord::Schema.define(version: 20220712070307) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "seeds", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin" do |t|
+    t.string   "title",       limit: 45, null: false
+    t.string   "class_type",  limit: 45, null: false
+    t.string   "level",       limit: 45, null: false
+    t.integer  "grade",                  null: false
+    t.string   "start_date",  limit: 45, null: false
+    t.string   "end_date",    limit: 45, null: false
+    t.string   "day",         limit: 45, null: false
+    t.string   "time",        limit: 45, null: false
+    t.string   "quantity",    limit: 45, null: false
+    t.integer  "price",                  null: false
+    t.integer  "min_student",            null: false
+    t.integer  "max_student",            null: false
+    t.integer  "type",                   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "soar_classes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "uid",        null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.integer  "uid",                   null: false
+    t.string   "name",       limit: 45, null: false
   end
 
   create_table "teachers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin" do |t|
