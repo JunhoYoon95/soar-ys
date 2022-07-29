@@ -62,6 +62,15 @@ ActiveRecord::Schema.define(version: 20220718024726) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "seed_schedules", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin" do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "day"
+    t.integer  "time"
+    t.integer  "seed_id"
+    t.index ["seed_id"], name: "seed_id_idx", using: :btree
+  end
+
   create_table "seeds", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin" do |t|
     t.string   "title",       limit: 45, null: false
     t.string   "class_type",  limit: 45, null: false
@@ -75,9 +84,10 @@ ActiveRecord::Schema.define(version: 20220718024726) do
     t.integer  "price",                  null: false
     t.integer  "min_student",            null: false
     t.integer  "max_student",            null: false
-    t.integer  "type",                   null: false
+    t.integer  "course",                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "course_type"
   end
 
   create_table "soar_classes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin" do |t|
@@ -90,6 +100,13 @@ ActiveRecord::Schema.define(version: 20220718024726) do
     t.datetime "updated_at",            null: false
     t.integer  "uid",                   null: false
     t.string   "name",       limit: 45, null: false
+  end
+
+  create_table "teacher_seed", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin" do |t|
+    t.integer  "teacher_id"
+    t.integer  "seed_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "teachers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin" do |t|
@@ -116,4 +133,5 @@ ActiveRecord::Schema.define(version: 20220718024726) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "seed_schedules", "seeds", name: "seed_id"
 end
