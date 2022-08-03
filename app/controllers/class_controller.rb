@@ -27,7 +27,7 @@ class ClassController < ApplicationController
         seed_schedule.seed_id = seed.id
         seed_schedule.save
 
-
+        redirect_to request.referrer
     end
     def admin_class_detail
         # @class_detail = SoarClass.find(params[:id])
