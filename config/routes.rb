@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   
   # class 관련 페이지
+  post '/class/createSeeds', to: 'class#createSeeds'
   get 'class/classroom-student/:id', to: 'class#class_room_student'
   get 'class/classroom-teacher/:id', to: 'class#class_room_teacher'
   get 'admin/class/class-list', to: 'class#class_list'

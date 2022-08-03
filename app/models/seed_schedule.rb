@@ -1,0 +1,2 @@
+class SeedSchedule < ApplicationRecord
+end
