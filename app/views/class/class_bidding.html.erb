@@ -649,13 +649,13 @@ License: For each use you must have a valid license purchased only from above li
 		
 																		
 																				<div>
-																						<div class="mb-7 fv-row fv-plugins-icon-container" data-select2-id="select2-data-68-sal4">
+																						<div class="mb-7 fv-row fv-plugins-icon-container" data-select2-id="select2-data-68-sal4" id="myModal">
 																						
 																							<div class="row">
 
 																								<div>
 
-																									<div class="mb-0">
+																									<div styl="margin-bottom : 40px">
 																										<label class="required fs-6 fw-bold mb-2"> Period  </label>
 																										<input class="form-control " placeholder="Pick date rage" id="kt_daterangepicker_1"/>
 																										<input id="start_date" name="start_date" style="display:none"/>
@@ -1012,6 +1012,10 @@ License: For each use you must have a valid license purchased only from above li
 														<!--end::Table head-->
 														<!--begin::Table body-->
 														<tbody class="text-gray-600 fw-bold">
+
+															<% @seeds.each do |seed|%>
+
+															<% end %>
 															
 															<tr class="odd text-center ">
 																<!--begin::Checkbox-->
@@ -4904,7 +4908,7 @@ License: For each use you must have a valid license purchased only from above li
 		<script>
 			$( document ).ready(function() { 
 				$("#kt_daterangepicker_1").daterangepicker({
-
+					drops: 'up'
 				}, function(start, end, label) {
 					console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')')
 					console.log("시작일 : " + start.format('YYYY-MM-DD'))

@@ -4,6 +4,7 @@ class ClassController < ApplicationController
     end
     def class_bidding
         @class_list = SoarClass.all
+        @seeds = Seed.all
         @data_tables = ActiveRecord::Base.connection.tables
         @class_types = ClassType.all
         @levels = Level.all
